@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<style>
+	#view-source {
+      position: fixed;
+      display: none;
+      right: 0;
+      top: 0;
+      margin-right: 40px;
+      margin-top: 130px;
+      z-index: 900;
+    }
+</style>
+
+<html>
+
+	<head>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.11/go-debug.js"></script>
+		<script src="js/jquery.js"></script>
+		
+		<script>
+		var winAltura = $(window).height();   // altura do browser
+		var winLargura = $(window).width();   // comprimento do browser
+		//alert(winAltura +" x "+winLargura);
+		$('#myDiagram').css('height', 200);
+		</script>
+		
+	</head>
+  
+	<body style="background-color:#f5f5f5;">
+		
+		<!-- Elemento que receberá o estilo mdl -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		
+					<p id="information" style="display:none;"></p>
+					<button id="demo-show-toast" class="mdl-button mdl-js-button mdl-button--raised" type="button" style="display:none;" >Show Toast</button>
+					<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+					  <div class="mdl-snackbar__text"></div>
+					  <button class="mdl-snackbar__action" type="button"></button>
+					</div>
+					<script>
+					(function() {
+					  'use strict';
+					  var snackbarContainer = document.querySelector('#demo-toast-example');
+					  var showToastButton = document.querySelector('#demo-show-toast');
+					  var body = document.getElementsByTagName("BODY")[0];
+					  
+					  body.addEventListener('click', function() {
+					    'use strict';
+					    var data = {message: 'Example Message'};
+					    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+					  });
+
+					}());
+					</script>
+		
+		
+			<!-- Cartão com nome e descrição do mapa -->
+
+				<div class="mdl-card mdl-shadow--6dp" id="view-source" style="width:320px;">
+				  <div class="mdl-card__title mdl-card--expand" style="background:#46B6AC;color:#fff;height:176px">
+				    <h3 class="mdl-card__title-text">Dados do Mapa</h3>
+				  </div>
+				  <div class="mdl-card__supporting-text">
+			    		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					    <input class="mdl-textfield__input" type="text" id="field-titulo-mapa">
+					    <label class="mdl-textfield__label" for="field-titulo-mapa">Questão de investigação</label>
+					  </div>
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					    <textarea class="mdl-textfield__input" type="text" rows= "4" id="field-descricao-mapa" ></textarea>
+					    <label class="mdl-textfield__label" for="field-descricao-mapa">Descrição do mapa</label>
+					  </div>
+				  </div>
+				  
+				  <div class="mdl-card__actions mdl-card--border">
+				    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+					 Esconder
+				    </a>
+				  </div>
+				  
+				  <div class="mdl-card__menu">
+				    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+					 <i class="material-icons" style="color:#fff;">close</i>
+				    </button>
+				  </div>
+				</div>
+			
+			<!-- Menu superior -->
+			<header class="mdl-layout__header">
+				<!--<div class="mdl-layout-icon"><i class="material-icons" style="font-size:32px;">arrow_back</i></div>-->
+				<div class="mdl-layout__header-row" style="height:30px;">
+					<span class="mdl-layout__title"><i>Documento sem título</i></span>
+				</div>
+				<div class="mdl-layout__header-row" style="height:30px;">
+					
+					<nav class="mdl-navigation" style="height:30px;">
+						<a class="mdl-navigation__link" href="#" id="nav-arquivo" style="padding:0 24px 0 0;line-height:25px;height:30px;">Arquivo</a>
+							<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="nav-arquivo">
+							  <li class="mdl-menu__item">Novo</li>
+							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Abrir</li>
+							  <li class="mdl-menu__item">Salvar</li>
+							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Salvar como...</li>
+							  <li class="mdl-menu__item">CMapTools</li>
+							</ul>
+							
+						<a class="mdl-navigation__link" href="#" id="nav-editar" style="padding:0 24px 0 0;line-height:25px;height:30px;">Editar</a>
+							<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="nav-editar">
+							  <li class="mdl-menu__item">Desfazer</li>
+							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Refazer</li>
+							  <li class="mdl-menu__item">Recortar</li>
+							  <li class="mdl-menu__item">Copiar</li>
+							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Colar</li>
+							  <li class="mdl-menu__item">Selecionar tudo</li>
+							</ul>
+						
+						<a class="mdl-navigation__link" href="#" id="nav-visualizar" style="padding:0 24px 0 0;line-height:25px;height:30px;">Visualizar</a>
+							<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="nav-visualizar">
+							  <li class="mdl-menu__item">Aumentar Zoom</li>
+							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Diminuir Zoom</li>
+							  <li class="mdl-menu__item">Tela cheia</li>
+							</ul>
+						
+						<a class="mdl-navigation__link" href="#" id="nav-exibir" style="padding:0 24px 0 0;line-height:25px;height:30px;">Exibir</a>
+							<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="nav-exibir">
+							  <li class="mdl-menu__item">Barra de Ferramentas</li>
+							  <li class="mdl-menu__item">Dados do Mapa</li>
+							</ul>
+					</nav>
+					
+					<div class="mdl-layout-spacer"></div>
+					
+					<!--<button class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#fff;" id="botao-compartilhar">
+					  <i class="material-icons">share</i>
+					</button>
+					<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="botao-compartilhar">
+					  <li class="mdl-menu__item">Facebook</li>
+					  <li class="mdl-menu__item">Instagram</li>
+					  <li class="mdl-menu__item">Twitter</li>
+					</ul>
+					
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#fff;">
+					  <i class="material-icons">delete</i>
+					</button>-->
+					
+					
+					
+				</div>
+				
+				<div class="mdl-layout__header-row" style="background:#ececec;height:40px;color:#737373;">
+					<nav class="mdl-navigation">
+						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-recortar">
+						  <i class="material-icons">content_cut</i>
+						</button>
+						<span for="botao-recortar" class="mdl-tooltip">Recortar</span>
+						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-copiar">
+						  <i class="material-icons">content_copy</i>
+						</button>
+						<span for="botao-copiar" class="mdl-tooltip">Copiar</span>
+						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-colar">
+						  <i class="material-icons">content_paste</i>
+						</button>
+						<span for="botao-colar" class="mdl-tooltip">Colar</span>
+						<span style="margin:0 10px;cursor:default;">|</span>
+						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-negrito">
+						  <i class="material-icons">format_bold</i>
+						</button>
+						<span for="botao-negrito" class="mdl-tooltip">Negrito</span>
+						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-italico">
+						  <i class="material-icons">format_italic</i>
+						</button>
+						<span for="botao-italico" class="mdl-tooltip">Italico</span>
+						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-sublinhado">
+						  <i class="material-icons">format_underlined</i>
+						</button>
+						<span for="botao-sublinhado" class="mdl-tooltip">Sublinhado</span>
+						<span style="margin:0 10px;cursor:default;">|</span>
+						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-cor-texto">
+						  <i class="material-icons">format_color_text</i>
+						</button>
+						<span for="botao-cor-texto" class="mdl-tooltip">Cor do texto</span>
+						<button class="mdl-button mdl-js-button mdl-button--icon"  id="botao-tamanho-texto">
+						  <i class="material-icons">format_size</i>
+						</button>
+						<span for="botao-tamanho-texto" class="mdl-tooltip">Tamanho do texto</span>
+						<span style="margin:0 10px;cursor:default;">|</span>
+						<button class="mdl-button mdl-js-button mdl-button--icon"  id="botao-desfazer">
+						  <i class="material-icons">undo</i>
+						</button>
+						<span for="botao-desfazer" class="mdl-tooltip">Desfazer</span>
+						<button class="mdl-button mdl-js-button mdl-button--icon"  id="botao-refazer">
+						  <i class="material-icons">redo</i>
+						</button>
+						<span for="botao-refazer" class="mdl-tooltip">Refazer</span>
+						<span style="margin:0 10px;cursor:default;">|</span>
+						<button class="mdl-button mdl-js-button mdl-button--icon"  id="botao-selecionar-tudo">
+						  <i class="material-icons">select_all</i>
+						</button>
+						<span for="botao-selecionar-tudo" class="mdl-tooltip">Selecionar tudo</span>
+						<span style="margin:0 10px;cursor:default;">|</span>
+						<button class="mdl-button mdl-js-button mdl-button--icon"  id="botao-mais-zoom">
+						  <i class="material-icons">zoom_in</i>
+						</button>
+						<span for="botao-mais-zoom" class="mdl-tooltip">Mais zoom</span>
+						<button class="mdl-button mdl-js-button mdl-button--icon"  id="botao-menos-zoom">
+						  <i class="material-icons">zoom_out</i>
+						</button>
+						<span for="botao-menos-zoom" class="mdl-tooltip">Menos zoom</span>
+						
+						<a class="mdl-navigation__link" href="#"></a>
+						<a class="mdl-navigation__link" href="#"></a>
+						<a class="mdl-navigation__link" href="#"></a>
+						<a class="mdl-navigation__link" href="#"></a>
+					</nav>
+					<nav class="mdl-navigation">
+						
+					</nav>
+				</div>
+				
+			</header>
+			
+			<!-- Menu lateral -->
+			<!--<div class="mdl-layout__drawer">
+				<span class="mdl-layout__title">Material Design Lite</span>
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="#">Hello</a>
+					<a class="mdl-navigation__link" href="#">World.</a>
+					<a class="mdl-navigation__link" href="#">How</a>
+					<a class="mdl-navigation__link" href="#">Are</a>
+					<a class="mdl-navigation__link" href="#">You?</a>
+				</nav>
+			</div>-->
+		
+			<!-- Conteudo -->
+			<main id="myDiagram" class="mdl-layout__content" style="width:100%; background-color: #ddd;">
+			
+
+		
+
+
+
+	  
+			</main>
+		
+		</div>
+		
+		<script src="js/editor.js"></script>
+
+	</body>
+	
+</html>
