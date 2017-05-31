@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 
 <style>
-	#view-source {
+	#cartao-dados-mapa {
       position: fixed;
-      display: none;
+      display: block;
       right: 0;
       top: 0;
       margin-right: 40px;
       margin-top: 130px;
       z-index: 900;
+    }
+    #botao-adicionar-conceito {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 901;
     }
 </style>
 
@@ -21,13 +30,52 @@
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.11/go-debug.js"></script>
 		<script src="js/jquery.js"></script>
+		<link rel="stylesheet" href="dist/css/material-modal.min.css">
 		
 	</head>
   
-	<body style="background-color:#f5f5f5;">
+	<body style="background-color:#f5f5f5;" id="body">
+
+      <!-- Modal using Material Design Lite -->
+      <!--<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#modal">
+        Launch Modal
+      </a>-->
+      
+      <div id="modal" class="modal modal__bg">
+        <div class="modal__dialog">
+          <div class="modal__content">
+            <!--<div class="modal__header">
+              <div class="modal__title">
+              </div>
+
+              <span class="mdl-button mdl-button--icon mdl-js-button  material-icons  modal__close"></span>
+            </div>-->
+            <div class="modal__text">
+              <p>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    <input class="mdl-textfield__input" type="text" id="div-field-titulo">
+			    <label class="mdl-textfield__label" for="div-field-titulo">Título</label>
+			  </div>
+              </p>
+            </div>
+
+            <div class="modal__footer">
+              <a class="mdl-button mdl-button--colored mdl-js-button  modal__close">
+                Close
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+		
 		
 		<!-- Elemento que receberá o estilo mdl -->
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		
+		<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="botao-adicionar-conceito">
+		  <i class="material-icons">add</i>
+		</button>
 		
 					<!--<button id="demo-show-toast" class="mdl-button mdl-js-button mdl-button--raised" type="button" style="display:none;" >Show Toast</button>
 					<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
@@ -53,14 +101,14 @@
 		
 			<!-- Cartão com nome e descrição do mapa -->
 
-				<div class="mdl-card mdl-shadow--6dp" id="view-source" style="width:320px;">
+				<div class="mdl-card mdl-shadow--6dp" id="cartao-dados-mapa" style="width:320px;">
 				  <div class="mdl-card__title mdl-card--expand" style="background:#46B6AC;color:#fff;height:176px">
 				    <h3 class="mdl-card__title-text">Dados do Mapa</h3>
 				  </div>
 				  <div class="mdl-card__supporting-text">
 			    		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					    <input class="mdl-textfield__input" type="text" id="field-titulo-mapa">
-					    <label class="mdl-textfield__label" for="field-titulo-mapa">Questão de investigação</label>
+					    <input class="mdl-textfield__input" type="text" id="field-questao-mapa">
+					    <label class="mdl-textfield__label" for="field-questao-mapa">Questão de investigação</label>
 					  </div>
 					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					    <textarea class="mdl-textfield__input" type="text" rows= "4" id="field-descricao-mapa" ></textarea>
@@ -68,14 +116,14 @@
 					  </div>
 				  </div>
 				  
-				  <div class="mdl-card__actions mdl-card--border">
+				  <!--<div class="mdl-card__actions mdl-card--border">
 				    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 					 Esconder
 				    </a>
-				  </div>
+				  </div>-->
 				  
 				  <div class="mdl-card__menu">
-				    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+				    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="exibirOuOcultarDadosMapa()">
 					 <i class="material-icons" style="color:#fff;">close</i>
 				    </button>
 				  </div>
@@ -84,8 +132,8 @@
 			<!-- Menu superior -->
 			<header class="mdl-layout__header">
 				<!--<div class="mdl-layout-icon"><i class="material-icons" style="font-size:32px;">arrow_back</i></div>-->
-				<div class="mdl-layout__header-row" style="height:30px;" id="linhateste">
-					<span class="mdl-layout__title"><i>Documento sem título</i></span>
+				<div class="mdl-layout__header-row" style="height:30px;">
+					<span class="mdl-layout__title modal__trigger" data-modal="#modal"><i>Documento sem título</i></span>
 				</div>
 				<div class="mdl-layout__header-row" style="height:30px;">
 					
@@ -113,13 +161,13 @@
 							<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="nav-visualizar">
 							  <li class="mdl-menu__item">Aumentar Zoom</li>
 							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Diminuir Zoom</li>
-							  <li class="mdl-menu__item">Tela cheia</li>
+							  <li class="mdl-menu__item" onclick="telaCheia(this)">Tela cheia</li>
 							</ul>
 						
 						<a class="mdl-navigation__link" href="#" id="nav-exibir" style="padding:0 24px 0 0;line-height:25px;height:30px;">Exibir</a>
 							<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="nav-exibir">
-							  <li class="mdl-menu__item">Barra de Ferramentas</li>
-							  <li class="mdl-menu__item">Dados do Mapa</li>
+							  <li class="mdl-menu__item" onclick="exibirOuOcultarBarraDeFerramentas()">Barra de Ferramentas</li>
+							  <li class="mdl-menu__item" onclick="exibirOuOcultarDadosMapa()">Dados do Mapa</li>
 							</ul>
 					</nav>
 					
@@ -142,7 +190,7 @@
 					
 				</div>
 				
-				<div class="mdl-layout__header-row" style="background:#ececec;height:40px;color:#737373;">
+				<div class="mdl-layout__header-row" style="background:#ececec;height:40px;color:#737373;" id="barra-ferramentas">
 					<nav class="mdl-navigation">
 						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-recortar">
 						  <i class="material-icons">content_cut</i>
@@ -251,14 +299,45 @@
 			</main>
 		
 		</div>
-		<script>
-		var winAltura = $(window).height();   // altura do browser
-		//var winLargura = $(window).width();   // comprimento do browser
-		//alert(winAltura);
-		$('#myDiagram').css('height', winAltura-100);
-		</script>
-		<script src="js/editor.js"></script>
-
+		
 	</body>
 	
 </html>
+
+<script>
+	var winAltura = $(window).height();
+	$('#myDiagram').css('height', winAltura-100);
+</script>
+<script src="js/editor.js"></script>
+<script src="js/screenfull.js"></script>
+<script src="dist/js/material-modal.min.js"></script>
+
+<script>
+
+function exibirOuOcultarDadosMapa(){
+	if($('#cartao-dados-mapa').css('display') == 'none'){
+		$('#cartao-dados-mapa').css('display', 'block');
+	}
+	else
+	{
+		$('#cartao-dados-mapa').css('display', 'none');
+	}
+}
+
+function exibirOuOcultarBarraDeFerramentas(){
+	if($('#barra-ferramentas').css('display') == 'none'){
+		$('#barra-ferramentas').css('display', 'flex');
+	}
+	else
+	{
+		$('#barra-ferramentas').css('display', 'none');
+	}
+}
+
+function telaCheia(){
+	if (screenfull.enabled) {
+		screenfull.toggle();
+	}
+}
+</script>
+
