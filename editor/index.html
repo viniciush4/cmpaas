@@ -84,7 +84,7 @@
 			<!-- Menu superior -->
 			<header class="mdl-layout__header">
 				<!--<div class="mdl-layout-icon"><i class="material-icons" style="font-size:32px;">arrow_back</i></div>-->
-				<div class="mdl-layout__header-row" style="height:30px;">
+				<div class="mdl-layout__header-row" style="height:30px;" id="linhateste">
 					<span class="mdl-layout__title"><i>Documento sem título</i></span>
 				</div>
 				<div class="mdl-layout__header-row" style="height:30px;">
@@ -170,13 +170,25 @@
 						</button>
 						<span for="botao-sublinhado" class="mdl-tooltip">Sublinhado</span>
 						<span style="margin:0 10px;cursor:default;">|</span>
-						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-cor-texto">
+						<!--<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-cor-texto">
 						  <i class="material-icons">format_color_text</i>
-						</button>
+						</button>-->
+						<input type="color" id="botao-cor-texto"></input>
 						<span for="botao-cor-texto" class="mdl-tooltip">Cor do texto</span>
-						<button class="mdl-button mdl-js-button mdl-button--icon"  id="botao-tamanho-texto">
+						<!--<button class="mdl-button mdl-js-button mdl-button--icon"  id="botao-tamanho-texto">
 						  <i class="material-icons">format_size</i>
-						</button>
+						</button>-->
+						<select id="botao-estilo-fonte">
+							 <option value="arial">Arial</option>
+							  <option value="sans-serif">Sans-Serif</option>
+							  <option value="times-new-roman">Times New Roman</option>
+						</select>
+						<span for="botao-estilo-fonte" class="mdl-tooltip">Estilo da fonte</span>
+						<select id="botao-tamanho-texto">
+							 <option value="12">12</option>
+							  <option value="14">14</option>
+							  <option value="16">16</option>
+						</select>
 						<span for="botao-tamanho-texto" class="mdl-tooltip">Tamanho do texto</span>
 						<span style="margin:0 10px;cursor:default;">|</span>
 						<button class="mdl-button mdl-js-button mdl-button--icon"  id="botao-desfazer">
@@ -201,6 +213,7 @@
 						  <i class="material-icons">zoom_out</i>
 						</button>
 						<span for="botao-menos-zoom" class="mdl-tooltip">Menos zoom</span>
+						
 						
 						
 						
