@@ -22,13 +22,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.11/go-debug.js"></script>
 		<script src="js/jquery.js"></script>
 		
-		<script>
-		var winAltura = $(window).height();   // altura do browser
-		var winLargura = $(window).width();   // comprimento do browser
-		//alert(winAltura +" x "+winLargura);
-		$('#myDiagram').css('height', 200);
-		</script>
-		
 	</head>
   
 	<body style="background-color:#f5f5f5;">
@@ -36,8 +29,7 @@
 		<!-- Elemento que receberá o estilo mdl -->
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 		
-					<p id="information" style="display:none;"></p>
-					<button id="demo-show-toast" class="mdl-button mdl-js-button mdl-button--raised" type="button" style="display:none;" >Show Toast</button>
+					<!--<button id="demo-show-toast" class="mdl-button mdl-js-button mdl-button--raised" type="button" style="display:none;" >Show Toast</button>
 					<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
 					  <div class="mdl-snackbar__text"></div>
 					  <button class="mdl-snackbar__action" type="button"></button>
@@ -56,7 +48,7 @@
 					  });
 
 					}());
-					</script>
+					</script>-->
 		
 		
 			<!-- Cartão com nome e descrição do mapa -->
@@ -210,14 +202,19 @@
 						</button>
 						<span for="botao-menos-zoom" class="mdl-tooltip">Menos zoom</span>
 						
-						<a class="mdl-navigation__link" href="#"></a>
-						<a class="mdl-navigation__link" href="#"></a>
-						<a class="mdl-navigation__link" href="#"></a>
-						<a class="mdl-navigation__link" href="#"></a>
-					</nav>
-					<nav class="mdl-navigation">
 						
+						
+						<a class="mdl-navigation__link" href="#"></a>
+						<a class="mdl-navigation__link" href="#"></a>
+						<a class="mdl-navigation__link" href="#"></a>
+						<a class="mdl-navigation__link" href="#"></a>
 					</nav>
+					
+					<div class="mdl-layout-spacer"></div>
+						
+					<span class="mdl-chip">
+					    <span class="mdl-chip__text" id="information"></span>
+					</span>
 				</div>
 				
 			</header>
@@ -235,18 +232,18 @@
 			</div>-->
 		
 			<!-- Conteudo -->
-			<main id="myDiagram" class="mdl-layout__content" style="width:100%; background-color: #ddd;">
+			<main id="myDiagram" class="mdl-layout__content" style="width:100%; height:500px; background-color: #ddd;">
 			
 
-		
-
-
-
-	  
 			</main>
 		
 		</div>
-		
+		<script>
+		var winAltura = $(window).height();   // altura do browser
+		//var winLargura = $(window).width();   // comprimento do browser
+		//alert(winAltura);
+		$('#myDiagram').css('height', winAltura-100);
+		</script>
 		<script src="js/editor.js"></script>
 
 	</body>
