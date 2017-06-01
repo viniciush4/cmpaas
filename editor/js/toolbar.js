@@ -12,7 +12,7 @@ colorButton.addEventListener("input", function() {
   myDiagram.commitTransaction("change color");
 });*/
 
-var boldButton = document.getElementById("bold");
+var boldButton = document.getElementById("botao-negrito");
 boldButton.addEventListener("click", function() {
   myDiagram.startTransaction("change font style");
   var it = myDiagram.selection.iterator;
@@ -27,7 +27,7 @@ boldButton.addEventListener("click", function() {
   myDiagram.commitTransaction("change font style");
 });
 
-var italicButton = document.getElementById("italic");
+var italicButton = document.getElementById("botao-italico");
 italicButton.addEventListener("click", function() {
   myDiagram.startTransaction("change font style");
   var it = myDiagram.selection.iterator;
@@ -42,7 +42,7 @@ italicButton.addEventListener("click", function() {
   myDiagram.commitTransaction("change font style");
 });
 
-var underlineButton = document.getElementById("underline");
+var underlineButton = document.getElementById("botao-sublinhado");
 underlineButton.addEventListener("click", function() {
   myDiagram.startTransaction("change font style");
   var it = myDiagram.selection.iterator;
@@ -155,7 +155,7 @@ function setFontStyle(style, font, equalStyles){
   return newFont
 }
 
-
+/*
 $(function(){
 
     var inputColor = $('#inputColor');
@@ -174,6 +174,7 @@ $(function(){
     });
 
 });
+*/
 
 
 function setFont(newFont, font){
@@ -313,7 +314,7 @@ myDiagram.addDiagramListener("ChangedSelection", function() {
     var textBlock = node.findObject("TEXTBLOCK")
     if(shape !== null){
       var fillButton = document.getElementById("fill-icon")
-      fillButton.style = `background-color: ${shape.fill};`
+      //fillButton.style = `background-color: ${shape.fill};`
     }
     if(textBlock !== null){
 

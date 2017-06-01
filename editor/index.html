@@ -24,49 +24,75 @@
 <html>
 
 	<head>
+		<!-- Material design lite -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 		
+		<!-- GoJS -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.11/go-debug.js"></script>
+		
+		<!-- JQuery -->
 		<script src="js/jquery.js"></script>
+		
+		<!-- Modal -->
 		<link rel="stylesheet" href="dist/css/material-modal.min.css">
 		
+		<!-- Tela cheia -->
+		<script src="js/screenfull.js"></script>
 	</head>
   
-	<body style="background-color:#f5f5f5;" id="body">
-
-      <!-- Modal using Material Design Lite -->
-      <!--<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#modal">
-        Launch Modal
-      </a>-->
+	<body>
       
+      <!-- Modal para alteracao do titulo -->
       <div id="modal" class="modal modal__bg">
         <div class="modal__dialog">
           <div class="modal__content">
-            <!--<div class="modal__header">
+            <div class="modal__header">
               <div class="modal__title">
+                <h2 class="modal__title-text">Título do mapa</h2>
               </div>
-
-              <span class="mdl-button mdl-button--icon mdl-js-button  material-icons  modal__close"></span>
-            </div>-->
+            </div>
             <div class="modal__text">
               <p>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    <input class="mdl-textfield__input" type="text" id="div-field-titulo">
-			    <label class="mdl-textfield__label" for="div-field-titulo">Título</label>
+                <div class="mdl-textfield mdl-js-textfield">
+			    <input class="mdl-textfield__input" type="text" id="field-titulo" value="">
+			    <label class="mdl-textfield__label" for="field-titulo"></label>
 			  </div>
               </p>
             </div>
 
             <div class="modal__footer">
-              <a class="mdl-button mdl-button--colored mdl-js-button  modal__close">
-                Close
+              <a class="mdl-button mdl-button--colored mdl-js-button  modal__close" onclick="preencherTitulo()">
+                Salvar
               </a>
             </div>
           </div>
         </div>
       </div>
+      
+      <!-- Cartão com nome e descrição do mapa -->
+	<div class="mdl-card mdl-shadow--6dp" id="cartao-dados-mapa" style="width:320px;">
+	  <div class="mdl-card__title mdl-card--expand" style="background:#46B6AC;color:#fff;height:176px">
+	    <h3 class="mdl-card__title-text">Dados do Mapa</h3>
+	  </div>
+	  <div class="mdl-card__supporting-text">
+    		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+		    <input class="mdl-textfield__input" type="text" id="field-questao-mapa">
+		    <label class="mdl-textfield__label" for="field-questao-mapa">Questão de investigação</label>
+		  </div>
+		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+		    <textarea class="mdl-textfield__input" type="text" rows= "4" id="field-descricao-mapa" ></textarea>
+		    <label class="mdl-textfield__label" for="field-descricao-mapa">Descrição do mapa</label>
+		  </div>
+	  </div>
+	  <div class="mdl-card__menu">
+	    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="exibirOuOcultarDadosMapa()">
+		 <i class="material-icons" style="color:#fff;">close</i>
+	    </button>
+	  </div>
+	</div>
+			
 
 		
 		
@@ -76,71 +102,21 @@
 		<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="botao-adicionar-conceito">
 		  <i class="material-icons">add</i>
 		</button>
-		
-					<!--<button id="demo-show-toast" class="mdl-button mdl-js-button mdl-button--raised" type="button" style="display:none;" >Show Toast</button>
-					<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
-					  <div class="mdl-snackbar__text"></div>
-					  <button class="mdl-snackbar__action" type="button"></button>
-					</div>
-					<script>
-					(function() {
-					  'use strict';
-					  var snackbarContainer = document.querySelector('#demo-toast-example');
-					  var showToastButton = document.querySelector('#demo-show-toast');
-					  var body = document.getElementsByTagName("BODY")[0];
-					  
-					  body.addEventListener('click', function() {
-					    'use strict';
-					    var data = {message: 'Example Message'};
-					    snackbarContainer.MaterialSnackbar.showSnackbar(data);
-					  });
 
-					}());
-					</script>-->
-		
-		
-			<!-- Cartão com nome e descrição do mapa -->
-
-				<div class="mdl-card mdl-shadow--6dp" id="cartao-dados-mapa" style="width:320px;">
-				  <div class="mdl-card__title mdl-card--expand" style="background:#46B6AC;color:#fff;height:176px">
-				    <h3 class="mdl-card__title-text">Dados do Mapa</h3>
-				  </div>
-				  <div class="mdl-card__supporting-text">
-			    		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					    <input class="mdl-textfield__input" type="text" id="field-questao-mapa">
-					    <label class="mdl-textfield__label" for="field-questao-mapa">Questão de investigação</label>
-					  </div>
-					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					    <textarea class="mdl-textfield__input" type="text" rows= "4" id="field-descricao-mapa" ></textarea>
-					    <label class="mdl-textfield__label" for="field-descricao-mapa">Descrição do mapa</label>
-					  </div>
-				  </div>
-				  
-				  <!--<div class="mdl-card__actions mdl-card--border">
-				    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-					 Esconder
-				    </a>
-				  </div>-->
-				  
-				  <div class="mdl-card__menu">
-				    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="exibirOuOcultarDadosMapa()">
-					 <i class="material-icons" style="color:#fff;">close</i>
-				    </button>
-				  </div>
-				</div>
 			
 			<!-- Menu superior -->
 			<header class="mdl-layout__header">
-				<!--<div class="mdl-layout-icon"><i class="material-icons" style="font-size:32px;">arrow_back</i></div>-->
+			
 				<div class="mdl-layout__header-row" style="height:30px;">
-					<span class="mdl-layout__title modal__trigger" data-modal="#modal"><i>Documento sem título</i></span>
+					<span class="mdl-layout__title modal__trigger" data-modal="#modal" onclick="preencherInputTitulo()"><i id="titulo">Documento sem título</i></span>
 				</div>
+				
 				<div class="mdl-layout__header-row" style="height:30px;">
 					
 					<nav class="mdl-navigation" style="height:30px;">
 						<a class="mdl-navigation__link" href="#" id="nav-arquivo" style="padding:0 24px 0 0;line-height:25px;height:30px;">Arquivo</a>
 							<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="nav-arquivo">
-							  <li class="mdl-menu__item">Novo</li>
+							  <li class="mdl-menu__item" onclick="newMap()">Novo</li>
 							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Abrir</li>
 							  <li class="mdl-menu__item">Salvar</li>
 							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Salvar como...</li>
@@ -170,23 +146,6 @@
 							  <li class="mdl-menu__item" onclick="exibirOuOcultarDadosMapa()">Dados do Mapa</li>
 							</ul>
 					</nav>
-					
-					<div class="mdl-layout-spacer"></div>
-					
-					<!--<button class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#fff;" id="botao-compartilhar">
-					  <i class="material-icons">share</i>
-					</button>
-					<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="botao-compartilhar">
-					  <li class="mdl-menu__item">Facebook</li>
-					  <li class="mdl-menu__item">Instagram</li>
-					  <li class="mdl-menu__item">Twitter</li>
-					</ul>
-					
-					<button class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:#fff;">
-					  <i class="material-icons">delete</i>
-					</button>-->
-					
-					
 					
 				</div>
 				
@@ -261,14 +220,6 @@
 						  <i class="material-icons">zoom_out</i>
 						</button>
 						<span for="botao-menos-zoom" class="mdl-tooltip">Menos zoom</span>
-						
-						
-						
-						
-						<a class="mdl-navigation__link" href="#"></a>
-						<a class="mdl-navigation__link" href="#"></a>
-						<a class="mdl-navigation__link" href="#"></a>
-						<a class="mdl-navigation__link" href="#"></a>
 					</nav>
 					
 					<div class="mdl-layout-spacer"></div>
@@ -276,21 +227,10 @@
 					<span class="mdl-chip">
 					    <span class="mdl-chip__text" id="information"></span>
 					</span>
+					
 				</div>
 				
 			</header>
-			
-			<!-- Menu lateral -->
-			<!--<div class="mdl-layout__drawer">
-				<span class="mdl-layout__title">Material Design Lite</span>
-				<nav class="mdl-navigation">
-					<a class="mdl-navigation__link" href="#">Hello</a>
-					<a class="mdl-navigation__link" href="#">World.</a>
-					<a class="mdl-navigation__link" href="#">How</a>
-					<a class="mdl-navigation__link" href="#">Are</a>
-					<a class="mdl-navigation__link" href="#">You?</a>
-				</nav>
-			</div>-->
 		
 			<!-- Conteudo -->
 			<main id="myDiagram" class="mdl-layout__content" style="width:100%; height:500px; background-color: #ddd;">
@@ -308,8 +248,9 @@
 	var winAltura = $(window).height();
 	$('#myDiagram').css('height', winAltura-100);
 </script>
+
 <script src="js/editor.js"></script>
-<script src="js/screenfull.js"></script>
+<script src="js/toolbar.js"></script>
 <script src="dist/js/material-modal.min.js"></script>
 
 <script>
@@ -338,6 +279,17 @@ function telaCheia(){
 	if (screenfull.enabled) {
 		screenfull.toggle();
 	}
+}
+
+function preencherInputTitulo(){
+	$('#field-titulo').val($('#titulo').html());
+	//$('#field-titulo').parent().addClass('is-focused');
+	$('#field-titulo').focus();
+	$('#field-titulo').select();
+}
+
+function preencherTitulo(){
+	$('#titulo').html($('#field-titulo').val());
 }
 </script>
 
