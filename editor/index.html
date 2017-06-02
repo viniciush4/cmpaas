@@ -10,7 +10,7 @@
       margin-top: 130px;
       z-index: 900;
     }
-    #botao-adicionar-conceito {
+    /*#botao-adicionar-conceito {
       position: fixed;
       display: block;
       right: 0;
@@ -18,7 +18,7 @@
       margin-right: 40px;
       margin-bottom: 40px;
       z-index: 901;
-    }
+    }*/
 </style>
 
 <html>
@@ -45,7 +45,7 @@
 	<body>
       
       <!-- Modal para alteracao do titulo -->
-      <div id="modal" class="modal modal__bg">
+      <div id="modal-titulo" class="modal modal__bg">
         <div class="modal__dialog">
           <div class="modal__content">
             <div class="modal__header">
@@ -64,6 +64,33 @@
 
             <div class="modal__footer">
               <a class="mdl-button mdl-button--colored mdl-js-button  modal__close" onclick="preencherTitulo()">
+                Salvar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Modal Novo mapa -->
+      <div id="modal-novo-mapa" class="modal modal__bg">
+        <div class="modal__dialog">
+          <div class="modal__content">
+            <div class="modal__header">
+              <div class="modal__title">
+                <h2 class="modal__title-text">Novo mapa</h2>
+              </div>
+            </div>
+            <div class="modal__text">
+              <p>
+                Existem alterações não salvas no mapa. Deseja salvá-las antes de criar um novo mapa?
+              </p>
+            </div>
+
+            <div class="modal__footer">
+              <a class="mdl-button mdl-button--colored mdl-js-button  modal__close"  onclick="newMap();">
+                Fechar
+              </a>
+              <a class="mdl-button mdl-button--colored mdl-js-button">
                 Salvar
               </a>
             </div>
@@ -99,16 +126,16 @@
 		<!-- Elemento que receberá o estilo mdl -->
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 		
-		<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="botao-adicionar-conceito">
+		<!--<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="botao-adicionar-conceito">
 		  <i class="material-icons">add</i>
-		</button>
+		</button>-->
 
 			
 			<!-- Menu superior -->
 			<header class="mdl-layout__header">
 			
 				<div class="mdl-layout__header-row" style="height:30px;">
-					<span class="mdl-layout__title modal__trigger" data-modal="#modal" onclick="preencherInputTitulo()"><i id="titulo">Documento sem título</i></span>
+					<span class="mdl-layout__title modal__trigger" data-modal="#modal-titulo" onclick="preencherInputTitulo()" style="cursor:pointer;"><i id="titulo">Documento sem título</i></span>
 				</div>
 				
 				<div class="mdl-layout__header-row" style="height:30px;">
@@ -116,11 +143,12 @@
 					<nav class="mdl-navigation" style="height:30px;">
 						<a class="mdl-navigation__link" href="#" id="nav-arquivo" style="padding:0 24px 0 0;line-height:25px;height:30px;">Arquivo</a>
 							<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="nav-arquivo">
-							  <li class="mdl-menu__item" onclick="newMap()">Novo</li>
-							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Abrir</li>
-							  <li class="mdl-menu__item">Salvar</li>
-							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Salvar como...</li>
-							  <li class="mdl-menu__item">CMapTools</li>
+							  <li class="mdl-menu__item  modal__trigger" data-modal="#modal-novo-mapa" >Novo mapa</li>
+							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Abrir mapa</li>
+							  <li class="mdl-menu__item">Salvar mapa</li>
+							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Salvar mapa como...</li>
+							  <li class="mdl-menu__item">Importar mapa de CMapTools</li>
+							  <li class="mdl-menu__item">Exportar mapa para CMapTools</li>
 							</ul>
 							
 						<a class="mdl-navigation__link" href="#" id="nav-editar" style="padding:0 24px 0 0;line-height:25px;height:30px;">Editar</a>
@@ -137,7 +165,7 @@
 							<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="nav-visualizar">
 							  <li class="mdl-menu__item">Aumentar Zoom</li>
 							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Diminuir Zoom</li>
-							  <li class="mdl-menu__item" onclick="telaCheia(this)">Tela cheia</li>
+							  <li class="mdl-menu__item" onclick="telaCheia(this)">Exibir em Tela cheia</li>
 							</ul>
 						
 						<a class="mdl-navigation__link" href="#" id="nav-exibir" style="padding:0 24px 0 0;line-height:25px;height:30px;">Exibir</a>
@@ -151,6 +179,11 @@
 				
 				<div class="mdl-layout__header-row" style="background:#ececec;height:40px;color:#737373;" id="barra-ferramentas">
 					<nav class="mdl-navigation">
+						<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="botao-adicionar-conceito">
+						  <i class="material-icons">add</i>
+						</button>
+						<span for="botao-adicionar-conceito" class="mdl-tooltip">Adicionar conceito</span>
+						<span style="margin:0 10px;cursor:default;">|</span>
 						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-recortar">
 						  <i class="material-icons">content_cut</i>
 						</button>
@@ -180,12 +213,12 @@
 						<!--<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-cor-texto">
 						  <i class="material-icons">format_color_text</i>
 						</button>-->
-						<input type="color" id="botao-cor-texto"></input>
+						<input type="color" id="botao-cor-texto" style="margin-right:5px;"></input>
 						<span for="botao-cor-texto" class="mdl-tooltip">Cor do texto</span>
 						<!--<button class="mdl-button mdl-js-button mdl-button--icon"  id="botao-tamanho-texto">
 						  <i class="material-icons">format_size</i>
 						</button>-->
-						<select id="botao-estilo-fonte">
+						<select id="botao-estilo-fonte" style="margin-right:5px;">
 							 <option value="arial">Arial</option>
 							  <option value="sans-serif">Sans-Serif</option>
 							  <option value="times-new-roman">Times New Roman</option>
@@ -234,6 +267,7 @@
 		
 			<!-- Conteudo -->
 			<main id="myDiagram" class="mdl-layout__content" style="width:100%; height:500px; background-color: #ddd;">
+
 			
 
 			</main>
