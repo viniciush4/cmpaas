@@ -1,0 +1,141 @@
+/* Downloaded from http://www.codeseek.co/ */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+body, button, input {
+  font-family: Roboto;
+}
+
+body {
+  overflow: hidden;
+}
+
+.card {
+  margin: 20px auto;
+  min-width: 200px;
+  max-width: calc(90% - 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px 16px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.card button {
+  background: #47adb2;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 0;
+  border-radius: 2px;
+  padding: 12px 16px;
+  margin: 10px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  cursor: pointer;
+}
+.card button:hover {
+  background: #398a8e;
+}
+.card .copy {
+  font-size: 14px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+#tour {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+#tour .tour-overlay {
+  height: 0;
+  width: 0;
+  border-radius: 100%;
+  position: absolute;
+  visibility: visible;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition-property: height,width,box-shadow;
+  transition-property: height,width,box-shadow;
+  -webkit-transition-duration: 0.25s,0.25s,0.5s;
+          transition-duration: 0.25s,0.25s,0.5s;
+  -webkit-transition-delay: 0.25s,0.25s,0.75s;
+          transition-delay: 0.25s,0.25s,0.75s;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 0 0 120vmax rgba(0, 0, 0, 0.9);
+}
+#tour .tour-content {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+  font-size: 2em;
+  font-weight: 300;
+  color: white;
+}
+#tour .tour-cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#tour .tour-cover .side {
+  position: absolute;
+  height: 100vmax;
+  width: 100vmax;
+  visibility: visible;
+  pointer-events: all;
+}
+#tour .tour-cover .side:nth-child(1) {
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+#tour .tour-cover .side:nth-child(2) {
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+#tour .tour-cover .side:nth-child(3) {
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+#tour .tour-cover .side:nth-child(4) {
+  top: 50%;
+  right: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
