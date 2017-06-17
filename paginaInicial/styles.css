@@ -69,7 +69,7 @@ a img{
 
 .android-header {
   overflow: visible;
-  background-color: orange; 
+  background-color: #512DA8; 
 }
 
   .android-header .material-icons {
@@ -82,7 +82,7 @@ a img{
   }
 
   .android-header .mdl-navigation__link {
-    color: #757575;
+    color: white;
     font-weight: 700;
     font-size: 14px;
   }
@@ -179,7 +179,7 @@ a img{
   height: 800px;
   width: auto;
   background-color: #f3f3f3;
-  background: url('images/lampada.png') center 30% no-repeat;
+  background: url('images/lamp.png') center 30% no-repeat;
   background-size: cover;
 }
 
@@ -469,6 +469,8 @@ a img{
 .android-link-menu:hover {
   cursor: pointer;
 }
+
+
 
 
 /**** Mobile layout ****/
