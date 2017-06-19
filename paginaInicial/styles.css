@@ -34,7 +34,7 @@ a img{
 }
 
 .android-search-box .mdl-textfield__input {
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .android-header .mdl-menu__container {
@@ -73,7 +73,7 @@ a img{
 }
 
   .android-header .material-icons {
-    color: #767777 !important;
+    color: white !important;
   }
 
   .android-header .mdl-layout__drawer-button {
@@ -217,7 +217,7 @@ a img{
   position: relative;
   padding-top: 60px;
   padding-bottom: 80px;
-  background-color: #6ab344;
+  background-color: orange;
 }
 
 .android-screens {
