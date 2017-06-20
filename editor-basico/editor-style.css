@@ -39,6 +39,7 @@
 #barra-titulo {
 	height:30px;
 	padding-left:30px;
+	background-color:#311c9e;
 }
 
 #barra-titulo .mdl-layout__title {
@@ -48,6 +49,7 @@
 #barra-menu {
 	height:30px;
 	padding-left:30px;
+	background-color:#311c9e;
 }
 
 #barra-menu .mdl-navigation {
