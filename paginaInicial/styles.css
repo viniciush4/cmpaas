@@ -122,7 +122,7 @@ a img{
   }
 
     .android-navigation .mdl-navigation__link:hover {
-      border-bottom: 4px solid #8bc34a;
+      border-bottom: 4px solid orange;
     }
 
   .android-search-box {
@@ -217,7 +217,7 @@ a img{
   position: relative;
   padding-top: 60px;
   padding-bottom: 80px;
-  background-color: orange;
+  background-color: #FFA726;
 }
 
 .android-screens {
@@ -229,6 +229,13 @@ a img{
 
 .android-screen {
   text-align: center;
+}
+
+.android-screen-section .mdl-grid
+{
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .android-screen .android-link {
@@ -470,6 +477,54 @@ a img{
   cursor: pointer;
 }
 
+
+.mdl-card__media {
+    margin: 0;
+}
+.mdl-card__media > img {
+  max-width: 100%;
+}
+.mdl-card__actions {
+  display: flex;
+  box-sizing:border-box;
+  align-items: center;
+}
+.mdl-card__actions > .mdl-button--icon {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.isaque-card-image.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: url('images/isaque.jpg') center / cover;
+}
+.isaque-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.isaque-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.israel-card-image.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: url('images/israel.jpg') center / cover;
+}
+.israel-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.israel-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
 
 
 
