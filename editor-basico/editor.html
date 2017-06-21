@@ -37,7 +37,7 @@
 		     <div class="modal__content">
 		       <div class="modal__header">
 		         <div class="modal__title">
-		           <h2 class="modal__title-text">T√≠tulo do mapa</h2>
+		           <h2 class="modal__title-text">TÌtulo do mapa</h2>
 		         </div>
 		       </div>
 		       <div class="modal__text">
@@ -51,7 +51,7 @@
 
 		       <div class="modal__footer">
 		         <a class="mdl-button mdl-button--colored mdl-js-button  modal__close" onclick="preencherTitulo()">
-		           Salvar T√≠tulo
+		           Salvar TÌtulo
 		         </a>
 		       </div>
 		     </div>
@@ -64,18 +64,18 @@
 		     <div class="modal__content">
 		       <div class="modal__header">
 		         <div class="modal__title">
-		           <h2 class="modal__title-text">Deseja salvar as altera√ß√µes?</h2>
+		           <h2 class="modal__title-text">Deseja salvar as alteraÁıes?</h2>
 		         </div>
 		       </div>
 		       <div class="modal__text">
 		         <p>
-		           Existem altera√ß√µes n√£o salvas neste mapa. Se as altera√ß√µes forem descartadas n√£o ser√° poss√≠vel recuper√°-las posteriormente.
+		           Existem alteraÁıes n„o salvas neste mapa. Se as alteraÁıes forem descartadas n„o ser· possÌvel recuper·-las posteriormente.
 		         </p>
 		       </div>
 
 		       <div class="modal__footer">
 		         <a class="mdl-button mdl-button--colored mdl-js-button  modal__close"  onclick="newMap();">
-		           Descartar altera√ß√µes
+		           Descartar alteraÁıes
 		         </a>
 		         <a class="mdl-button mdl-button--colored mdl-js-button">
 		           Salvar
@@ -97,11 +97,11 @@
 		       <div class="modal__text">
     				  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%;">
 				    <input class="mdl-textfield__input" type="text" id="field-questao-mapa">
-				    <label class="mdl-textfield__label" for="field-questao-mapa">Quest√£o de investiga√ß√£o</label>
+				    <label class="mdl-textfield__label" for="field-questao-mapa">Quest„o de investigaÁ„o</label>
 				  </div>
 				  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%;">
 				    <textarea class="mdl-textfield__input" type="text" rows= "4" id="field-descricao-mapa" ></textarea>
-				    <label class="mdl-textfield__label" for="field-descricao-mapa">Descri√ß√£o do mapa</label>
+				    <label class="mdl-textfield__label" for="field-descricao-mapa">DescriÁ„o do mapa</label>
 				  </div>
 		       </div>
 
@@ -116,7 +116,7 @@
 		 
 		 
 		 
-		 <!-- Cart√£o com nome e descri√ß√£o do mapa -->
+		 <!-- Cart„o com nome e descriÁ„o do mapa -->
 		<div class="mdl-card mdl-shadow--6dp" id="cartao-dados-mapa">
 		  <div class="mdl-card__title mdl-card--expand">
 		    <h3 class="mdl-card__title-text">Dados do Mapa</h3>
@@ -124,11 +124,11 @@
 		  <div class="mdl-card__supporting-text">
 	    		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 			    <input class="mdl-textfield__input" type="text" id="field-questao-mapa">
-			    <label class="mdl-textfield__label" for="field-questao-mapa">Quest√£o de investiga√ß√£o</label>
+			    <label class="mdl-textfield__label" for="field-questao-mapa">Quest„o de investigaÁ„o</label>
 			  </div>
 			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 			    <textarea class="mdl-textfield__input" type="text" rows= "4" id="field-descricao-mapa" ></textarea>
-			    <label class="mdl-textfield__label" for="field-descricao-mapa">Descri√ß√£o do mapa</label>
+			    <label class="mdl-textfield__label" for="field-descricao-mapa">DescriÁ„o do mapa</label>
 			  </div>
 		  </div>
 		  <div class="mdl-card__menu">
@@ -138,43 +138,43 @@
 		  </div>
 		</div>
 	
-		<!-- Bot√£o de adicionar conceitos -->
+		<!-- Bot„o de adicionar conceitos -->
 		<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="botao-adicionar-conceito">
 		  <i class="material-icons">add</i>
 		</button>
 
-		<!-- Elemento que receber√° o estilo mdl -->
+		<!-- Elemento que receber· o estilo mdl -->
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 		
 			<!-- Menu superior -->
 			<header class="mdl-layout__header">
 			
-				<!-- Barra de T√≠tulo -->
+				<!-- Barra de TÌtulo -->
 				<div class="mdl-layout__header-row" id="barra-titulo">
 					<i id="icone-voltar" class="material-icons" onclick="history.back();">arrow_back</i>
 					<span class="mdl-layout__title modal__trigger" data-modal="#modal-titulo" onclick="preencherInputTitulo()">
-						<i id="titulo">Documento sem t√≠tulo</i>
+						<i id="titulo">Documento sem tÌtulo</i>
 					</span>
 					
-					<!-- Espa√ßamento -->
+					<!-- EspaÁamento -->
 					<div class="mdl-layout-spacer"></div>
 					
-					<!-- Bot√£o dados do mapa -->
+					<!-- Bot„o dados do mapa -->
 					<button class="mdl-button mdl-js-button mdl-button--icon apenas-telas-pequenas modal__trigger" data-modal="#modal-dados-mapa" style="margin-right:10px;">
 					  <i class="material-icons">info_outline</i>
 					</button>
 
-					<!-- Bot√£o salvar -->
+					<!-- Bot„o salvar -->
 					<button class="mdl-button mdl-js-button mdl-button--icon apenas-telas-pequenas" style="margin-right:10px;">
 					  <i class="material-icons">save</i>
 					</button>
 				
-					<!-- Bot√£o menu -->
+					<!-- Bot„o menu -->
 					<button class="mdl-button mdl-js-button mdl-button--icon apenas-telas-pequenas"  id="botao-menu">
 					  <i class="material-icons">more_vert</i>
 					</button>
 				
-					<!-- Op√ß√µes menu -->
+					<!-- OpÁıes menu -->
 					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect apenas-telas-pequenas" for="botao-menu">
 					  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider modal__trigger" data-modal="#modal-novo-mapa" >Novo mapa</li>
 					  <li class="mdl-menu__item modal__trigger" data-modal="#modal-novo-mapa" >Importar mapa de CMapTools</li>
@@ -256,7 +256,7 @@
 						<!--<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-italico">
 						  <i class="material-icons">format_italic</i>
 						</button>-->
-						<span for="label-botao-italico" class="mdl-tooltip">It√°lico</span>
+						<span for="label-botao-italico" class="mdl-tooltip">It·lico</span>
 						<label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="botao-sublinhado" id="label-botao-sublinhado">
 						  <input type="checkbox" id="botao-sublinhado" class="mdl-icon-toggle__input">
 						  <i class="mdl-icon-toggle__label material-icons">format_underlined</i>
