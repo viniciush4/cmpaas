@@ -15,16 +15,16 @@
 		<script src="js/jquery.js"></script>
 		
 		<!-- Modal -->
-		<link rel="stylesheet" href="dist/css/material-modal.min.css">
+		<link rel="stylesheet" href="css/material-modal.min.css">
 		
 		<!-- Tela cheia -->
 		<script src="js/screenfull.js"></script>
 		
 		<!-- Intro Js -->
-		<link href="introjs.css" rel="stylesheet">
+		<link href="css/introjs.css" rel="stylesheet">
 		
 		<!-- Editor -->
-		<link rel="stylesheet" href="editor-style.css">
+		<link rel="stylesheet" href="css/editor-style.css">
 	</head>
   
 	<body>
@@ -126,6 +126,7 @@
 			<header class="mdl-layout__header">
 			
 				<div class="mdl-layout__header-row" id="barra-titulo">
+					<i id="icone-voltar" class="material-icons" onclick="history.back();">arrow_back</i>
 					<span class="mdl-layout__title modal__trigger" data-modal="#modal-titulo" onclick="preencherInputTitulo()" data-step="1" data-intro="This is a tooltip!"><i id="titulo">Documento sem título</i></span>
 				</div>
 				
@@ -263,6 +264,19 @@
 					
 				</div>
 				
+				<div class="mdl-layout__header-row" id="dados-mapa-celular">
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--12-col">
+						</div>
+						<div class="mdl-cell mdl-cell--12-col">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				    				<textarea class="mdl-textfield__input" type="text" rows= "1" id="field-descricao-mapa" ></textarea>
+					    			<label class="mdl-textfield__label" for="field-descricao-mapa">Descrição do mapa</label>
+				  	</div>
+						</div>
+					</div>
+				</div>
+				
 			</header>
 		
 			<!-- Conteudo -->
@@ -287,7 +301,7 @@
 
 <script src="js/editor.js"></script>
 <script src="js/toolbar.js"></script>
-<script src="dist/js/material-modal.min.js"></script>
+<script src="js/material-modal.min.js"></script>
 <script type="text/javascript" src="js/intro.js"></script>
 
 <script>
