@@ -1,5 +1,182 @@
 <!DOCTYPE html>
 
+<style>
+
+.mdl-radio__outer-circle {
+	border: 2px solid rgba(255,255,255,0.75) !important;
+}
+
+.mdl-radio__inner-circle {
+	background: #fff !important;
+	border: 2px solid #fff !important;
+}
+
+
+
+@font-face {
+    font-family: roboto;
+    src: url(fontes/RobotoCondensed-Light.ttf);
+}
+
+body {
+	background-color:#311c9e;
+	font-family:roboto;
+	color:#fff !important;
+}
+
+#conteudo {
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	position:absolute;
+	margin:auto 10%;
+	height:100%;
+}
+
+#conteudo h1 {
+	font-size:250%;
+}
+
+
+
+#div-texto-base {
+	width:100%;
+	padding-top:0;
+}
+
+#field-texto-base {
+	border:2px solid #fff;
+	border-radius:1px;	
+}
+
+#div-botao-proximo {
+	text-align:right;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+.animated {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.3);
+    transform: scale(.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.3);
+    -ms-transform: scale(.3);
+    transform: scale(.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+/* Animation Timers
+---------------------------------*/
+.delay-01s { 
+	animation-delay: 0.1s; 
+	-webkit-animation-delay: 0.1s; 
+}
+.delay-02s { 
+	animation-delay: 0.2s; 
+	-webkit-animation-delay: 0.2s; 
+}
+.delay-03s { 
+	animation-delay: 0.3s; 
+	-webkit-animation-delay: 0.3s; 
+}
+.delay-04s { 
+	animation-delay: 0.4s; 
+	-webkit-animation-delay: 0.4s; 
+}
+
+.delay-05s { 
+	animation-delay: 0.5s; 
+	-webkit-animation-delay: 0.5s; 
+}
+.delay-06s { 
+	animation-delay: 0.6s; 
+	-webkit-animation-delay: 0.6s; 
+}
+
+.delay-07s { 
+	animation-delay: 0.7s; 
+	-webkit-animation-delay: 0.7s; 
+}
+.delay-08s { 
+	animation-delay: 0.8s; 
+	-webkit-animation-delay: 0.8s; 
+}
+
+.delay-09s { 
+	animation-delay: 0.9s; 
+	-webkit-animation-delay: 0.9s; 
+}
+.delay-1s { 
+	animation-delay: 1s; 
+	-webkit-animation-delay: 1s; 
+}
+.delay-12s { 
+	animation-delay: 1.2s; 
+	-webkit-animation-delay: 1.2s; 
+}
+</style>
+
 <html>
 
 	<head>
@@ -8,374 +185,58 @@
 		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css">
 		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 		
-		<!-- GoJS -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.11/go-debug.js"></script>
+		<meta name="viewport" content="width=device-width">
 		
-		<!-- JQuery -->
-		<script src="js/jquery.js"></script>
-		
-		<!-- Modal -->
-		<link rel="stylesheet" href="css/material-modal.min.css">
-		
-		<!-- Tela cheia -->
-		<script src="js/screenfull.js"></script>
-		
-		<!-- Intro Js -->
-		<link href="css/introjs.css" rel="stylesheet">
-		
-		<!-- Editor -->
-		<link rel="stylesheet" href="css/editor-style.css">
 	</head>
   
 	<body>
-	
-		 <!-- Modal para alteracao do titulo -->
-		 <div id="modal-titulo" class="modal modal__bg">
-		   <div class="modal__dialog">
-		     <div class="modal__content">
-		       <div class="modal__header">
-		         <div class="modal__title">
-		           <h2 class="modal__title-text">Título do mapa</h2>
-		         </div>
-		       </div>
-		       <div class="modal__text">
-		         <p>
-		           <div class="mdl-textfield mdl-js-textfield">
-				    <input class="mdl-textfield__input" type="text" id="field-titulo" value="">
-				    <label class="mdl-textfield__label" for="field-titulo"></label>
-				  </div>
-		         </p>
-		       </div>
-
-		       <div class="modal__footer">
-		         <a class="mdl-button mdl-button--colored mdl-js-button  modal__close" onclick="preencherTitulo()">
-		           Salvar Título
-		         </a>
-		       </div>
-		     </div>
-		   </div>
-		 </div>
-		 
-		 <!-- Modal Novo mapa -->
-		 <div id="modal-novo-mapa" class="modal modal__bg">
-		   <div class="modal__dialog">
-		     <div class="modal__content">
-		       <div class="modal__header">
-		         <div class="modal__title">
-		           <h2 class="modal__title-text">Deseja salvar as alterações?</h2>
-		         </div>
-		       </div>
-		       <div class="modal__text">
-		         <p>
-		           Existem alterações não salvas neste mapa. Se as alterações forem descartadas não será possível recuperá-las posteriormente.
-		         </p>
-		       </div>
-
-		       <div class="modal__footer">
-		         <a class="mdl-button mdl-button--colored mdl-js-button  modal__close"  onclick="newMap();">
-		           Descartar alterações
-		         </a>
-		         <a class="mdl-button mdl-button--colored mdl-js-button">
-		           Salvar
-		         </a>
-		       </div>
-		     </div>
-		   </div>
-		 </div>
-		 
-		 <!-- Modal dados do mapa -->
-		 <div id="modal-dados-mapa" class="modal modal__bg">
-		   <div class="modal__dialog">
-		     <div class="modal__content">
-		       <div class="modal__header">
-		         <div class="modal__title">
-		           <h2 class="modal__title-text">Dados deste mapa</h2>
-		         </div>
-		       </div>
-		       <div class="modal__text">
-    				  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%;">
-				    <input class="mdl-textfield__input" type="text" id="field-questao-mapa">
-				    <label class="mdl-textfield__label" for="field-questao-mapa">Questão de investigação</label>
-				  </div>
-				  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%;">
-				    <textarea class="mdl-textfield__input" type="text" rows= "4" id="field-descricao-mapa" ></textarea>
-				    <label class="mdl-textfield__label" for="field-descricao-mapa">Descrição do mapa</label>
-				  </div>
-		       </div>
-
-		       <div class="modal__footer">
-		         <a class="mdl-button mdl-button--colored mdl-js-button  modal__close">
-		           Salvar dados
-		         </a>
-		       </div>
-		     </div>
-		   </div>
-		 </div>
-		 
-		 
-		 
-		 <!-- Cartão com nome e descrição do mapa -->
-		<div class="mdl-card mdl-shadow--6dp" id="cartao-dados-mapa">
-		  <div class="mdl-card__title mdl-card--expand">
-		    <h3 class="mdl-card__title-text">Dados do Mapa</h3>
-		  </div>
-		  <div class="mdl-card__supporting-text">
-	    		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    <input class="mdl-textfield__input" type="text" id="field-questao-mapa">
-			    <label class="mdl-textfield__label" for="field-questao-mapa">Questão de investigação</label>
-			  </div>
-			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    <textarea class="mdl-textfield__input" type="text" rows= "4" id="field-descricao-mapa" ></textarea>
-			    <label class="mdl-textfield__label" for="field-descricao-mapa">Descrição do mapa</label>
-			  </div>
-		  </div>
-		  <div class="mdl-card__menu">
-		    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="exibirOuOcultarDadosMapa()">
-			 <i class="material-icons">close</i>
-		    </button>
-		  </div>
+		<div id="conteudo">
+			<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--12-col">
+					<i class="material-icons">arrow_back</i>
+				</div>
+				<div class="mdl-cell mdl-cell--12-col">
+					<h1 class="fadeInDown animated">Qual o tipo de representação?</h1>
+				</div>
+				<div class="mdl-cell mdl-cell--3-col fadeInDown animated delay-01s">
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-1">
+						<input type="radio" id="list-option-1" class="mdl-radio__button" name="options" value="1" checked />
+					</label>
+				  	Representação baseada em texto
+		  		</div>
+				<div class="mdl-cell mdl-cell--3-col fadeInDown animated delay-01s">
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-2">
+						<input type="radio" id="list-option-2" class="mdl-radio__button" name="options" value="2" />
+					</label>
+					Sumarização baseada em texto
+				</div>
+				<div class="mdl-cell mdl-cell--3-col fadeInDown animated delay-01s">
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-3">
+						<input type="radio" id="list-option-3" class="mdl-radio__button" name="options" value="3" />
+					</label>
+					Síntese baseada em texto e domínio
+				</div>
+				<div class="mdl-cell mdl-cell--3-col fadeInDown animated delay-01s">
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-4">
+						<input type="radio" id="list-option-4" class="mdl-radio__button" name="options" value="4" />
+					</label>
+					Sumarização baseada em domínio
+				</div>
+				<div class="mdl-cell mdl-cell--12-col">
+					<h1 class="fadeInDown animated delay-02s">Qual é o texto base?</h1>
+					<div class="mdl-textfield mdl-js-textfield" id="div-texto-base">
+				    		<textarea class="mdl-textfield__input" type="text" rows="8" id="field-texto-base" ></textarea>
+				  	</div>
+				</div>
+				<div class="mdl-cell mdl-cell--12-col">
+				<div id="div-botao-proximo">
+				  	<button onclick="window.location.replace('editor.html')" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored zoomIn animated delay-03s">
+						<i class="material-icons">arrow_forward</i>
+					</button>
+				</div>
+				</div>
+			</div>
 		</div>
-	
-		<!-- Botão de adicionar conceitos -->
-		<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="botao-adicionar-conceito">
-		  <i class="material-icons">add</i>
-		</button>
-
-		<!-- Elemento que receberá o estilo mdl -->
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-		
-			<!-- Menu superior -->
-			<header class="mdl-layout__header">
-			
-				<!-- Barra de Título -->
-				<div class="mdl-layout__header-row" id="barra-titulo">
-					<i id="icone-voltar" class="material-icons" onclick="history.back();">arrow_back</i>
-					<span class="mdl-layout__title modal__trigger" data-modal="#modal-titulo" onclick="preencherInputTitulo()">
-						<i id="titulo">Documento sem título</i>
-					</span>
-					
-					<!-- Espaçamento -->
-					<div class="mdl-layout-spacer"></div>
-					
-					<!-- Botão dados do mapa -->
-					<button class="mdl-button mdl-js-button mdl-button--icon apenas-telas-pequenas modal__trigger" data-modal="#modal-dados-mapa" style="margin-right:10px;">
-					  <i class="material-icons">info_outline</i>
-					</button>
-
-					<!-- Botão salvar -->
-					<button class="mdl-button mdl-js-button mdl-button--icon apenas-telas-pequenas" style="margin-right:10px;">
-					  <i class="material-icons">save</i>
-					</button>
-				
-					<!-- Botão menu -->
-					<button class="mdl-button mdl-js-button mdl-button--icon apenas-telas-pequenas"  id="botao-menu">
-					  <i class="material-icons">more_vert</i>
-					</button>
-				
-					<!-- Opções menu -->
-					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect apenas-telas-pequenas" for="botao-menu">
-					  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider modal__trigger" data-modal="#modal-novo-mapa" >Novo mapa</li>
-					  <li class="mdl-menu__item modal__trigger" data-modal="#modal-novo-mapa" >Importar mapa de CMapTools</li>
-					  <li class="mdl-menu__item">Exportar este mapa para CMapTools</li>
-					</ul>
-					
-				</div>
-				
-				<!-- Barra de menus -->
-				<div class="mdl-layout__header-row" id="barra-menu">
-					
-					<nav class="mdl-navigation" >
-						<a class="mdl-navigation__link" href="#" id="nav-arquivo">Arquivo</a>
-							<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="nav-arquivo">
-							  <li class="mdl-menu__item  modal__trigger" data-modal="#modal-novo-mapa" >Novo mapa</li>
-							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Abrir mapa</li>
-							  <li class="mdl-menu__item">Salvar mapa</li>
-							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Salvar mapa como...</li>
-							  <li class="mdl-menu__item">Importar mapa de CMapTools</li>
-							  <li class="mdl-menu__item">Exportar mapa para CMapTools</li>
-							</ul>
-							
-						<a class="mdl-navigation__link" href="#" id="nav-editar">Editar</a>
-							<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="nav-editar">
-							  <li class="mdl-menu__item">Desfazer</li>
-							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Refazer</li>
-							  <li class="mdl-menu__item">Recortar</li>
-							  <li class="mdl-menu__item">Copiar</li>
-							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Colar</li>
-							  <li class="mdl-menu__item">Selecionar tudo</li>
-							</ul>
-						
-						<a class="mdl-navigation__link" href="#" id="nav-visualizar">Visualizar</a>
-							<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="nav-visualizar">
-							  <li class="mdl-menu__item">Aumentar Zoom</li>
-							  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Diminuir Zoom</li>
-							  <li class="mdl-menu__item" onclick="telaCheia(this)">Visualizar em Tela cheia</li>
-							</ul>
-						
-						<a class="mdl-navigation__link" href="#" id="nav-exibir">Exibir</a>
-							<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="nav-exibir">
-							  <li class="mdl-menu__item" onclick="exibirOuOcultarBarraDeFerramentas()">Barra de Ferramentas</li>
-							  <li class="mdl-menu__item" onclick="exibirOuOcultarDadosMapa()">Dados do Mapa</li>
-							</ul>
-					</nav>
-					
-				</div>
-				
-				<!-- Barra de ferramentas -->
-				<div class="mdl-layout__header-row" id="barra-ferramentas">
-					<nav class="mdl-navigation">
-						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-recortar">
-						  <i class="material-icons">content_cut</i>
-						</button>
-						<span for="botao-recortar" class="mdl-tooltip">Recortar</span>
-						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-copiar">
-						  <i class="material-icons">content_copy</i>
-						</button>
-						<span for="botao-copiar" class="mdl-tooltip">Copiar</span>
-						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-colar">
-						  <i class="material-icons">content_paste</i>
-						</button>
-						<span for="botao-colar" class="mdl-tooltip">Colar</span>
-						<span style="margin:0 10px;cursor:default;">|</span>
-						<label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="botao-negrito" id="label-botao-negrito">
-						  <input type="checkbox" id="botao-negrito" class="mdl-icon-toggle__input">
-						  <i class="mdl-icon-toggle__label material-icons">format_bold</i>
-						  
-						</label>
-						<!--<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-negrito">
-						  <i class="material-icons">format_bold</i>
-						</button>-->
-						<span for="label-botao-negrito" class="mdl-tooltip">Negrito</span>
-						<label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="botao-italico" id="label-botao-italico">
-						  <input type="checkbox" id="botao-italico" class="mdl-icon-toggle__input">
-						  <i class="mdl-icon-toggle__label material-icons">format_italic</i>
-						  
-						</label>
-						<!--<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-italico">
-						  <i class="material-icons">format_italic</i>
-						</button>-->
-						<span for="label-botao-italico" class="mdl-tooltip">Itálico</span>
-						<label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="botao-sublinhado" id="label-botao-sublinhado">
-						  <input type="checkbox" id="botao-sublinhado" class="mdl-icon-toggle__input">
-						  <i class="mdl-icon-toggle__label material-icons">format_underlined</i>
-						  
-						</label>
-						<!--<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-sublinhado">
-						  <i class="material-icons">format_underlined</i>
-						</button>-->
-						<span for="label-botao-sublinhado" class="mdl-tooltip">Sublinhado</span>
-						<span style="margin:0 10px;cursor:default;">|</span>
-						<input type="color" id="botao-cor-texto" style="margin-right:5px;" class="apenas-telas-grandes"></input>
-						<span for="botao-cor-texto" class="mdl-tooltip">Cor do texto</span>
-						<select id="botao-estilo-fonte" style="margin-right:5px;" class="apenas-telas-grandes">
-							 <option value="arial">Arial</option>
-							  <option value="sans-serif">Sans-Serif</option>
-							  <option value="times-new-roman">Times New Roman</option>
-						</select>
-						<span for="botao-estilo-fonte" class="mdl-tooltip">Estilo da fonte</span>
-						<select id="botao-tamanho-texto" class="apenas-telas-grandes">
-							 <option value="12">12</option>
-							  <option value="14">14</option>
-							  <option value="16">16</option>
-						</select>
-						<span for="botao-tamanho-texto" class="mdl-tooltip">Tamanho do texto</span>
-						<span style="margin:0 10px;cursor:default;" class="apenas-telas-grandes">|</span>
-						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-desfazer">
-						  <i class="material-icons">undo</i>
-						</button>
-						<span for="botao-desfazer" class="mdl-tooltip">Desfazer</span>
-						<button class="mdl-button mdl-js-button mdl-button--icon" id="botao-refazer">
-						  <i class="material-icons">redo</i>
-						</button>
-						<span for="botao-refazer" class="mdl-tooltip">Refazer</span>
-						<span style="margin:0 10px;cursor:default;" class="apenas-telas-grandes">|</span>
-						<button class="mdl-button mdl-js-button mdl-button--icon apenas-telas-grandes" id="botao-selecionar-tudo">
-						  <i class="material-icons">select_all</i>
-						</button>
-						<span for="botao-selecionar-tudo" class="mdl-tooltip">Selecionar tudo</span>
-						<span style="margin:0 10px;cursor:default;" class="apenas-telas-grandes">|</span>
-						<button class="mdl-button mdl-js-button mdl-button--icon apenas-telas-grandes" id="botao-mais-zoom">
-						  <i class="material-icons">zoom_in</i>
-						</button>
-						<span for="botao-mais-zoom" class="mdl-tooltip">Mais zoom</span>
-						<button class="mdl-button mdl-js-button mdl-button--icon apenas-telas-grandes" id="botao-menos-zoom">
-						  <i class="material-icons">zoom_out</i>
-						</button>
-						<span for="botao-menos-zoom" class="mdl-tooltip">Menos zoom</span>
-					</nav>
-					
-					<div class="mdl-layout-spacer"></div>
-						
-					<!--<span class="mdl-chip">
-					    <span class="mdl-chip__text" id="information"></span>
-					</span>-->
-					
-				</div>
-				
-			</header>
-		
-			<!-- Conteudo -->
-			<main id="myDiagram" class="mdl-layout__content" ondblclick="$(this).css('background-image', 'none')">
-
-			
-
-			</main>
-		
-		</div>
-		
 	</body>
 	
 </html>
-
-<script>
-	var winAltura = $(window).height();
-	$('#myDiagram').css('height', winAltura-100);
-	
-	//$(function(){introJs().start()});
-</script>
-
-<script src="js/editor.js"></script>
-<script src="js/toolbar.js"></script>
-<script src="js/material-modal.min.js"></script>
-<script type="text/javascript" src="js/intro.js"></script>
-
-<script>
-
-function exibirOuOcultarDadosMapa(){
-	if($('#cartao-dados-mapa').css('display') == 'none'){
-		$('#cartao-dados-mapa').css('display', 'block');
-	}
-	else
-	{
-		$('#cartao-dados-mapa').css('display', 'none');
-	}
-}
-
-function exibirOuOcultarBarraDeFerramentas(){
-	if($('#barra-ferramentas').css('display') == 'none'){
-		$('#barra-ferramentas').css('display', 'flex');
-	}
-	else
-	{
-		$('#barra-ferramentas').css('display', 'none');
-	}
-}
-
-function telaCheia(){
-	if (screenfull.enabled) {
-		screenfull.toggle();
-	}
-}
-
-function preencherInputTitulo(){
-	$('#field-titulo').val($('#titulo').html());
-	//$('#field-titulo').parent().addClass('is-focused');
-	//$('#field-titulo').focus();
-	$('#field-titulo').select();
-}
-
-function preencherTitulo(){
-	$('#titulo').html($('#field-titulo').val());
-}
-</script>
-
