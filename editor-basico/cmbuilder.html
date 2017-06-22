@@ -30,15 +30,30 @@ body {
 	left:0;
 	right:0;
 	position:absolute;
-	margin:auto 30%;
-	height:100px;
-	text-align:center;
+	margin:auto 10%;
+	height:100%;
 }
 
 #conteudo h1 {
 	font-size:250%;
-	padding:0;
-	margin:0;
+}
+
+
+
+#div-texto-base {
+	width:100%;
+	padding-top:0;
+}
+
+#field-texto-base {
+	border:2px solid #fff;
+	border-radius:1px;
+	padding:10px;	
+	margin-left:-10px;
+}
+
+#div-botao-proximo {
+	text-align:right;
 }
 
 @-webkit-keyframes fadeInDown {
@@ -174,33 +189,58 @@ body {
 		
 		<meta name="viewport" content="width=device-width">
 		
-		<!-- JQuery -->
-		<script src="js/jquery.js"></script>
-		
 	</head>
   
 	<body>
-		<div id="conteudo">
-			<img src="img/logo-cmbuilder.png" height="60" width="60" class="animated zoomIn delay-01s">
-			<h1 class="animated fadeInDown">CMBuilder</h1>
+		<form action="editor.html">
+			<div id="conteudo">
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--12-col">
+						<i class="material-icons">arrow_back</i>
+					</div>
+					<div class="mdl-cell mdl-cell--12-col">
+						<h1 class="fadeInDown animated">Qual o tipo de representação?</h1>
+					</div>
+					<div class="mdl-cell mdl-cell--3-col fadeInDown animated delay-01s">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-1">
+							<input type="radio" id="list-option-1" class="mdl-radio__button" name="options" value="1" checked />
+						</label>
+					  	Representação baseada em texto
+			  		</div>
+					<div class="mdl-cell mdl-cell--3-col fadeInDown animated delay-01s">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-2">
+							<input type="radio" id="list-option-2" class="mdl-radio__button" name="options" value="2" />
+						</label>
+						Sumarização baseada em texto
+					</div>
+					<div class="mdl-cell mdl-cell--3-col fadeInDown animated delay-01s">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-3">
+							<input type="radio" id="list-option-3" class="mdl-radio__button" name="options" value="3" />
+						</label>
+						Síntese baseada em texto e domínio
+					</div>
+					<div class="mdl-cell mdl-cell--3-col fadeInDown animated delay-01s">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-4">
+							<input type="radio" id="list-option-4" class="mdl-radio__button" name="options" value="4" />
+						</label>
+						Sumarização baseada em domínio
+					</div>
+					<div class="mdl-cell mdl-cell--12-col">
+						<h1 class="fadeInDown animated delay-02s">Qual é o texto base?</h1>
+						<div class="mdl-textfield mdl-js-textfield" id="div-texto-base">
+					    		<textarea class="mdl-textfield__input" type="text" rows="8" id="field-texto-base" ></textarea>
+					  	</div>
+					</div>
+					<div class="mdl-cell mdl-cell--12-col">
+					<div id="div-botao-proximo">
+					  	<button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored zoomIn animated delay-03s">
+							<i class="material-icons">arrow_forward</i>
+						</button>
+					</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 	
 </html>
-
-<script>
-$(document).ready(function(){
-	// códigos jQuery a serem executados quando a página carregar
-	sleep(2000);
-	window.location.href = "cmbuilder.html";
- });
-
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-    }
-  }
-</script>
