@@ -60,6 +60,22 @@ a img{
   display: none !important;
 }
 
+.logoPrincipal
+{
+  height: 50px;
+  width: 300px;
+}
+.logoCentral
+{
+  height: 35px;
+  width: 120px; 
+}
+.logoLateral
+{
+  height: 80px;
+  width: 220px;
+  margin-top: 40px;
+}
 
 .android-logo-image {
   height: 50px;
@@ -708,6 +724,27 @@ a img{
 
 
 /**** Mobile layout ****/
+
+@media (max-width: 1200px){
+.logoPrincipal
+{
+  height: 40px;
+  width: 200px;
+}
+}
+@media (max-width: 1000px){
+.logoPrincipal
+{
+  display: none;
+}
+}
+
+@media only screen and (min-width: 480px) { ... }
+@media only screen and (min-width: 600px) { ... }
+@media only screen and (min-width: 768px) { ... }
+@media only screen and (min-width: 992px) { ... }
+@media only screen and (min-width: 1382px) { ... }
+
 @media (max-width: 900px) {
 
 .mdl-layout__drawer-button
