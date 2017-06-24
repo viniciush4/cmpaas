@@ -60,16 +60,32 @@ a img{
   display: none !important;
 }
 
+.logoPrincipal
+{
+  height: 50px;
+  width: 300px;
+}
+.logoCentral
+{
+  height: 35px;
+  width: 120px; 
+}
+.logoLateral
+{
+  height: 80px;
+  width: 220px;
+  margin-top: 40px;
+}
 
 .android-logo-image {
-  height: 40px;
-  width: 150px;
+  height: 50px;
+  width: 300px;
 }
 
 
 .android-header {
   overflow: visible;
-  background-color: #512DA8; 
+  background-color: #311c9e; 
 }
 
   .android-header .material-icons {
@@ -150,7 +166,7 @@ a img{
 
   .android-drawer-separator {
     height: 1px;
-    background-color: #dcdcdc;
+    background-color: #311c9e;
     margin: 8px 0;
   }
 
@@ -165,7 +181,7 @@ a img{
 
   .android-drawer .mdl-layout-title {
     position: relative;
-    background: #6ab344;
+    background: #311c9e;
     height: 160px;
   }
 
@@ -186,15 +202,15 @@ a img{
 .logo-font {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   line-height: 1;
-  color: #6ab344;
+  color: #ff3d00;
   font-weight: 500;
   text-align: left;
   margin-left: 50px;
 }
 
 .android-slogan {
-  font-size: 30px;
-  padding-top: 10px;
+  font-size: 40px;
+  padding-top: 200px;
 }
 
 .android-sub-slogan {
@@ -682,12 +698,53 @@ a img{
 
 
 
-
-
-
+.contato-card
+{
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background-color: #FFA726;
+}
+.contato
+{
+  position: relative;
+  padding-bottom: 30%;
+  height: 0;
+  overflow: hidden;
+  background-color: #FFA726;
+}
+.contato iframe
+{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90% !important;
+  height: 90% !important;
+}
 
 
 /**** Mobile layout ****/
+
+@media (max-width: 1200px){
+.logoPrincipal
+{
+  height: 40px;
+  width: 200px;
+}
+}
+@media (max-width: 1000px){
+.logoPrincipal
+{
+  display: none;
+}
+}
+
+@media only screen and (min-width: 480px) { ... }
+@media only screen and (min-width: 600px) { ... }
+@media only screen and (min-width: 768px) { ... }
+@media only screen and (min-width: 992px) { ... }
+@media only screen and (min-width: 1382px) { ... }
+
 @media (max-width: 900px) {
 
 .mdl-layout__drawer-button
@@ -768,4 +825,11 @@ a img{
   .android-footer .mdl-mega-footer--bottom-section {
     display: none;
   }
+
+.contato
+{
+  padding-bottom: 55%;
+}
+
+
 }

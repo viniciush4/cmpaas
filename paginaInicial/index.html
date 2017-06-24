@@ -23,7 +23,7 @@
 		<meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 		
-		<link rel="icon" href="images/icone.ico" type="image/x-icon" />
+		<link rel="icon" href="images/icone1.ico" type="image/x-icon" />
 		<title>Portal do Conhecimento</title>
 
 		<!-- Page styles -->
@@ -35,25 +35,25 @@
 		
 		
 		<link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.1/material.teal-red.min.css" />
-		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="css/animate.css" rel="stylesheet" type="text/css">
 		<script src="//storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
 
 
 <!-- Teste -->
 
 
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 
 <link href="css/linecons.css" rel="stylesheet" type="text/css">
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
 <link href="css/responsive.css" rel="stylesheet" type="text/css">
-<link href="css/animate.css" rel="stylesheet" type="text/css">
+
 
 <link href='http://fonts.googleapis.com/css?family=Lato:400,900,700,700italic,400italic,300italic,300,100italic,100,900italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Dosis:400,500,700,800,600,300,200' rel='stylesheet' type='text/css'>
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
 
@@ -115,11 +115,11 @@ function resizeText() {
 			<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
 				<div class="mdl-layout__header-row">
 
-<!--					
+					
 					<span class="android-title mdl-layout-title">
-						<img class="android-logo-image" src="images/portal1.png">
+						<img class="logoPrincipal" src="images/logoPrincipal.png">
 					</span>
- -->
+ 
          
           			<!-- Add spacer, to align navigation to the right in desktop -->
 					<div class="android-header-spacer mdl-layout-spacer"></div>
@@ -137,14 +137,14 @@ function resizeText() {
 						<nav class="android-navigation mdl-navigation">
 							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Início</a>
 							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="#sobre">Sobre</a>
-							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Serviços</a>
+							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="#servico">Serviços</a>
 							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Publicações</a>
 							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Editores</a>
 							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Contato</a>
 						</nav>
 					</div>
 					<span class="android-mobile-title mdl-layout-title">
-						<img class="android-logo-image" src="images/android-logo.png">
+						<img class="logoCentral" src="images/logoCentral.png">
 					</span>
 					<button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
 						<i class="material-icons">more_vert</i>
@@ -160,7 +160,7 @@ function resizeText() {
 
 			<div class="android-drawer mdl-layout__drawer">
 				<span class="mdl-layout-title">
-					<img class="android-logo-image" src="images/android-logo-white.png">
+					<img class="logoLateral" src="images/logoLateral.png">
 				</span>
 				<nav class="mdl-navigation">
 					<a class="mdl-navigation__link" href="">Início</a>
@@ -197,6 +197,17 @@ function resizeText() {
 			<div class="android-content mdl-layout__content">
         			<a name="top"></a>
 				<div class="android-be-together-section mdl-typography--text-center">
+					
+					<div class="logo-font android-slogan">
+						<b>Elabore</b></br> <b>Mapas Conceituais</b>
+					</div>
+					<div class="logo-font android-sub-slogan">
+						Experimente o Editor</br></br>
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+							Comece Já
+						</button>
+					</div>
+				
 
 <!--
 					<div class="logo-font android-slogan">Portal do Conhecimento </br> Baseado em Mapas Conceituais</div>
@@ -206,13 +217,16 @@ function resizeText() {
 					  <a href=""><img src="images/andy.png"> create your android character</a>
 					</div>
 -->
+
 					<a href="#screens">
 						<button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
 							<i class="material-icons">expand_more</i>
 						</button>
 					</a>
+
 				</div>
-				<div class="android-screen-section mdl-typography--text-center">
+				
+				<div id="servico" class="android-screen-section mdl-typography--text-center">
 					<a name="screens"></a>
 					<div class="mdl-typography--display-1-color-contrast">
 						Serviços em Destaque
@@ -412,8 +426,31 @@ function resizeText() {
 					</div>
 					<div class="android-card-container mdl-grid">
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-							<div class="mdl-card__media">
+							<div class="mdl-card__media team-leader wow fadeInDown delay-03s">
+								<div class="team-leader-shadow">
+									<a href="javascript:void(0)"></a>
+								</div>
 								<img src="images/dede.jpg">
+								<ul>
+									<li>
+										<a href="https://twitter.com/dedecury" target="blank" class="fa-twitter"></a>
+									</li>
+									<li>
+										<a href="https://www.facebook.com/dede.cury.1" target="blank" class="fa-facebook"></a>
+									</li>
+									<li>
+										<a href="https://www.linkedin.com/in/dede-cury-98aa2720" target="blank" class="fa-linkedin"></a>
+									</li>
+									<li>
+										<a href="https://plus.google.com/104140632538430866888" target="blank" class="fa-google-plus"></a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" target="blank" class="fa-instagram"></a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" target="blank" class="fa-github"></a>
+									</li>
+								</ul>
 							</div>
 							<div class="mdl-card__title">
 								<h4 class="mdl-card__title-text">Davidson Cury</h4>								
@@ -424,16 +461,33 @@ function resizeText() {
 							<div class="mdl-card__supporting-text">
 								<span class="mdl-typography--font-light mdl-typography--subhead">Professor Titular do Departamento de Informática da Universidade Federal do Espírito Santo (UFES)</span>
 							</div>
-							<div class="mdl-card__actions">
-								<a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-									Make the switch
-									<i class="material-icons">chevron_right</i>
-								</a>
-							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-							<div class="mdl-card__media">
+							<div class="mdl-card__media team-leader wow fadeInDown delay-03s">
+								<div class="team-leader-shadow">
+									<a href="javascript:void(0)"></a>
+								</div>
 								<img src="images/wagner.jpg">
+								<ul>
+									<li>
+										<a href="https://twitter.com/wagneraperin" target="blank" class="fa-twitter"></a>
+									</li>
+									<li>
+										<a href="https://www.facebook.com/wagnerperin" target="blank" class="fa-facebook"></a>
+									</li>
+									<li>
+										<a href="https://br.linkedin.com/in/wagner-de-andrade-perin-7a477a60" target="blank" class="fa-linkedin"></a>
+									</li>
+									<li>
+										<a href="https://plus.google.com/115161195251114240231" target="blank" class="fa-google-plus"></a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/wagnerperin/" target="blank" class="fa-instagram"></a>
+									</li>
+									<li>
+										<a href="https://github.com/wagnerperin" target="blank" class="fa-github"></a>
+									</li>
+								</ul>
 							</div>
 							<div class="mdl-card__title">
 								<h4 class="mdl-card__title-text">Wagner Perin</h4>
@@ -444,16 +498,33 @@ function resizeText() {
 							<div class="mdl-card__supporting-text">
 								<span class="mdl-typography--font-light mdl-typography--subhead">Mestre em Informática e Analista de T.I. da Universidade Federal do Espírito Santo (UFES)</span>
 							</div>
-							<div class="mdl-card__actions">
-								<a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-									androidify.com
-									<i class="material-icons">chevron_right</i>
-								</a>
-							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-							<div class="mdl-card__media">
+							<div class="mdl-card__media team-leader wow fadeInDown delay-03s">
+								<div class="team-leader-shadow">
+									<a href="javascript:void(0)"></a>
+								</div>
 								<img src="images/camila.jpg">
+								<ul>
+									<li>
+										<a href="javascript:void(0)" target="blank" class="fa-twitter"></a>
+									</li>
+									<li>
+										<a href="https://www.facebook.com/camila.zacche" target="blank" class="fa-facebook"></a>
+									</li>
+									<li>
+										<a href="https://www.linkedin.com/in/camila-zacche-de-aguiar-04872762" target="blank" class="fa-linkedin"></a>
+									</li>
+									<li>
+										<a href="https://plus.google.com/100772671932948873303" target="blank" class="fa-google-plus"></a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" target="blank" class="fa-instagram"></a>
+									</li>
+									<li>
+										<a href="https://github.com/camilazagui" target="blank" class="fa-github"></a>
+									</li>
+								</ul>
 							</div>
 							<div class="mdl-card__title">
 								<h4 class="mdl-card__title-text">Camila Zacche</h4>
@@ -464,16 +535,33 @@ function resizeText() {
 							<div class="mdl-card__supporting-text">
 								<span class="mdl-typography--font-light mdl-typography--subhead">Mestranda em Informática na Universidade Federal do Espírito Santo (UFES)</span>
 							</div>
-							<div class="mdl-card__actions">
-								<a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-									Download now
-									<i class="material-icons">chevron_right</i>
-								</a>
-							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-							<div class="mdl-card__media">
+							<div class="mdl-card__media team-leader wow fadeInDown delay-03s">
+								<div class="team-leader-shadow">
+									<a href="javascript:void(0)"></a>
+								</div>
 								<img src="images/guilherme.jpg">
+								<ul>
+									<li>
+										<a href="https://twitter.com/GPinotte" target="blank" class="fa-twitter"></a>
+									</li>
+									<li>
+										<a href="https://www.facebook.com/guilherme.pinotte" target="blank" class="fa-facebook"></a>
+									</li>
+									<li>
+										<a href="https://www.linkedin.com/in/guilherme-pinotte-36b52b95" target="blank" class="fa-linkedin"></a>
+									</li>
+									<li>
+										<a href="https://plus.google.com/113096922921593072827" target="blank" class="fa-google-plus"></a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/guilhermepinotte/" target="blank" class="fa-instagram"></a>
+									</li>
+									<li>
+										<a href="https://github.com/guilhermepinotte" target="blank" class="fa-github"></a>
+									</li>
+								</ul>
 							</div>
 							<div class="mdl-card__title">
 								<h4 class="mdl-card__title-text">Guilherme Pinotte</h4>
@@ -484,16 +572,33 @@ function resizeText() {
 							<div class="mdl-card__supporting-text">
 								<span class="mdl-typography--font-light mdl-typography--subhead">Mestrando em Informática na Universidade Federal do Espírito Santo (UFES)</span>
 							</div>
-							<div class="mdl-card__actions">
-								<a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-									Find apps
-									<i class="material-icons">chevron_right</i>
-								</a>
-							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-							<div class="mdl-card__media">
+							<div class="mdl-card__media team-leader wow fadeInDown delay-03s">
+								<div class="team-leader-shadow">
+									<a href="javascript:void(0)"></a>
+								</div>
 								<img src="images/daniel.jpg">
+								<ul>
+									<li>
+										<a href="javascript:void(0)" target="blank" class="fa-twitter"></a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" target="blank" class="fa-facebook"></a>
+									</li>									
+									<li>
+										<a href="javascript:void(0)" target="blank" class="fa-linkedin"></a>
+									</li>
+									<li>
+										<a href="https://plus.google.com/116798262947757395990" target="blank" class="fa-google-plus"></a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/danieldeassis/" target="blank" class="fa-instagram"></a>
+									</li>
+									<li>
+										<a href="https://github.com/danieldeassis" target="blank" class="fa-github"></a>
+									</li>
+								</ul>
 							</div>
 							<div class="mdl-card__title">
 								<h4 class="mdl-card__title-text">Daniel de Assis</h4>
@@ -504,16 +609,33 @@ function resizeText() {
 							<div class="mdl-card__supporting-text">
 								<span class="mdl-typography--font-light mdl-typography--subhead">Mestrando em Informática na Universidade Federal do Espírito Santo (UFES)</span>
 							</div>
-							<div class="mdl-card__actions">
-								<a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-									Find apps
-									<i class="material-icons">chevron_right</i>
-								</a>
-							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-							<div class="mdl-card__media">
+							<div class="mdl-card__media team-leader wow fadeInDown delay-03s">
+								<div class="team-leader-shadow">
+									<a href="javascript:void(0)"></a>
+								</div>
 								<img src="images/geraldo.jpg">
+								<ul>
+									<li>
+										<a href="javascript:void(0)" target="blank" class="fa-twitter"></a>
+									</li>
+									<li>
+										<a href="https://www.facebook.com/geraldo.vassoler" target="blank" class="fa-facebook"></a>
+									</li>
+									<li>
+										<a href="https://www.linkedin.com/in/geraldo-vassoler-93a53436" target="blank" class="fa-linkedin"></a>
+									</li>
+									<li>
+										<a href="https://plus.google.com/118156293728289167769" target="blank" class="fa-google-plus"></a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" target="blank" class="fa-instagram"></a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" target="blank" class="fa-github"></a>
+									</li>
+								</ul>
 							</div>
 							<div class="mdl-card__title">
 								<h4 class="mdl-card__title-text">Geraldo Vassoler</h4>
@@ -523,12 +645,6 @@ function resizeText() {
 							</div>
 							<div class="mdl-card__supporting-text">
 								<span class="mdl-typography--font-light mdl-typography--subhead">Mestre em Informática pela UFES e Analista de T.I. da VALE</span>
-							</div>
-							<div class="mdl-card__actions">
-								<a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-									Find apps
-									<i class="material-icons">chevron_right</i>
-								</a>
 							</div>
 						</div>
 					</div>
@@ -553,7 +669,7 @@ function resizeText() {
 							<div class="israel-card-image mdl-card mdl-shadow--2dp">
 								<div class="mdl-card__title mdl-card--expand"></div>
 								<div class="mdl-card__actions">
-									<span class="israel-card-image__filename"><b>Israel Henrique</b></span>
+									<span class="israel-card-image__filename"><b>Israel Henrique&nbsp;&nbsp;</b></span>
 									<span class="israel-card-image__filename">Sugestão de Conceitos</span>
 								</div>
 							</div>
@@ -591,66 +707,16 @@ function resizeText() {
 
 				</div>
 
-<!-- Teste -->
-<!--c-logo-part-end-->
+				<div class="contato-card">
+					<div class="mdl-typography--display-1-color-contrast">
+						Contato
+					</div>
+				</div>
+				<div class="contato">
 
-<section class="main-section team" id="team"><!--main-section team-start-->
-  <div class="container">
-    <h2>Amazing Team</h2>
-    <h6>Take a closer look into our amazing team. We won’t bite.</h6>
-    <div class="team-leader-block clearfix">
-      <div class="team-leader-box">
-        <div class="team-leader wow fadeInDown delay-03s">
-          <div class="team-leader-shadow"><a href="javascript:void(0)"></a></div>
-          <img src="images/team-leader-pic1.jpg" alt="">
-          <ul>
-            <li><a href="javascript:void(0)" class="fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa-google-plus"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-03s">Walter White</h3>
-        <span class="wow fadeInDown delay-03s">Chief Executive Officer</span>
-        <p class="wow fadeInDown delay-03s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>
-      <div class="team-leader-box">
-        <div class="team-leader  wow fadeInDown delay-06s">
-          <div class="team-leader-shadow"><a href="javascript:void(0)"></a></div>
-          <img src="images/team-leader-pic2.jpg" alt="">
-          <ul>
-            <li><a href="javascript:void(0)" class="fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa-google-plus"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-06s">Jesse Pinkman</h3>
-        <span class="wow fadeInDown delay-06s">Product Manager</span>
-        <p class="wow fadeInDown delay-06s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>
-      <div class="team-leader-box">
-        <div class="team-leader wow fadeInDown delay-09s">
-          <div class="team-leader-shadow"><a href="javascript:void(0)"></a></div>
-          <img src="images/team-leader-pic3.jpg" alt="">
-          <ul>
-            <li><a href="javascript:void(0)" class="fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa-google-plus"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-09s">Skyler white</h3>
-        <span class="wow fadeInDown delay-09s">Accountant</span>
-        <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!--main-section team-end-->
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7485.209946209955!2d-40.305643103687835!3d-20.27521135244676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xef39e58c104c8a86!2sDepartamento+de+Inform%C3%A1tica%2C+Centro+Tecnol%C3%B3gico+-+UFES!5e0!3m2!1spt-BR!2sbr!4v1498265762154" width="1000" height="400" frameborder="2" style="border:2" allowfullscreen></iframe>
+				</div>
 
-<!-- Fim do Teste-->
-				
 
 				
 
