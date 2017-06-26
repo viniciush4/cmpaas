@@ -68,7 +68,7 @@ a img{
 .logoCentral
 {
   height: 35px;
-  width: 120px; 
+  width: 100px; 
 }
 .logoLateral
 {
@@ -705,6 +705,23 @@ a img{
   padding-bottom: 80px;
   background-color: #FFA726;
 }
+
+.portfolio-contact .mdl-textfield {
+  width: 100%;
+}
+
+.portfolio-contact form {
+  max-width: 550px;
+  margin: auto;
+}
+
+.mdl-card__media {
+    background-color: #D2D2D2;
+}
+
+
+
+
 .contato
 {
   position: relative;
@@ -728,16 +745,9 @@ a img{
 @media (max-width: 1200px){
 .logoPrincipal
 {
-  height: 40px;
-  width: 200px;
+   display: none;
 }
-}
-@media (max-width: 1000px){
-.logoPrincipal
-{
-  display: none;
-}
-}
+
 
 @media only screen and (min-width: 480px) { ... }
 @media only screen and (min-width: 600px) { ... }

@@ -41,73 +41,6 @@
 		<script src="//storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
 
 
-<!-- Teste -->
-
-
-
-<link href="css/linecons.css" rel="stylesheet" type="text/css">
-<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-<link href="css/responsive.css" rel="stylesheet" type="text/css">
-
-
-<link href='http://fonts.googleapis.com/css?family=Lato:400,900,700,700italic,400italic,300italic,300,100italic,100,900italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Dosis:400,500,700,800,600,300,200' rel='stylesheet' type='text/css'>
-
-
-
-<!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
-
-<script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="js/jquery.isotope.js"></script>
-<script type="text/javascript" src="js/wow.js"></script>
-<script type="text/javascript" src="js/classie.js"></script>
-
-<!--[if lt IE 9]>
-    <script src="js/respond-1.1.0.min.js"></script>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/html5element.js"></script>
-<![endif]-->
-
-<script type="text/javascript">
-	$(document).ready(function(e) {
-        $('.res-nav_click').click(function(){
-		$('ul.toggle').slideToggle(600)	
-			});	
-			
-	$(document).ready(function() {
-$(window).bind('scroll', function() {
-         if ($(window).scrollTop() > 0) {
-             $('#header_outer').addClass('fixed');
-         }
-         else {
-             $('#header_outer').removeClass('fixed');
-         }
-    });
-	
-	  });
-	  
-
-		    });	
-function resizeText() {
-	var preferredWidth = 767;
-	var displayWidth = window.innerWidth;
-	var percentage = displayWidth / preferredWidth;
-	var fontsizetitle = 25;
-	var newFontSizeTitle = Math.floor(fontsizetitle * percentage);
-	$(".divclass").css("font-size", newFontSizeTitle)
-}
-</script>
-
-
-<!-- Fim Teste-->
-
-
-
-		
-		
 	</head>
 	<body>
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -139,8 +72,8 @@ function resizeText() {
 							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="#sobre">Sobre</a>
 							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="#servico">Serviços</a>
 							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Publicações</a>
-							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Editores</a>
-							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Contato</a>
+							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="#contato">Contato</a>
+							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Login</a>
 						</nav>
 					</div>
 					<span class="android-mobile-title mdl-layout-title">
@@ -164,33 +97,16 @@ function resizeText() {
 				</span>
 				<nav class="mdl-navigation">
 					<a class="mdl-navigation__link" href="">Início</a>
-					<a class="mdl-navigation__link" href="">Sobre</a>
-					<a class="mdl-navigation__link" href="">Serviços</a>
-					<a class="mdl-navigation__link" href="">Publicações</a>
-					<a class="mdl-navigation__link" href="">Editores</a>
-					<a class="mdl-navigation__link" href="">Contato</a>
+					<a class="mdl-navigation__link" href="#sobre">Sobre</a>
+					<a class="mdl-navigation__link" href="#servico">Serviços</a>
+					<a class="mdl-navigation__link" href="">Publicações</a>					
+					<a class="mdl-navigation__link" href="#contato">Contato</a>
+					<a class="mdl-navigation__link" href="">Login</a>
 					
 					<div class="android-drawer-separator"></div>
-					<span class="mdl-navigation__link" href="">Versions</span>
-		
-					<a class="mdl-navigation__link" href="">Lollipop 5.0</a>
-					<a class="mdl-navigation__link" href="">KitKat 4.4</a>
-					<a class="mdl-navigation__link" href="">Jelly Bean 4.3</a>
-					<a class="mdl-navigation__link" href="">Android history</a>
-			
-					<div class="android-drawer-separator"></div>
-					<span class="mdl-navigation__link" href="">Resources</span>
-			
-					<a class="mdl-navigation__link" href="">Official blog</a>
-					<a class="mdl-navigation__link" href="">Android on Google+</a>
-					<a class="mdl-navigation__link" href="">Android on Twitter</a>
-			
-					<div class="android-drawer-separator"></div>
-					<span class="mdl-navigation__link" href="">For developers</span>
-			
-					<a class="mdl-navigation__link" href="">App developer resources</a>
-					<a class="mdl-navigation__link" href="">Android Open Source Project</a>
-					<a class="mdl-navigation__link" href="">Android SDK</a>
+<!--					<span class="mdl-navigation__link" href="">Versions</span>
+-->		
+					
 				</nav>
 			</div>
 	
@@ -369,8 +285,8 @@ function resizeText() {
 								O Portal do Conhecimento Baseado em Mapas Conceituais é o principal front-end dos serviços oferecidos pela plataforma CMPaaS. Todos seus desenvolvedores são Professores, Pesquisadores e Estudantes da UFES.
 							</p>
 							<p>
-								<a class="mdl-typography--font-regular mdl-typography--text-uppercase android-alt-link" href="">
-									See what's new in the Play Store&nbsp;<i class="material-icons">chevron_right</i>
+								<a class="mdl-typography--font-regular mdl-typography--text-uppercase android-alt-link" href="http://www.ufes.br/" target="blank">
+									Sobre a UFES&nbsp;<i class="material-icons">chevron_right</i>
 								</a>
 							</p>
 						</div>
@@ -415,7 +331,7 @@ function resizeText() {
 						<p class="mdl-typography--font-light">
 							Desejamos que você aproveite ao máximo os serviços que oferecemos e colabore conosco fornecendo feedbacks e sugestões de melhorias para o aprimoramento constante das funcionalidades oferecidas na Plataforma CMPaaS e no Portal do Conhecimento.
 							<br></br>
-							<a href="" class="android-link mdl-typography--font-light">Customise your phone</a>
+							<a href="" class="android-link mdl-typography--font-light">UFES</a>
 						</p>
 					</div>
 					<div class="android-customized-section-image"></div>
@@ -707,10 +623,89 @@ function resizeText() {
 
 				</div>
 
-				<div class="contato-card">
-					<div class="mdl-typography--display-1-color-contrast">
-						Contato
-					</div>
+				<div id="contato" class="contato-card">
+					<div class="">
+						
+						<div class="mdl-grid portfolio-max-width portfolio-contact">
+							<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+							    <div class="mdl-card__title">
+							        <h2 class="mdl-card__title-text">Contato</h2>
+							    </div>
+							    <div class="mdl-card__media">
+							        <img class="article-image" src=" images/contato.png" border="0" alt="">
+							    </div>
+							    <div class="mdl-card__supporting-text">
+							        <p>
+							            <b>Fale Conosco</b>
+							            </br></br>
+										UFES - Campus Universitário de Goiabeiras
+										</br>
+										CT 7 - Departamento de Informática
+										</br>
+										Laboratório de Informática na Educação
+										</br>
+										Av. Fernando Ferrari, 514, 29075-910 - Vitória/ES, Brasil
+							        </p>
+							       	<ul class="demo-list-icon mdl-list">
+										<li class="mdl-list__item">
+											<span class="mdl-list__item-primary-content">
+												<i class="material-icons mdl-list__item-icon">
+													phone
+												</i>
+												 Tel: +55 (27) 4009 - 2061
+											</span>
+										</li>
+										<li class="mdl-list__item">
+											<span class="mdl-list__item-primary-content">
+												<i class="material-icons mdl-list__item-icon">
+													email
+												</i>
+												Email: cmpaas@gmail.com
+											</span>
+										</li>
+										<li class="mdl-list__item">
+											<span class="mdl-list__item-primary-content">
+												<i class="material-icons mdl-list__item-icon">
+													watch_later
+												</i>
+												Horários: Segunda - Sexta: 8:00 às 17:00
+											</span>
+										</li>
+									</ul>
+							        <p>
+							        	</br>
+							        	<b>Envie sua Mensagem</b>
+							        </p>
+							        <form action="#" class="">
+							            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Nome">
+							                <label class="mdl-textfield__label" for="Name">Nome Completo:</label>
+							                <span class="mdl-textfield__error">Somente letras ou espaços</span>
+							            </div>
+							            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							                <input class="mdl-textfield__input" type="text" id="Email">
+							                <label class="mdl-textfield__label" for="Email">Email:</label>
+							            </div>
+							            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="telefone" />
+							                <label class="mdl-textfield__label" for="demo-input">Telefone para Contato:</label>
+							                <span class="mdl-textfield__error">Entrada inválida</span>
+							            </div>
+							            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							                <textarea class="mdl-textfield__input" type="text" rows="5" id="note"></textarea>
+							                <label class="mdl-textfield__label" for="note">Mensagem:</label>
+							            </div>
+							            <p>
+							                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">
+												Enviar
+											</button>
+							            </p>
+							        </form>
+							    </div>
+							</div>
+						</div>
+					
+					</div>					
 				</div>
 				<div class="contato">
 
@@ -722,13 +717,7 @@ function resizeText() {
 
 				<footer class="android-footer mdl-mega-footer">
 					<div class="mdl-mega-footer--top-section">
-						<div class="mdl-mega-footer--left-section">
-							<button class="mdl-mega-footer--social-btn"></button>
-							&nbsp;
-							<button class="mdl-mega-footer--social-btn"></button>
-							&nbsp;
-							<button class="mdl-mega-footer--social-btn"></button>
-						</div>
+						
 						<div class="mdl-mega-footer--right-section">
 							<a class="mdl-typography--font-light" href="#top">
 								Back to Top
@@ -737,32 +726,22 @@ function resizeText() {
 						</div>
 					</div>
 					<div class="mdl-mega-footer--middle-section">
-						<p class="mdl-typography--font-light">Satellite imagery: © 2014 Astrium, DigitalGlobe</p>
-						<p class="mdl-typography--font-light">Some features and devices may not be available in all areas</p>
+						<p class="mdl-typography--font-light">Copyright © PPGI - UFES 2017</p>
 					</div>
 					<div class="mdl-mega-footer--bottom-section">
 						<a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
-							Versions
+							Menu
 							<i class="material-icons">arrow_drop_up</i>
 						</a>
 						<ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
-							<li class="mdl-menu__item">5.0 Lollipop</li>
-							<li class="mdl-menu__item">4.4 KitKat</li>
-							<li class="mdl-menu__item">4.3 Jelly Bean</li>
-							<li class="mdl-menu__item">Android History</li>
+							<li class="mdl-menu__item"><a href="#top">Início</a></li>
+							<li class="mdl-menu__item"><a href="#sobre">Sobre</a></li>
+							<li class="mdl-menu__item"><a href="#servico">Serviços</a></li>
+							<li class="mdl-menu__item"><a href="">Publicações</a></li>
+							<li class="mdl-menu__item"><a href="#contato">Contato</a></li>
+							<li class="mdl-menu__item"><a href="">Login</a></li>
 						</ul>
-						<a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
-							For Developers
-							<i class="material-icons">arrow_drop_up</i>
-						</a>
-						<ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
-							<li class="mdl-menu__item">App developer resources</li>
-							<li class="mdl-menu__item">Android Open Source Project</li>
-							<li class="mdl-menu__item">Android SDK</li>
-							<li class="mdl-menu__item">Android for Work</li>
-						</ul>
-						<a class="android-link mdl-typography--font-light" href="">Blog</a>
-						<a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
+						
 					</div>
 				</footer>
       
