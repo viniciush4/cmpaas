@@ -114,6 +114,17 @@ body {
 	z-index: 901;
 }
 
+#celula-foto-usuario {
+	height:100%;
+	margin-top:0px !important;
+}
+
+#celula-nome-e-medias-sociais {
+	padding:50px 0;
+	height:100%;
+	margin-top:0px !important;
+}
+
 .card-mapa.mdl-card {
   width: 100%;
   height: 200px;
@@ -300,6 +311,14 @@ body {
 	animation-delay: 1.2s; 
 	-webkit-animation-delay: 1.2s; 
 }
+
+/* Estilos para telas abaixo de 300px de largura */
+@media screen and (max-width: 750px) {
+	#celula-nome-e-medias-sociais {
+		background-color:red;
+	}
+}
+
 </style>
 
 
@@ -314,30 +333,30 @@ body {
 	<body>
 		<!-- Botão de adicionar mapas ou publicações-->
 		<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored animated bounceIn  delay-07s" id="botao-adicionar-mapa-ou-publicacao">
-		  <i class="material-icons">add</i>
+			<i class="material-icons">add</i>
 		</button>
 		
 		<!-- Elemento que receberá o estilo mdl -->
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-		
 
 			<main class="mdl-layout__content">
 			
 				<!-- Topo da página -->
 				<div class="topo">
 					
+					<!-- Grid -->
 					<div class="mdl-grid">
-				
-					  <div class="mdl-cell mdl-cell--3-col" style="height:100%;margin-top:-8px !important;">
-					  	<div id="foto-usuario" class="animated bounceIn">
-					  		
+						
+						<!-- Célula foto do usuário -->
+						<div class="mdl-cell mdl-cell--3-col" id="celula-foto-usuario" style="background-color:red;">
+					  		<div id="foto-usuario" class="animated bounceIn">	
+					  		</div>
 					  	</div>
-					  </div>
 					  
-					  
-					  <div class="mdl-cell mdl-cell--9-col" style="padding:50px 0;height:100%;margin-top:-8px !important;">
-						<h1 id="nome-usuario" class="animated fadeInDown delay-01s">Vinícius Berger</h1>
-						<div id="medias-usuario">
+					  	<!-- Célula nome e medias sociais -->
+						<div class="mdl-cell mdl-cell--9-col" id="celula-nome-e-medias-sociais" style="background-color:green;">
+							<h1 id="nome-usuario" class="animated fadeInDown delay-01s">Vinícius Berger</h1>
+							<div id="medias-usuario">
 								<div class="animated bounceIn delay-01s">A</div>
 								<div class="animated bounceIn delay-02s">B</div>
 								<div class="animated bounceIn delay-03s">C</div>
@@ -345,8 +364,8 @@ body {
 								<div class="animated bounceIn delay-05s">E</div>
 								<div class="animated bounceIn delay-06s">P</div>
 								<div class="animated bounceIn delay-07s">V</div>
-						<div>
-					  </div>
+							<div>
+				  		</div>
 					  
 					</div>
 				
@@ -356,19 +375,19 @@ body {
 				<div class="meio">
 					<div class="mdl-grid">
 				
-					  <div id="sobre-usuario" class="mdl-cell mdl-cell--3-col">
-					  	<span>Professor Titular do Departamento de Informática da Universidade Federal do Espírito Santo (UFES)</span>
-					  </div>
-					  
-					  
-					  <div class="mdl-cell mdl-cell--9-col">
-					  
-						<div class="mdl-tabs mdl-js-tabs" id="tabs">
-						  <div class="mdl-tabs__tab-bar">
-						    <a href="#mapas" class="mdl-tabs__tab is-active">Mapas</a>
-						    <a href="#publicacoes" class="mdl-tabs__tab">Publicações</a>
-						  </div>
+						<!-- Conteudo celula sobre usuario -->
+						<div id="sobre-usuario" class="mdl-cell mdl-cell--3-col">
+					  		<span>Professor Titular do Departamento de Informática da Universidade Federal do Espírito Santo (UFES)</span>
+					  	</div>
+					  	
+						  	<div class="mdl-cell mdl-cell--9-col">
 						  
+							<div class="mdl-tabs mdl-js-tabs" id="tabs">
+							  <div class="mdl-tabs__tab-bar">
+							    <a href="#mapas" class="mdl-tabs__tab is-active">Mapas</a>
+							    <a href="#publicacoes" class="mdl-tabs__tab">Publicações</a>
+							  </div>
+							  
 						  <!-- Conteúdo da tab mapas -->
 						  <div class="mdl-tabs__panel is-active" id="mapas">
 						  
