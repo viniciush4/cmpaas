@@ -25,17 +25,6 @@ body {
 	color:#fff !important;
 }
 
-.topo {
-    width: 100%;
-    height: 200px;
-    background-color: #3F51B5;
-}
-
-.meio {
-	width: 100%;
-	height: 200px;
-}
-
 .mdl-grid {
 	padding:0 !important;
 }
@@ -57,17 +46,14 @@ body {
 }
 
 #medias-usuario {
-	padding:7px 0 0 0;
+	padding:7px 0 0 7px;
 	font-family:social !important;
 	font-size:40px;
-	color:#fff !important;
-	width:100%;
 }
 
-#medias-usuario > div {
-	margin:0;
-	width:30px;
-	float:left;
+#medias-usuario .media-usuario {
+	display:inline-block;
+	margin:-10px;
 }
 
 #sobre-usuario {
@@ -115,15 +101,16 @@ body {
 }
 
 #celula-foto-usuario {
-	height:100%;
-	margin-top:0px !important;
+	height:200px;
+	background-color:#3F51B5;
 }
 
 #celula-nome-e-medias-sociais {
 	padding:50px 0;
-	height:100%;
-	margin-top:0px !important;
-}
+	text-align:left;
+	height:200px;
+} 
+
 
 .card-mapa.mdl-card {
   width: 100%;
@@ -262,6 +249,210 @@ body {
   -webkit-animation-name: bounceIn;
   animation-name: bounceIn;
 }
+
+
+@-webkit-keyframes bounceOut {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  25% {
+    -webkit-transform: scale(.95);
+    transform: scale(.95);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(.3);
+    transform: scale(.3);
+  }
+}
+
+@keyframes bounceOut {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  25% {
+    -webkit-transform: scale(.95);
+    -ms-transform: scale(.95);
+    transform: scale(.95);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(.3);
+    -ms-transform: scale(.3);
+    transform: scale(.3);
+  }
+}
+
+.bounceOut {
+  -webkit-animation-name: bounceOut;
+  animation-name: bounceOut;
+}
+
+
+@-webkit-keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+
+@-webkit-keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+
+@-webkit-keyframes fadeOutUpBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes fadeOutUpBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+.fadeOutUpBig {
+  -webkit-animation-name: fadeOutUpBig;
+  animation-name: fadeOutUpBig;
+}
+
+@-webkit-keyframes topoFull {
+  0% {
+  	hopacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes topoFull {
+  0% {
+  	opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+.topoFull {
+  -webkit-animation-name: topoFull;
+  animation-name: topoFull;
+}
+
+
+
 /* Animation Timers
 ---------------------------------*/
 .delay-01s { 
@@ -312,10 +503,64 @@ body {
 	-webkit-animation-delay: 1.2s; 
 }
 
-/* Estilos para telas abaixo de 300px de largura */
-@media screen and (max-width: 750px) {
+/* Estilos para telas abaixo de 840px de largura */
+@media screen and (max-width: 840px) {
+	.apenas-telas-grandes {
+		display:none;
+	}
+	
+	.apenas-telas-pequenas {
+		display:block;
+	}
+	
 	#celula-nome-e-medias-sociais {
-		background-color:red;
+		padding:120px 0;
+		text-align:center;
+		height:200px;
+		width:100%;
+		color:rgba(0,0,0,.87);
+		margin:0 !important;
+	} 
+	
+	#nome-usuario {
+		font-size:40px;
+	}
+	
+	#medias-usuario {
+		font-size:35px;
+	}
+	
+	#celula-foto-usuario {
+		margin:0 !important;
+		width:100%;
+	}
+	
+	#sobre-usuario {
+		font-family:robotoCondensedLight !important;
+		margin-top:0px;
+		color:#333;
+		text-align:center;
+		padding:0 20px;
+	}
+	
+	#topo {
+		background-color:transparent;
+	}
+	
+}
+
+/* Estilos para telas acima de 840px de largura */
+@media screen and (min-width: 840px) {
+	.apenas-telas-grandes {
+		display:block;
+	}
+	
+	.apenas-telas-pequenas {
+		display:none;
+	}
+	
+	#topo {
+		background-color:#3F51B5 !important;
 	}
 }
 
@@ -329,200 +574,221 @@ body {
 		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css">
 		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 		
+		<!-- JQuery -->
+		<script src="../editor-basico/js/jquery.js"></script>
+		
+		
 	</head>
 	<body>
 		<!-- Botão de adicionar mapas ou publicações-->
-		<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored animated bounceIn  delay-07s" id="botao-adicionar-mapa-ou-publicacao">
+		<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored animated bounceIn  delay-07s" id="botao-adicionar-mapa-ou-publicacao" onclick="criarMapa()">
 			<i class="material-icons">add</i>
 		</button>
+		
+		<div id="limpa-tela"></div>
 		
 		<!-- Elemento que receberá o estilo mdl -->
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
 			<main class="mdl-layout__content">
-			
-				<!-- Topo da página -->
-				<div class="topo">
+
+				<!-- Grid topo-->
+				<div id="topo" class="mdl-grid">
 					
-					<!-- Grid -->
-					<div class="mdl-grid">
-						
-						<!-- Célula foto do usuário -->
-						<div class="mdl-cell mdl-cell--3-col" id="celula-foto-usuario" style="background-color:red;">
-					  		<div id="foto-usuario" class="animated bounceIn">	
-					  		</div>
-					  	</div>
-					  
-					  	<!-- Célula nome e medias sociais -->
-						<div class="mdl-cell mdl-cell--9-col" id="celula-nome-e-medias-sociais" style="background-color:green;">
-							<h1 id="nome-usuario" class="animated fadeInDown delay-01s">Vinícius Berger</h1>
-							<div id="medias-usuario">
-								<div class="animated bounceIn delay-01s">A</div>
-								<div class="animated bounceIn delay-02s">B</div>
-								<div class="animated bounceIn delay-03s">C</div>
-								<div class="animated bounceIn delay-04s">D</div>
-								<div class="animated bounceIn delay-05s">E</div>
-								<div class="animated bounceIn delay-06s">P</div>
-								<div class="animated bounceIn delay-07s">V</div>
-							<div>
+					<!-- Célula foto do usuário -->
+					<div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="celula-foto-usuario">
+				  		<div id="foto-usuario" class="animated bounceIn">	
 				  		</div>
-					  
-					</div>
-				
+				  	</div>
+				  
+				  	<!-- Célula nome e medias sociais -->
+					<div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="celula-nome-e-medias-sociais">
+						<h1 id="nome-usuario" class="animated fadeInDown delay-01s">Vinícius Berger</h1>
+						<div id="medias-usuario">
+							<div class="animated bounceIn delay-01s media-usuario">A</div>
+							<div class="animated bounceIn delay-02s media-usuario">B</div>
+							<div class="animated bounceIn delay-03s media-usuario">C</div>
+							<div class="animated bounceIn delay-04s media-usuario">D</div>
+							<div class="animated bounceIn delay-05s media-usuario">E</div>
+							<div class="animated bounceIn delay-06s media-usuario">P</div>
+							<div class="animated bounceIn delay-07s media-usuario">V</div>
+						</div>
+			  		</div>
 				</div>
+
 				
 				<!-- Conteúdo da página -->
-				<div class="meio">
-					<div class="mdl-grid">
 				
-						<!-- Conteudo celula sobre usuario -->
-						<div id="sobre-usuario" class="mdl-cell mdl-cell--3-col">
-					  		<span>Professor Titular do Departamento de Informática da Universidade Federal do Espírito Santo (UFES)</span>
-					  	</div>
+				<div class="mdl-grid">
+			
+					<!-- Conteudo celula sobre usuario -->
+					<div id="sobre-usuario" class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+				  		<span>Professor Titular do Departamento de Informática da Universidade Federal do Espírito Santo (UFES)</span>
+				  	</div>
+				  	
+					  	<div class="mdl-cell mdl-cell--9-col">
+					  
+						<div class="mdl-tabs mdl-js-tabs" id="tabs">
+						  <div class="mdl-tabs__tab-bar">
+						    <a href="#mapas" class="mdl-tabs__tab is-active">Mapas</a>
+						    <a href="#publicacoes" class="mdl-tabs__tab">Publicações</a>
+						  </div>
+						  
+					  <!-- Conteúdo da tab mapas -->
+					  <div class="mdl-tabs__panel is-active" id="mapas">
+					  
 					  	
-						  	<div class="mdl-cell mdl-cell--9-col">
-						  
-							<div class="mdl-tabs mdl-js-tabs" id="tabs">
-							  <div class="mdl-tabs__tab-bar">
-							    <a href="#mapas" class="mdl-tabs__tab is-active">Mapas</a>
-							    <a href="#publicacoes" class="mdl-tabs__tab">Publicações</a>
+					  	<!-- Grid que abrigará os mapas -->
+					    <div class="mdl-grid">
+					    		
+					    		
+					    		<!-- uma célula do grid contendo um mapa -->
+					    		<div class="mdl-cell mdl-cell--4-col" style="background-color:red;">
+					    			<div class="card-mapa mdl-card mdl-shadow--2dp">
+								  <div class="mdl-card__title mdl-card--expand" style="background-color:#ffc107;color:#fff;">
+								    <h2 class="mdl-card__title-text">Supermercado</h2>
+								  </div>
+								  <div class="mdl-card__supporting-text">
+								    Mapa que representa todos os conceitos presentes em um supermercado. Mapa que rep...
+								  </div>
+								  <div class="mdl-card__actions mdl-card--border">
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+									 <i class="material-icons">edit</i>
+								    </button>
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+									 <i class="material-icons">delete</i>
+								    </button>
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+									 <i class="material-icons">question_answer</i>
+								    </button>
+								    <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="botao-mapa-publico">
+									    <input type="checkbox" id="botao-mapa-publico" class="mdl-icon-toggle__input">
+									    <i class="mdl-icon-toggle__label material-icons">public</i>
+								    </label>
+								  </div>
 							  </div>
-							  
-						  <!-- Conteúdo da tab mapas -->
-						  <div class="mdl-tabs__panel is-active" id="mapas">
-						  
-						  	
-						  	<!-- Grid que abrigará os mapas -->
-						    <div class="mdl-grid">
-						    		
-						    		
-						    		<!-- uma célula do grid contendo um mapa -->
-						    		<div class="mdl-cell mdl-cell--4-col" style="background-color:red;">
-						    			<div class="card-mapa mdl-card mdl-shadow--2dp">
-									  <div class="mdl-card__title mdl-card--expand" style="background-color:#ffc107;color:#fff;">
-									    <h2 class="mdl-card__title-text">Supermercado</h2>
-									  </div>
-									  <div class="mdl-card__supporting-text">
-									    Mapa que representa todos os conceitos presentes em um supermercado. Mapa que rep...
-									  </div>
-									  <div class="mdl-card__actions mdl-card--border">
-									    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										 <i class="material-icons">edit</i>
-									    </button>
-									    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										 <i class="material-icons">delete</i>
-									    </button>
-									    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										 <i class="material-icons">question_answer</i>
-									    </button>
-									    <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="botao-mapa-publico">
-										    <input type="checkbox" id="botao-mapa-publico" class="mdl-icon-toggle__input">
-										    <i class="mdl-icon-toggle__label material-icons">public</i>
-									    </label>
-									  </div>
+					    		</div>
+					    		
+					    		
+					    		<!-- uma célula do grid contendo um mapa -->
+					    		<div class="mdl-cell mdl-cell--4-col">
+					    			<div class="card-mapa mdl-card mdl-shadow--2dp">
+								  <div class="mdl-card__title mdl-card--expand" style="background-color:#ff5722;color:#fff;">
+								    <h2 class="mdl-card__title-text">Escola</h2>
 								  </div>
-						    		</div>
-						    		
-						    		
-						    		<!-- uma célula do grid contendo um mapa -->
-						    		<div class="mdl-cell mdl-cell--4-col">
-						    			<div class="card-mapa mdl-card mdl-shadow--2dp">
-									  <div class="mdl-card__title mdl-card--expand" style="background-color:#ff5722;color:#fff;">
-									    <h2 class="mdl-card__title-text">Escola</h2>
-									  </div>
-									  <div class="mdl-card__supporting-text">
-									    Mapa que representa todos os conceitos presentes em um supermercado. Mapa que rep...
-									  </div>
-									  <div class="mdl-card__actions mdl-card--border">
-									    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										 <i class="material-icons">edit</i>
-									    </button>
-									    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										 <i class="material-icons">delete</i>
-									    </button>
-									    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										 <i class="material-icons">question_answer</i>
-									    </button>
-									    <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="botao-mapa-publico">
-										    <input type="checkbox" id="botao-mapa-publico" class="mdl-icon-toggle__input">
-										    <i class="mdl-icon-toggle__label material-icons">public</i>
-									    </label>
-									  </div>
+								  <div class="mdl-card__supporting-text">
+								    Mapa que representa todos os conceitos presentes em um supermercado. Mapa que rep...
 								  </div>
-						    		</div>
-						    		
-						    		<!-- uma célula do grid contendo um mapa -->
-						    		<div class="mdl-cell mdl-cell--4-col">
-						    			<div class="card-mapa mdl-card mdl-shadow--2dp">
-									  <div class="mdl-card__title mdl-card--expand" style="background-color:#2196f3;color:#fff;">
-									    <h2 class="mdl-card__title-text">Rural</h2>
-									  </div>
-									  <div class="mdl-card__supporting-text">
-									    Mapa que representa todos os conceitos presentes em um supermercado. Mapa que rep...
-									  </div>
-									  <div class="mdl-card__actions mdl-card--border">
-									    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										 <i class="material-icons">edit</i>
-									    </button>
-									    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										 <i class="material-icons">delete</i>
-									    </button>
-									    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										 <i class="material-icons">question_answer</i>
-									    </button>
-									    <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="botao-mapa-publico">
-										    <input type="checkbox" id="botao-mapa-publico" class="mdl-icon-toggle__input">
-										    <i class="mdl-icon-toggle__label material-icons">public</i>
-									    </label>
-									  </div>
+								  <div class="mdl-card__actions mdl-card--border">
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+									 <i class="material-icons">edit</i>
+								    </button>
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+									 <i class="material-icons">delete</i>
+								    </button>
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+									 <i class="material-icons">question_answer</i>
+								    </button>
+								    <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="botao-mapa-publico">
+									    <input type="checkbox" id="botao-mapa-publico" class="mdl-icon-toggle__input">
+									    <i class="mdl-icon-toggle__label material-icons">public</i>
+								    </label>
 								  </div>
-						    		</div>
-						    		
-						    		<!-- uma célula do grid contendo um mapa -->
-						    		<div class="mdl-cell mdl-cell--4-col">
-						    			<div class="card-mapa mdl-card mdl-shadow--2dp">
-									  <div class="mdl-card__title mdl-card--expand" style="background-color:#4caf50;color:#fff;">
-									    <h2 class="mdl-card__title-text">Vitória</h2>
-									  </div>
-									  <div class="mdl-card__supporting-text">
-									    Mapa que representa todos os conceitos presentes em um supermercado. Mapa que rep...
-									  </div>
-									  <div class="mdl-card__actions mdl-card--border">
-									    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										 <i class="material-icons">edit</i>
-									    </button>
-									    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										 <i class="material-icons">delete</i>
-									    </button>
-									    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-										 <i class="material-icons">question_answer</i>
-									    </button>
-									    <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="botao-mapa-publico">
-										    <input type="checkbox" id="botao-mapa-publico" class="mdl-icon-toggle__input">
-										    <i class="mdl-icon-toggle__label material-icons">public</i>
-									    </label>
-									  </div>
+							  </div>
+					    		</div>
+					    		
+					    		<!-- uma célula do grid contendo um mapa -->
+					    		<div class="mdl-cell mdl-cell--4-col">
+					    			<div class="card-mapa mdl-card mdl-shadow--2dp">
+								  <div class="mdl-card__title mdl-card--expand" style="background-color:#2196f3;color:#fff;">
+								    <h2 class="mdl-card__title-text">Rural</h2>
 								  </div>
-						    		</div>
-						    		
-						    		
-						    </div>
-						  
-						  </div>
-						  
-						  <!-- Conteúdo da tab publicações -->
-						  <div class="mdl-tabs__panel" id="publicacoes">
-						    
-						  </div>
-						</div>
-						
+								  <div class="mdl-card__supporting-text">
+								    Mapa que representa todos os conceitos presentes em um supermercado. Mapa que rep...
+								  </div>
+								  <div class="mdl-card__actions mdl-card--border">
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+									 <i class="material-icons">edit</i>
+								    </button>
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+									 <i class="material-icons">delete</i>
+								    </button>
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+									 <i class="material-icons">question_answer</i>
+								    </button>
+								    <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="botao-mapa-publico">
+									    <input type="checkbox" id="botao-mapa-publico" class="mdl-icon-toggle__input">
+									    <i class="mdl-icon-toggle__label material-icons">public</i>
+								    </label>
+								  </div>
+							  </div>
+					    		</div>
+					    		
+					    		<!-- uma célula do grid contendo um mapa -->
+					    		<div class="mdl-cell mdl-cell--4-col">
+					    			<div class="card-mapa mdl-card mdl-shadow--2dp">
+								  <div class="mdl-card__title mdl-card--expand" style="background-color:#4caf50;color:#fff;">
+								    <h2 class="mdl-card__title-text">Vitória</h2>
+								  </div>
+								  <div class="mdl-card__supporting-text">
+								    Mapa que representa todos os conceitos presentes em um supermercado. Mapa que rep...
+								  </div>
+								  <div class="mdl-card__actions mdl-card--border">
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+									 <i class="material-icons">edit</i>
+								    </button>
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+									 <i class="material-icons">delete</i>
+								    </button>
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+									 <i class="material-icons">question_answer</i>
+								    </button>
+								    <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="botao-mapa-publico">
+									    <input type="checkbox" id="botao-mapa-publico" class="mdl-icon-toggle__input">
+									    <i class="mdl-icon-toggle__label material-icons">public</i>
+								    </label>
+								  </div>
+							  </div>
+					    		</div>
+					    		
+					    		
+					    </div>
+					  
 					  </div>
 					  
+					  <!-- Conteúdo da tab publicações -->
+					  <div class="mdl-tabs__panel" id="publicacoes">
+					    
+					  </div>
 					</div>
+					
+				  </div>
+				  
 				</div>
+			
 			</main>
 		
 		</div>
 		
 	</body>
 </html>
+
+<script>
+function criarMapa(){
+	$('#foto-usuario').removeClass('bounceIn');
+	$('#foto-usuario').addClass('bounceOut');
+	
+	$('#nome-usuario').removeClass('fadeInDown');
+	$('#nome-usuario').addClass('fadeOutUp');
+	
+	$('.media-usuario').removeClass('bounceIn');
+	$('.media-usuario').addClass('bounceOut');
+	
+	$('#limpa-tela').css('width', '500px;');
+	
+	$('#limpa-tela').css('height', '500px;');
+	
+	
+	$('#limpa-tela').css('backgrotund-color', 'green');
+}
+</script>
