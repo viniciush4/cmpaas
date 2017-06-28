@@ -102,7 +102,6 @@ body {
 
 #celula-foto-usuario {
 	height:200px;
-	background-color:#3F51B5;
 }
 
 #celula-nome-e-medias-sociais {
@@ -418,31 +417,21 @@ body {
 
 @-webkit-keyframes topoFull {
   0% {
-  	hopacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+  	height:200px;
   }
 
   100% {
-    opacity: 0;
-    -webkit-transform: translateY(-2000px);
-    transform: translateY(-2000px);
+  	height:100%;
   }
 }
 
 @keyframes topoFull {
   0% {
-  	opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
+  	height:200px;
   }
 
   100% {
-    opacity: 0;
-    -webkit-transform: translateY(-2000px);
-    -ms-transform: translateY(-2000px);
-    transform: translateY(-2000px);
+  	height:100%;
   }
 }
 
@@ -619,7 +608,7 @@ body {
 				
 				<!-- Conteúdo da página -->
 				
-				<div class="mdl-grid">
+				<div class="mdl-grid" id="meio">
 			
 					<!-- Conteudo celula sobre usuario -->
 					<div id="sobre-usuario" class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
@@ -775,20 +764,24 @@ body {
 
 <script>
 function criarMapa(){
+	// Esconde foto
 	$('#foto-usuario').removeClass('bounceIn');
 	$('#foto-usuario').addClass('bounceOut');
 	
+	// Esconde nome
 	$('#nome-usuario').removeClass('fadeInDown');
 	$('#nome-usuario').addClass('fadeOutUp');
 	
+	// Esconde medias
 	$('.media-usuario').removeClass('bounceIn');
 	$('.media-usuario').addClass('bounceOut');
 	
-	$('#limpa-tela').css('width', '500px;');
+	// Esconde meio
+	$('#meio').css('display', 'none');
 	
-	$('#limpa-tela').css('height', '500px;');
+	// Amplia topo
+	$('#topo').addClass('animated topoFull');
 	
 	
-	$('#limpa-tela').css('backgrotund-color', 'green');
 }
 </script>
