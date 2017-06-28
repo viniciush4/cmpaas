@@ -65,6 +65,10 @@ a img{
   height: 50px;
   width: 300px;
 }
+.logoPrincipal1
+{
+  display: none;
+}
 .logoCentral
 {
   height: 35px;
@@ -197,6 +201,7 @@ a img{
   background-color: #f3f3f3;
   background: url('../images/lamp.png') center 30% no-repeat;
   background-size: cover;
+  margin-bottom: 100px;
 }
 
 .logo-font {
@@ -702,7 +707,7 @@ a img{
 {
   position: relative;
   padding-top: 60px;
-  padding-bottom: 80px;
+  padding-bottom: 30px;
   background-color: #FFA726;
 }
 
@@ -740,12 +745,22 @@ a img{
 }
 
 
+
+
+
+
 /**** Mobile layout ****/
 
 @media (max-width: 1200px){
 .logoPrincipal
 {
    display: none;
+}
+.logoPrincipal1
+{
+   display: block;
+   height: 50px;
+   width: 50px;
 }
 }
 
