@@ -199,20 +199,19 @@ a img{
   height: 800px;
   width: auto;
   background-color: #f3f3f3;
-  background: url('../images/lamp.png') center 30% no-repeat;
+  background: url('../images/lamp1.png') center 30% no-repeat;
   background-size: cover;
-  margin-bottom: 100px;
+ /* margin-bottom: 200px; */
 }
 
 .logo-font {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  line-height: 1;
-  color: #ff3d00;
-  font-weight: 500;
   text-align: left;
-  margin-left: 50px;
+  color: #ff3d00;
+  
 }
 
+/*
 .android-slogan {
   font-size: 40px;
   padding-top: 200px;
@@ -223,6 +222,7 @@ a img{
   padding-top: 24px;
 }
 
+*/
 .android-create-character {
   font-size: 21px;
   padding-top: 400px;
@@ -745,23 +745,248 @@ a img{
 }
 
 
+.texto
+{
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  text-align: left;
+  color: #ff3d00;
+}
 
-
-
+.texto1
+{
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  text-align: right;
+  color: #ff3d00;
+}
+.subTextoCapa
+{
+  color: #311c9e;
+}
+.subTextoCapa1
+{
+  color: #311c9e;
+}
 
 /**** Mobile layout ****/
 
 @media (max-width: 1200px){
-.logoPrincipal
-{
-   display: none;
+  .logoPrincipal
+  {
+     display: none;
+  }
+  .logoPrincipal1
+  {
+     display: block;
+     height: 50px;
+     width: 50px;
+  }
 }
-.logoPrincipal1
+
+@media (min-width:300px){
+.android-be-together-section 
 {
-   display: block;
-   height: 50px;
-   width: 50px;
+  margin-bottom: 430px;
 }
+
+.textoCapa
+{
+  
+  font-size: 30px;
+    margin: 0 20px;
+    padding-top: 295px;
+}
+.subTextoCapa
+{
+  font-size: 18px;
+    margin: 0 20px;
+    padding-top: 15px;
+}
+
+.textoCapa1
+{
+  
+  font-size: 30px;
+margin: 0 20px;
+padding-top: 25px;
+}
+.subTextoCapa1
+{
+  font-size: 18px;
+    margin: 0 20px;
+    padding-top: 15px;
+} 
+
+}
+
+@media (min-width:480px) {
+.android-be-together-section 
+{
+  margin-bottom: 360px;
+}
+ .textoCapa
+{
+  
+  font-size: 30px;
+    margin: 0 100px;
+    padding-top: 295px;
+}
+.subTextoCapa
+{
+  font-size: 18px;
+    margin: 0 100px;
+    padding-top: 15px;
+}
+.textoCapa1
+{
+  
+  font-size: 30px;
+margin: 0 100px;
+padding-top: 30px;
+}
+.subTextoCapa1
+{
+ font-size: 18px;
+margin: 0 100px;
+padding-top: 15px;
+} 
+
+
+}
+
+@media (min-width:600px) {
+
+ .textoCapa
+{
+  
+  font-size: 30px;
+    margin: 0 160px;
+    padding-top: 295px;
+}
+.subTextoCapa
+{
+  font-size: 18px;
+    margin: 0 160px;
+    padding-top: 15px;
+}
+.textoCapa1
+{
+  
+  font-size: 30px;
+margin: 0 160px;
+padding-top: 30px;
+}
+.subTextoCapa1
+{
+ font-size: 18px;
+margin: 0 160px;
+padding-top: 15px;
+} 
+
+
+}
+
+@media (min-width:801px) {
+.android-be-together-section 
+{
+  margin-bottom: 0px;
+}
+ .textoCapa
+{
+
+ font-size: 28px;
+margin: 0 12px;
+padding-top: 118px;
+}
+.subTextoCapa
+{
+  
+  font-size: 18px;
+margin: 0 12px;
+padding-top: 15px;
+}
+.textoCapa1
+{
+   
+ font-size: 28px;
+margin: 0 12px;
+margin-top: -193px;
+}
+.subTextoCapa1
+{
+  
+font-size: 13px;
+margin: 0 380px;
+margin-top: 1px;
+width: 500px;
+
+} 
+
+
+}
+
+@media (min-width:1025px) {
+
+ .textoCapa
+{
+  
+font-size: 38px;
+margin: 0 14px;
+padding-top: 160px;
+}
+.subTextoCapa
+{
+  font-size: 20px;
+margin: 0 14px;
+padding-top: 15px;
+}
+.textoCapa1
+{
+  
+  font-size: 40px;
+margin: 0 12px;
+margin-top: -218px;
+}
+.subTextoCapa1
+{
+ font-size: 18px;
+margin: 0 510px;
+padding-top: 15px;
+
+} 
+
+}
+@media (min-width:1281px) {
+
+ .textoCapa
+{
+  
+  font-size: 40px;
+margin: 0 50px;
+padding-top: 170px;
+}
+.subTextoCapa
+{
+  font-size: 26px;
+margin: 0 50px;
+padding-top: 15px;
+}
+.textoCapa1
+{
+  
+  font-size: 40px;
+margin: 0 70px;
+margin-top: -255px;
+}
+.subTextoCapa1
+{
+ font-size: 26px;
+margin: 0 785px;
+padding-top: 15px;
+
+} 
+
+
+
 }
 
 @media only screen and (min-width: 480px) { ... }
@@ -817,6 +1042,7 @@ a img{
     height: 350px;
   }
 
+/*
   .android-slogan {
     font-size: 26px;
     margin: 0 16px;
@@ -828,7 +1054,7 @@ a img{
     margin: 0 16px;
     padding-top: 8px;
   }
-
+*/
   .android-create-character {
     padding-top: 200px;
     font-size: 16px;
