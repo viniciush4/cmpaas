@@ -782,7 +782,7 @@ a img{
   }
 }
 
-@media (min-width:300px){
+@media (min-width:200px){
 .android-be-together-section 
 {
   margin-bottom: 430px;
@@ -914,10 +914,9 @@ margin-top: -193px;
 .subTextoCapa1
 {
   
-font-size: 13px;
-margin: 0 380px;
-margin-top: 1px;
-width: 500px;
+font-size: 18px;
+margin: 0 12px;
+padding-top: 15px;
 
 } 
 
@@ -949,7 +948,7 @@ margin-top: -218px;
 .subTextoCapa1
 {
  font-size: 18px;
-margin: 0 510px;
+margin: 0 12px;
 padding-top: 15px;
 
 } 
@@ -980,7 +979,7 @@ margin-top: -255px;
 .subTextoCapa1
 {
  font-size: 26px;
-margin: 0 785px;
+margin: 0 70px;
 padding-top: 15px;
 
 } 
