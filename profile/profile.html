@@ -415,31 +415,6 @@ body {
   animation-name: fadeOutUpBig;
 }
 
-@-webkit-keyframes topoFull {
-  0% {
-  	height:200px;
-  }
-
-  100% {
-  	height:100%;
-  }
-}
-
-@keyframes topoFull {
-  0% {
-  	height:200px;
-  }
-
-  100% {
-  	height:100%;
-  }
-}
-
-.topoFull {
-  -webkit-animation-name: topoFull;
-  animation-name: topoFull;
-}
-
 
 
 /* Animation Timers
@@ -522,6 +497,7 @@ body {
 	#celula-foto-usuario {
 		margin:0 !important;
 		width:100%;
+		background-color:#3F51B5 !important;
 	}
 	
 	#sobre-usuario {
@@ -536,6 +512,56 @@ body {
 		background-color:transparent;
 	}
 	
+	@-webkit-keyframes topoFull {
+	  0% {
+	  	height:440px;
+	  }
+
+	  100% {
+	  	height:100%;
+	  }
+	}
+
+	@keyframes topoFull {
+	  0% {
+	  	height:440px;
+	  }
+
+	  100% {
+	  	height:100%;
+	  }
+	}
+
+	.topoFull {
+	  -webkit-animation-name: topoFull;
+	  animation-name: topoFull;
+	}
+
+	@-webkit-keyframes topoNormal {
+	  0% {
+	  	height:100%;
+	  }
+
+	  100% {
+	  	height:440px;
+	  }
+	}
+
+	@keyframes topoNormal {
+	  0% {
+	  	height:100%;
+	  }
+
+	  100% {
+	  	height:440px;
+	  }
+	}
+
+	.topoNormal {
+	  -webkit-animation-name: topoNormal;
+	  animation-name: topoNormal;
+	}
+
 }
 
 /* Estilos para telas acima de 840px de largura */
@@ -551,6 +577,72 @@ body {
 	#topo {
 		background-color:#3F51B5 !important;
 	}
+	
+	@-webkit-keyframes topoFull {
+	  0% {
+	  	height:200px;
+	  }
+
+	  100% {
+	  	height:100%;
+	  }
+	}
+
+	@keyframes topoFull {
+	  0% {
+	  	height:200px;
+	  }
+
+	  100% {
+	  	height:100%;
+	  }
+	}
+
+	.topoFull {
+	  -webkit-animation-name: topoFull;
+	  animation-name: topoFull;
+	}
+
+	@-webkit-keyframes topoNormal {
+	  0% {
+	  	height:100%;
+	  }
+
+	  100% {
+	  	height:200px;
+	  }
+	}
+
+	@keyframes topoNormal {
+	  0% {
+	  	height:100%;
+	  }
+
+	  100% {
+	  	height:200px;
+	  }
+	}
+
+	.topoNormal {
+	  -webkit-animation-name: topoNormal;
+	  animation-name: topoNormal;
+	}
+
+}
+
+#conteudo {
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	position:absolute;
+	margin:auto 10%;
+	height:100%;
+}
+
+#conteudo h1 {
+	font-family:robotoCondensedLight !important;
+	font-size:250%;
 }
 
 </style>
@@ -604,10 +696,9 @@ body {
 						</div>
 			  		</div>
 				</div>
-
+				
 				
 				<!-- Conteúdo da página -->
-				
 				<div class="mdl-grid" id="meio">
 			
 					<!-- Conteudo celula sobre usuario -->
@@ -641,7 +732,7 @@ body {
 								    Mapa que representa todos os conceitos presentes em um supermercado. Mapa que rep...
 								  </div>
 								  <div class="mdl-card__actions mdl-card--border">
-								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="cmeditor()">
 									 <i class="material-icons">edit</i>
 								    </button>
 								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
@@ -669,7 +760,7 @@ body {
 								    Mapa que representa todos os conceitos presentes em um supermercado. Mapa que rep...
 								  </div>
 								  <div class="mdl-card__actions mdl-card--border">
-								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="cmeditor()">
 									 <i class="material-icons">edit</i>
 								    </button>
 								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
@@ -696,7 +787,7 @@ body {
 								    Mapa que representa todos os conceitos presentes em um supermercado. Mapa que rep...
 								  </div>
 								  <div class="mdl-card__actions mdl-card--border">
-								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="cmeditor()">
 									 <i class="material-icons">edit</i>
 								    </button>
 								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
@@ -723,7 +814,7 @@ body {
 								    Mapa que representa todos os conceitos presentes em um supermercado. Mapa que rep...
 								  </div>
 								  <div class="mdl-card__actions mdl-card--border">
-								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" onclick="cmeditor()">
 									 <i class="material-icons">edit</i>
 								    </button>
 								    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
@@ -763,25 +854,83 @@ body {
 </html>
 
 <script>
+
+var conteudo_topo = $('#topo').html();
+
 function criarMapa(){
-	// Esconde foto
-	$('#foto-usuario').removeClass('bounceIn');
-	$('#foto-usuario').addClass('bounceOut');
-	
-	// Esconde nome
-	$('#nome-usuario').removeClass('fadeInDown');
-	$('#nome-usuario').addClass('fadeOutUp');
-	
-	// Esconde medias
-	$('.media-usuario').removeClass('bounceIn');
-	$('.media-usuario').addClass('bounceOut');
+	// Esconde botão flutuante
+	$('#botao-adicionar-mapa-ou-publicacao').removeClass('bounceIn delay-07s');
+	$('#botao-adicionar-mapa-ou-publicacao').addClass('bounceOut delay-02s');
 	
 	// Esconde meio
-	$('#meio').css('display', 'none');
-	
+	$('#meio').hide();
+		
 	// Amplia topo
+	$('#topo').removeClass('animated topoNormal');
 	$('#topo').addClass('animated topoFull');
 	
+	// Adiciona conteúdo (pergunta sobre como o usuario deseja criar o mapa) ao topo
+	var conteudo_novo = '<div id="conteudo">'+
+		'<div class="mdl-grid">'+
+			'<div class="mdl-cell mdl-cell--12-col" style="margin-top:16px;">'+
+				'<i onclick="retornarAoProfile();" style="cursor:pointer;" class="material-icons">arrow_back</i>'+
+			'</div>'+
+			'<div class="mdl-cell mdl-cell--12-col">'+
+				'<h1 id="titulo" class="animated fadeInDown delay-01s">Como deseja criar o mapa?</h1>'+
+			'</div>'+
+			'<div class="mdl-cell mdl-cell--4-col" style="text-align:center;">'+
+				'<img src="../editor-basico/img/logo-cmbuilder.png" height="60" width="60" class="animated zoomIn delay-02s">'+
+				'<h1 style="padding:0;margin:0;" class="animated fadeInDown delay-02s">CMBuilder</h1>'+
+				'<button onclick="cmbuilder()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-button--mini-fab zoomIn animated delay-03s">'+
+					'<i class="material-icons">arrow_forward</i>'+
+				'</button>'+
+			'</div>'+
+			'<div class="mdl-cell mdl-cell--4-col" style="text-align:center;">'+
+				'<img src="../editor-basico/img/logo-cmeditor.png" height="60" width="60" class="animated zoomIn delay-03s">'+
+				'<h1 style="padding:0;margin:0;" class="animated fadeInDown delay-03s">CMEditor</h1>'+
+				'<button onclick="cmeditor()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-button--mini-fab zoomIn animated delay-04s">'+
+					'<i class="material-icons">arrow_forward</i>'+
+				'</button>'+
+			'</div>'+
+			'<div class="mdl-cell mdl-cell--4-col" style="text-align:center;">'+
+				'<img src="../editor-basico/img/logo-mergemaps" height="60" width="60" class="animated zoomIn delay-04s">'+
+				'<h1 style="padding:0;margin:0;" class="animated fadeInDown delay-04s">MergeMaps</h1>'+
+				'<button onclick="" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-button--mini-fab zoomIn animated delay-05s">'+
+					'<i class="material-icons">arrow_forward</i>'+
+				'</button>'+
+			'</div>'+
+		'</div>'+
+	'</div>'
+	
+	$('#topo').css('background-color', '#3F51B5');
+	
+	$('#topo').html(conteudo_novo);
+}
+
+function cmbuilder(){
+	window.location.href = "../editor-basico/index.html";
+}
+
+function cmeditor(){
+	window.location.href = "../editor-basico/editor.html";
+}
+
+function retornarAoProfile(){	
+
+	$('#topo').html(conteudo_topo);
+	
+	$('#topo').css('background-color', 'transparent');
+				
+	// Reduz topo
+	$('#topo').removeClass('animated topoFull');
+	$('#topo').addClass('animated topoNormal');
+	
+	// Mostra meio
+	$('#meio').show();
+	
+	// Mostra botão flutuante
+	$('#botao-adicionar-mapa-ou-publicacao').removeClass('bounceOut delay-02s');
+	$('#botao-adicionar-mapa-ou-publicacao').addClass('bounceIn delay-07s');
 	
 }
 </script>
