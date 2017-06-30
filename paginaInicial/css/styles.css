@@ -749,14 +749,17 @@ a img{
 {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   text-align: left;
-  color: #ff3d00;
+  color: black;
+  /*color: #ff3d00;*/
+
 }
 
 .texto1
 {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   text-align: right;
-  color: #ff3d00;
+  color: black;
+  /*color: #ff3d00;*/
 }
 .subTextoCapa
 {
@@ -821,7 +824,7 @@ padding-top: 25px;
 @media (min-width:480px) {
 .android-be-together-section 
 {
-  margin-bottom: 360px;
+  margin-bottom: 430px;
 }
  .textoCapa
 {
