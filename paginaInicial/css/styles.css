@@ -770,6 +770,22 @@ a img{
   color: #311c9e;
 }
 
+
+.listaCentralizada{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__content .modal__text
+{
+  width: 100%;
+}
+.modal__text p
+{
+  margin: 0 20px 10px;
+}
+
 /**** Mobile layout ****/
 
 @media (max-width: 1200px){

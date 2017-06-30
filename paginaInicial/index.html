@@ -40,8 +40,9 @@
 		<link href="css/animate.css" rel="stylesheet" type="text/css">
 		<script src="//storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
 
-		<link rel="stylesheet" type="text/css" href="css/dialog-polyfill.css" />
-		<script src="js/dialog-polyfill.js"></script>
+		<!-- Modal -->
+		<link rel="stylesheet" href="css/material-modal.min.css">
+		
 
 	</head>
 	<body>
@@ -130,7 +131,7 @@
 					</div>
 					<div class="texto subTextoCapa">
 						<b>Experimente o Editor</b></br></br>
-						<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+						<button onclick="window.open('../editor-basico/editor.html','editor')" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
 							Comece Já
 						</button>
 					</div>
@@ -189,14 +190,12 @@
 								<p>Crie, armazene e gerencie seus Mapas Conceituais de onde quiser.</p>
 							</div>
 							<div class="mdl-card__actions mdl-card--border">
-								<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Saiba Mais</a>
-							<div class="mdl-layout-spacer"></div>
-								<button class="mdl-button mdl-button--icon mdl-button--colored">
-									<i class="material-icons">favorite</i>
-								</button>
-								<button class="mdl-button mdl-button--icon mdl-button--colored">
-									<i class="material-icons">share</i>
-								</button>
+								<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor1">
+									Saiba Mais
+								</a>
+
+								<div class="mdl-layout-spacer"></div>
+								
 							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--16dp">
@@ -210,14 +209,11 @@
 								<p>Interaja com seus mapas por meio de perguntas e respostas.</p>
 							</div>
 							<div class="mdl-card__actions mdl-card--border">
-								<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Saiba Mais</a>
-							<div class="mdl-layout-spacer"></div>
-								<button class="mdl-button mdl-button--icon mdl-button--colored">
-									<i class="material-icons">favorite</i>
-								</button>
-								<button class="mdl-button mdl-button--icon mdl-button--colored">
-									<i class="material-icons">share</i>
-								</button>
+								<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor2">
+									Saiba Mais
+								</a>
+								<div class="mdl-layout-spacer"></div>
+									
 							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--16dp">
@@ -231,14 +227,11 @@
 								<p>Construa ontologias razas com nosso editor OWL.</p>
 							</div>
 							<div class="mdl-card__actions mdl-card--border">
-								<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Saiba Mais</a>
-							<div class="mdl-layout-spacer"></div>
-								<button class="mdl-button mdl-button--icon mdl-button--colored">
-									<i class="material-icons">favorite</i>
-								</button>
-								<button class="mdl-button mdl-button--icon mdl-button--colored">
-									<i class="material-icons">share</i>
-								</button>
+								<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor3">
+									Saiba Mais
+								</a>
+								<div class="mdl-layout-spacer"></div>
+								
 							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--16dp">
@@ -252,14 +245,11 @@
 								<p>Gere mapas conceituais automaticamente a partir de textos.</p>
 							</div>
 							<div class="mdl-card__actions mdl-card--border">
-								<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Saiba Mais</a>
-							<div class="mdl-layout-spacer"></div>
-								<button class="mdl-button mdl-button--icon mdl-button--colored">
-									<i class="material-icons">favorite</i>
-								</button>
-								<button class="mdl-button mdl-button--icon mdl-button--colored">
-									<i class="material-icons">share</i>
-								</button>
+								<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor4">
+									Saiba Mais
+								</a>
+								<div class="mdl-layout-spacer"></div>
+								
 							</div>
 						</div>
 
@@ -664,7 +654,7 @@
 							        <img class="article-image" src=" images/contato.png" border="0" alt="">
 							    </div>
 							    <div class="mdl-card__supporting-text">
-							        <p>
+							        <p style="text-align: center">
 							            <b>Fale Conosco</b>
 							            </br></br>
 										UFES - Campus Universitário de Goiabeiras
@@ -675,7 +665,7 @@
 										</br>
 										Av. Fernando Ferrari, 514, 29075-910 - Vitória/ES, Brasil
 							        </p>
-							       	<ul class="demo-list-icon mdl-list">
+							       	<ul class="listaCentralizada demo-list-icon mdl-list">
 										<li class="mdl-list__item">
 											<span class="mdl-list__item-primary-content">
 												<i class="material-icons mdl-list__item-icon">
@@ -684,6 +674,8 @@
 												 Tel: +55 (27) 4009 - 2061
 											</span>
 										</li>
+									</ul>
+									<ul class="listaCentralizada demo-list-icon mdl-list">	
 										<li class="mdl-list__item">
 											<span class="mdl-list__item-primary-content">
 												<i class="material-icons mdl-list__item-icon">
@@ -692,6 +684,8 @@
 												Email: cmpaas@gmail.com
 											</span>
 										</li>
+									</ul>
+									<ul class="listaCentralizada demo-list-icon mdl-list">	
 										<li class="mdl-list__item">
 											<span class="mdl-list__item-primary-content">
 												<i class="material-icons mdl-list__item-icon">
@@ -701,7 +695,7 @@
 											</span>
 										</li>
 									</ul>
-							        <p>
+							        <p style="text-align: center">
 							        	</br>
 							        	<b>Envie sua Mensagem</b>
 							        </p>
@@ -742,41 +736,105 @@
 				</div>
 
 
-<button id="show-dialog" type="button" class="mdl-button">Show Dialog</button>
-  <dialog class="mdl-dialog">
-    <h4 class="mdl-dialog__title">Allow data collection?</h4>
-    <div class="mdl-dialog__content">
-      <p>
-        Allowing us to collect data will let us get you the information you want faster.
-      </p>
-    </div>
-    <div class="mdl-dialog__actions">
-      <button type="button" class="mdl-button">Agree</button>
-      <button type="button" class="mdl-button close">Disagree</button>
-    </div>
-  </dialog>
-  <script>
-    var dialog = document.querySelector('dialog');
-    var showDialogButton = document.querySelector('#show-dialog');
-    if (! dialog.showModal) {
-      dialogPolyfill.registerDialog(dialog);
-    }
-    showDialogButton.addEventListener('click', function() {
-      dialog.showModal();
-    });
-    dialog.querySelector('.close').addEventListener('click', function() {
-      dialog.close();
-    });
-  </script>
+				<div class="modais">					
+					<div id="editor1" class="modal modal__bg">
+						<div class="modal__dialog">
+					  		<div class="modal__content">
+					    		<div class="modal__header">
+					      			<div class="modal__title">
+					        			<h2 class="modal__title-text">O Editor de Mapas Conceituais</h2>
+					      			</div>
+					    		</div>
+								<div class="modal__text">
+					      			<p>
+					        			O Editor de Mapas Conceituais é o serviço mais importante desta plataforma, pois é a partir dos mapas nele construídos e armazenados na plataforma que se torna possível explorar os demais serviços oferecidos pela plataforma para manipulação dos mapas e do conhecimento neles presentes.
+					      			</p>
+					    		</div>
+					    		<div class="modal__footer">
+					      			<a class="mdl-button mdl-button--colored mdl-js-button  modal__close">
+					        			Fechar
+					      			</a>
+					    		</div>
+					  		</div>
+						</div>
+					</div>
+					<div id="editor2" class="modal modal__bg">
+						<div class="modal__dialog">
+					  		<div class="modal__content">
+					    		<div class="modal__header">
+					      			<div class="modal__title">
+					        			<h2 class="modal__title-text">O iMap</h2>
+					      			</div>
+					    		</div>
+								<div class="modal__text">
+					      			<p>
+					        			Cançado de navegar seus mapas conceituais visualmente? Intereja com seus mapas por meio de perguntas e respostas em linguagem natural! Este serviço permite uma interação humanizada entre você e seu mapa conceitual, tornando mais fácil o processo de análise do conhecimento presente no mapa.
+					      			</p>
+					    		</div>
+					    		<div class="modal__footer">
+					      			<a class="mdl-button mdl-button--colored mdl-js-button  modal__close">
+					        			Fechar
+					      			</a>
+					    		</div>
+					  		</div>
+						</div>
+					</div>
+					<div id="editor3" class="modal modal__bg">
+						<div class="modal__dialog">
+					  		<div class="modal__content">
+					    		<div class="modal__header">
+					      			<div class="modal__title">
+					        			<h2 class="modal__title-text">O OntoMap</h2>
+					      			</div>
+					    		</div>
+								<div class="modal__text">
+					      			<p>
+					        			Com o OntoMap você poderá construir por meio de um editor visual suas ontologias razas e produzir o arquivo equivalente em OWL. Ontologia é um modelo de dados que representa um conjunto de conceitos dentro de um domínio e os relacionamentos entre estes e são utilizadas para realizar inferência sobre os objetos do domínio. São utilizadas em inteligência artificial, web semântica, engenharia de software e arquitetura da informação.
+					      			</p>
+					    		</div>
+					    		<div class="modal__footer">
+					      			<a class="mdl-button mdl-button--colored mdl-js-button  modal__close">
+					        			Fechar
+					      			</a>
+					    		</div>
+					  		</div>
+						</div>
+					</div>
+					<div id="editor4" class="modal modal__bg">
+						<div class="modal__dialog">
+					  		<div class="modal__content">
+					    		<div class="modal__header">
+					      			<div class="modal__title">
+					        			<h2 class="modal__title-text">O Gerador de Mapas</h2>
+					      			</div>
+					    		</div>
+								<div class="modal__text">
+					      			<p>
+					        			Gosta de produzir mapas conceituais a partir da leitura de texto? Você pode facilitar este processo utilizando o serviço de geração automática de mapas conceituais a partir de textos. Com ele você pode obter um mapa gerado automáticamente e pessoalizar seu mapa com suas posteriores intervenções.
+					      			</p>
+					    		</div>
+					    		<div class="modal__footer">
+					      			<a class="mdl-button mdl-button--colored mdl-js-button  modal__close">
+					        			Fechar
+					      			</a>
+					    		</div>
+					  		</div>
+						</div>
+					</div>
+				</div>
 
-				
+
+
+
+
+          				
 
 				<footer class="android-footer mdl-mega-footer">
 					<div class="mdl-mega-footer--top-section">
 						
 						<div class="mdl-mega-footer--right-section">
 							<a class="mdl-typography--font-light" href="#top">
-								Back to Top
+								Ir ao Topo
 								<i class="material-icons">expand_less</i>
 							</a>
 						</div>
@@ -803,5 +861,6 @@
 			</div>
 		</div>
 		<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<script src="js/material-modal.min.js"></script>
 	</body>
 </html>
