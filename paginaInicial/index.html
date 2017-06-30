@@ -1,39 +1,21 @@
-<!doctype html>
-<!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
+<!DOCTYPE html>
 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License
--->
-
-<html lang="pt">
+<html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+		<meta name="description" content="Portal do conhecimento, UFES">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 		
+		<!-- Ícone da página-->
 		<link rel="icon" href="images/icone1.ico" type="image/x-icon" />
 		<title>Portal do Conhecimento</title>
 
-		<!-- Page styles -->
+		<!-- CSS, Fontes e JS -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
 		<link rel="stylesheet" href="css/styles.css">
-		
-		
-		
 		<link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.1/material.teal-red.min.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -43,24 +25,27 @@
 		<!-- Modal -->
 		<link rel="stylesheet" href="css/material-modal.min.css">
 		
-
 	</head>
 	<body>
+		<!-- Menu fixo na página-->
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-			<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+			<!-- Barra do Menu -->
+			<div class="portal-header mdl-layout__header mdl-layout__header--waterfall">
 				<div class="mdl-layout__header-row">
 
-					
-					<span class="android-title mdl-layout-title">
+					<!-- Logomarca do portal -->
+					<span class="portal-title mdl-layout-title animated fadeInDown wow">
 						<img class="logoPrincipal" src="images/logoPrincipal.png">
 						<img class="logoPrincipal1" src="images/logoCentral.png">
 					</span>
  
          
-          			<!-- Add spacer, to align navigation to the right in desktop -->
-					<div class="android-header-spacer mdl-layout-spacer"></div>
-					<div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+          			<!-- Alinhar a navegação para a direita na área de trabalho -->
+					<div class="portal-header-spacer mdl-layout-spacer"></div>
+					
+					<!-- Lupa de Pesquisa -->
+					<div class="portal-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
 						<label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
 							<i class="material-icons">search</i>
 						</label>
@@ -69,9 +54,9 @@
 						</div>
 					</div>
 					
-					<!-- Navigation -->
-					<div class="android-navigation-container">
-						<nav class="android-navigation mdl-navigation">
+					<!-- Menu de navegação -->
+					<div class="portal-navigation-container">
+						<nav class="portal-navigation mdl-navigation delay-06s animated  bounce wow">
 							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Início</a>
 							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="#sobre">Sobre</a>
 							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="#servico">Serviços</a>
@@ -79,22 +64,30 @@
 							<a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Login</a>
 						</nav>
 					</div>
-					<span class="android-mobile-title mdl-layout-title">
+
+					<!-- Logomarca após redimensionamento da tela-->	
+					<span class="portal-mobile-title mdl-layout-title">
 						<img class="logoCentral" src="images/logoCentral.png">
 					</span>
-					<button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+
+
+					<button class="portal-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
 						<i class="material-icons">more_vert</i>
 					</button>
 					<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-						<li class="mdl-menu__item">5.0 Lollipop</li>
-						<li class="mdl-menu__item">4.4 KitKat</li>
-						<li disabled class="mdl-menu__item">4.3 Jelly Bean</li>
-						<li class="mdl-menu__item">Android History</li>
+						<li class="mdl-menu__item">Mapa Conceitual</li>
+						<li disabled class="mdl-menu__item">iMap</li>
+						<li disabled class="mdl-menu__item">OntoMap</li>
+						<li disabled class="mdl-menu__item">Gerador de Mapas</li>
+						<li disabled class="mdl-menu__item">VMap</li>
+						<li disabled class="mdl-menu__item">MergeMaps</li>
 					</ul>
 				</div>
 			</div>
+			<!-- Fim da barra do menu -->
 
-			<div class="android-drawer mdl-layout__drawer">
+			<!-- Barra do menu lateral para dispositivos móveis -->
+			<div class="portal-drawer mdl-layout__drawer">
 				<span class="mdl-layout-title">
 					<img class="logoLateral" src="images/logoLateral.png">
 				</span>
@@ -103,82 +96,50 @@
 					<a class="mdl-navigation__link" href="#sobre">Sobre</a>
 					<a class="mdl-navigation__link" href="#servico">Serviços</a>					
 					<a class="mdl-navigation__link" href="#contato">Contato</a>
-					<a class="mdl-navigation__link" href="">Login</a>
-					
-					<div class="android-drawer-separator"></div>
-<!--					<span class="mdl-navigation__link" href="">Versions</span>
--->		
-					
+					<a class="mdl-navigation__link" href="">Login</a>					
 				</nav>
 			</div>
 	
-			<div class="android-content mdl-layout__content">
-        			<a name="top"></a>
-				<div class="android-be-together-section">
-<!--					
-					<div class="logo-font android-slogan">
+			<!-- Conteúdo do Portal -->
+			<div class="portal-content mdl-layout__content">
+        		<a name="top"></a>
+        		
+        		<!-- Imagem principal -->	
+				<div class="portal-be-together-section animated fadeInUp wow">
+					
+					<!-- Texto da imagem principal -->
+					<div class="texto textoCapa delay-03s animated wow zoomIn">
 						<b>Elabore</b></br> <b>Mapas Conceituais</b>
 					</div>
-					<div class="logo-font android-sub-slogan">
-						<b>Experimente o Editor</b></br></br>
-						<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-							Comece Já
-						</button>
-					</div>
--->				
-					<div class="texto textoCapa">
-						<b>Elabore</b></br> <b>Mapas Conceituais</b>
-					</div>
-					<div class="texto subTextoCapa">
+					<div class="texto subTextoCapa delay-03s animated wow zoomIn">
 						<b>Experimente o Editor</b></br></br>
 						<button onclick="window.open('../editor-basico/editor.html','editor')" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
 							Comece Já
 						</button>
 					</div>
 
-					<div class="texto1 textoCapa1">
+					<div class="texto1 textoCapa1 delay-03s animated wow zoomIn">
 						<b>Colabore Conosco!</b>
 					</div>
-					<div class="texto1 subTextoCapa1">
+					<div class="texto1 subTextoCapa1 delay-03s animated wow zoomIn">
 						<b>Seja usuário, desenvolvedor</b></br> <b>ou investidor</b></br></br>
 						<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
 							Cadastre-se
 						</button>
 					</div>
-
-
-
-
-
-
-<!--
-					<div class="logo-font android-slogan">Portal do Conhecimento </br> Baseado em Mapas Conceituais</div>
-
-					<div class="logo-font android-sub-slogan">3 mil dólares ou nada!</div>
-					<div class="logo-font android-create-character">
-					  <a href=""><img src="images/andy.png"> create your android character</a>
-					</div>
-
-
-					<a href="#screens">
-						<button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-							<i class="material-icons">expand_more</i>
-						</button>
-					</a>
-
--->
-
 				</div>
 				
-				
-				
-				<div id="servico" class="android-screen-section mdl-typography--text-center">
+				<!-- Serviços -->
+				<div id="servico" class="portal-screen-section mdl-typography--text-center">
 					<a name="screens"></a>
 					<div class="mdl-typography--display-1-color-contrast">
 						Serviços em Destaque
 					</div>
 
+					<!-- Cartões com os editores -->
 					<div class="mdl-grid">
+
+						<!-- Editor de Mapas Conceituais -->
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--16dp">
 							<figure class="mdl-card__media">
 								<img src="images/editor.jpg" alt="" />
@@ -193,11 +154,11 @@
 								<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor1">
 									Saiba Mais
 								</a>
-
 								<div class="mdl-layout-spacer"></div>
-								
 							</div>
 						</div>
+
+						<!-- iMap -->
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--16dp">
 							<figure class="mdl-card__media">
 								<img src="images/editor1.jpg" alt="" />
@@ -212,10 +173,11 @@
 								<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor2">
 									Saiba Mais
 								</a>
-								<div class="mdl-layout-spacer"></div>
-									
+								<div class="mdl-layout-spacer"></div>								
 							</div>
 						</div>
+
+						<!-- OntoMap -->
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--16dp">
 							<figure class="mdl-card__media">
 								<img src="images/mapa3.jpg" alt="" />
@@ -230,10 +192,11 @@
 								<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor3">
 									Saiba Mais
 								</a>
-								<div class="mdl-layout-spacer"></div>
-								
+								<div class="mdl-layout-spacer"></div>								
 							</div>
 						</div>
+
+						<!-- Gerador de Mapas -->
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--16dp">
 							<figure class="mdl-card__media">
 								<img src="images/editor2.jpg" alt="" />
@@ -248,71 +211,34 @@
 								<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor4">
 									Saiba Mais
 								</a>
-								<div class="mdl-layout-spacer"></div>
-								
+								<div class="mdl-layout-spacer"></div>								
 							</div>
 						</div>
-
 					</div>
-
-						
-					
-
-
-<!--
-					<div class="android-screens">
-						<div class="android-wear android-screen">
-							<a class="android-image-link" href="">
-				 				<img class="android-screen-image" src="images/wear-silver-on.png">
-				 				<img class="android-screen-image" src="images/wear-black-on.png">
-							</a>
-							<a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Android Wear</a>
-						</div>
-						<div class="android-phone android-screen">
-							<a class="android-image-link" href="">
-								<img class="android-screen-image" src="images/nexus6-on.jpg">
-							</a>
-							<a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Phones</a>
-						</div>
-						<div class="android-tablet android-screen">
-							<a class="android-image-link" href="">
-								<img class="android-screen-image" src="images/nexus9-on.jpg">
-							</a>
-							<a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Tablets</a>
-						</div>
-						<div class="android-tv android-screen">
-							<a class="android-image-link" href="">
-								<img class="android-screen-image" src="images/tv-on.jpg">
-							</a>
-							<a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Android TV</a>
-						</div>
-						<div class="android-auto android-screen">
-							<a class="android-image-link" href="">
-								<img class="android-screen-image" src="images/auto-on.jpg">
-							</a>
-							<a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase mdl-typography--text-left" href="">Coming Soon: Android Auto</a>
-						</div>
-					</div>
--->
-
 				</div>
-				<div id="sobre" class="android-wear-section">
-					<div class="android-wear-band">
-						<div class="android-wear-band-text">
+				<!-- Fim Serviços -->
+
+				<!-- Sobre UFES-->
+				<div id="sobre" class="portal-wear-section">
+					<div class="portal-wear-band">
+						<div class="portal-wear-band-text">
 							<div class="mdl-typography--display-2 mdl-typography--font-thin">UNIVERSIDADE FEDERAL DO ESPÍRITO SANTO</div>
 							<p class="mdl-typography--headline mdl-typography--font-thin">
 								O Portal do Conhecimento Baseado em Mapas Conceituais é o principal front-end dos serviços oferecidos pela plataforma CMPaaS. Todos seus desenvolvedores são Professores, Pesquisadores e Estudantes da UFES.
 							</p>
 							<p>
-								<a class="mdl-typography--font-regular mdl-typography--text-uppercase android-alt-link" href="http://www.ufes.br/" target="blank">
+								<a class="mdl-typography--font-regular mdl-typography--text-uppercase portal-alt-link" href="http://www.ufes.br/" target="blank">
 									Sobre a UFES&nbsp;<i class="material-icons">chevron_right</i>
 								</a>
 							</p>
 						</div>
 					</div>
 				</div>
-				<div class="android-customized-section">
-					<div class="android-customized-section-text">
+				<!-- Fim sobre ufes-->
+
+				<!-- Sobre Cmpaas -->
+				<div class="portal-customized-section">
+					<div class="portal-customized-section-text">
 						<div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Portal do Conhecimento e CMPaaS</div>
 						<p class="mdl-typography--font-light">
 							</br>
@@ -350,16 +276,23 @@
 						<p class="mdl-typography--font-light">
 							Desejamos que você aproveite ao máximo os serviços que oferecemos e colabore conosco fornecendo feedbacks e sugestões de melhorias para o aprimoramento constante das funcionalidades oferecidas na Plataforma CMPaaS e no Portal do Conhecimento.
 							<br></br>
-							<a href="" class="android-link mdl-typography--font-light">UFES</a>
+							<a href="" class="portal-link mdl-typography--font-light">UFES</a>
 						</p>
 					</div>
-					<div class="android-customized-section-image"></div>
+					<div class="portal-customized-section-image"></div>
 				</div>
-				<div class="android-more-section">
-					<div class="android-section-title mdl-typography--display-1-color-contrast">
+				<!-- Fim sobre Cmpaas -->
+
+				<!-- Equipe -->
+				<div class="portal-more-section">
+					<div class="portal-section-title mdl-typography--display-1-color-contrast">
 						Nossa Equipe
 					</div>
-					<div class="android-card-container mdl-grid">
+
+					<!-- Cartões da equipe -->
+					<div class="portal-card-container mdl-grid">
+						
+						<!-- Davidson Cury -->
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
 							<div class="mdl-card__media team-leader wow fadeInDown delay-03s">
 								<div class="team-leader-shadow">
@@ -388,7 +321,7 @@
 								</ul>
 							</div>
 							<div class="mdl-card__title">
-								<h4 class="mdl-card__title-text">Davidson Cury</h4>								
+								<h4 class="mdl-card__title-text">Davidson Cury</h4>
 							</div>
 							<div class="mdl-card__subtitle">
 								<h4 class="mdl-card__subtitle-text">&nbsp;&nbsp;&nbsp;&nbsp;Coordenador Geral</h4>
@@ -397,6 +330,8 @@
 								<span class="mdl-typography--font-light mdl-typography--subhead">Professor Titular do Departamento de Informática da Universidade Federal do Espírito Santo (UFES)</span>
 							</div>
 						</div>
+
+						<!-- Wagner Perin -->
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
 							<div class="mdl-card__media team-leader wow fadeInDown delay-03s">
 								<div class="team-leader-shadow">
@@ -434,6 +369,8 @@
 								<span class="mdl-typography--font-light mdl-typography--subhead">Mestre em Informática e Analista de T.I. da Universidade Federal do Espírito Santo (UFES)</span>
 							</div>
 						</div>
+
+						<!-- Camila Zacche -->
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
 							<div class="mdl-card__media team-leader wow fadeInDown delay-03s">
 								<div class="team-leader-shadow">
@@ -471,6 +408,8 @@
 								<span class="mdl-typography--font-light mdl-typography--subhead">Mestranda em Informática na Universidade Federal do Espírito Santo (UFES)</span>
 							</div>
 						</div>
+
+						<!-- Guilherme Pinotte -->
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
 							<div class="mdl-card__media team-leader wow fadeInDown delay-03s">
 								<div class="team-leader-shadow">
@@ -508,6 +447,8 @@
 								<span class="mdl-typography--font-light mdl-typography--subhead">Mestrando em Informática na Universidade Federal do Espírito Santo (UFES)</span>
 							</div>
 						</div>
+
+						<!-- Daniel de Assis -->
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
 							<div class="mdl-card__media team-leader wow fadeInDown delay-03s">
 								<div class="team-leader-shadow">
@@ -545,6 +486,8 @@
 								<span class="mdl-typography--font-light mdl-typography--subhead">Mestrando em Informática na Universidade Federal do Espírito Santo (UFES)</span>
 							</div>
 						</div>
+
+						<!-- Geraldo Vassoler -->
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
 							<div class="mdl-card__media team-leader wow fadeInDown delay-03s">
 								<div class="team-leader-shadow">
@@ -583,13 +526,15 @@
 							</div>
 						</div>
 					</div>
+					<!-- Fim dos Cartões da equipe -->
 
 					</br></br>
-					<div class="android-section-title mdl-typography--display-1-color-contrast">
+					<div class="portal-section-title mdl-typography--display-1-color-contrast">
 						Desenvolvem conosco...
 					</div>
 					</br>
 					
+					<!-- Desenvolvedores -->
 					<div class="mdl-grid">
 						<div class="mdl-cell mdl-cell--3-col">
 							<div class="isaque-card-image mdl-card mdl-shadow--2dp">
@@ -637,14 +582,14 @@
 							</div>
 						</div>
 					</div>
-
-
+					<!-- Fim desenvolvedores -->
 
 				</div>
+				<!-- Fim equipe -->
 
+				<!-- Contato -->
 				<div id="contato" class="contato-card">
-					<div class="">
-						
+					<div class="">						
 						<div class="mdl-grid portfolio-max-width portfolio-contact">
 							<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
 							    <div class="mdl-card__title">
@@ -726,16 +671,17 @@
 							        </form>
 							    </div>
 							</div>
-						</div>
-					
+						</div>					
 					</div>					
 				</div>
+
 				<div class="contato">
-
-				<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d865.8909596762527!2d-40.30593451110011!3d-20.273451028988042!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81806e8ccc563%3A0xef39e58c104c8a86!2sDepartamento+de+Inform%C3%A1tica%2C+Centro+Tecnol%C3%B3gico+-+UFES!5e1!3m2!1spt-BR!2sbr!4v1498670890568" width="1000" height="400" frameborder="2" style="border:2" allowfullscreen></iframe>
+					<!-- Mapa da ufes-->
+					<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d865.8909596762527!2d-40.30593451110011!3d-20.273451028988042!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81806e8ccc563%3A0xef39e58c104c8a86!2sDepartamento+de+Inform%C3%A1tica%2C+Centro+Tecnol%C3%B3gico+-+UFES!5e1!3m2!1spt-BR!2sbr!4v1498670890568" width="1000" height="400" frameborder="2" style="border:2" allowfullscreen></iframe>
 				</div>
+				<!-- Fim contato -->
 
-
+				<!-- Modais dos cartões dos editores -->
 				<div class="modais">					
 					<div id="editor1" class="modal modal__bg">
 						<div class="modal__dialog">
@@ -822,16 +768,11 @@
 						</div>
 					</div>
 				</div>
+				<!-- Fim dos modais dos cartões dos editores -->
 
-
-
-
-
-          				
-
-				<footer class="android-footer mdl-mega-footer">
-					<div class="mdl-mega-footer--top-section">
-						
+				<!-- Rodapé -->
+				<footer class="portal-footer mdl-mega-footer">
+					<div class="mdl-mega-footer--top-section">						
 						<div class="mdl-mega-footer--right-section">
 							<a class="mdl-typography--font-light" href="#top">
 								Ir ao Topo
@@ -843,7 +784,7 @@
 						<p class="mdl-typography--font-light">Copyright © PPGI - UFES 2017</p>
 					</div>
 					<div class="mdl-mega-footer--bottom-section">
-						<a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
+						<a class="portal-link portal-link-menu mdl-typography--font-light" id="version-dropdown">
 							Menu
 							<i class="material-icons">arrow_drop_up</i>
 						</a>
@@ -853,14 +794,18 @@
 							<li class="mdl-menu__item"><a href="#servico">Serviços</a></li>
 							<li class="mdl-menu__item"><a href="#contato">Contato</a></li>
 							<li class="mdl-menu__item"><a href="">Login</a></li>
-						</ul>
-						
+						</ul>						
 					</div>
 				</footer>
+				<!-- Fim rodapé -->
       
 			</div>
+			<!-- Fim do conteúdo da página -->
 		</div>
+		<!-- Fim do menu fixo -->
+
 		<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 		<script src="js/material-modal.min.js"></script>
+	
 	</body>
 </html>
