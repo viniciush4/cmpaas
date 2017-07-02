@@ -1,0 +1,27 @@
+@font-face {
+    font-family: roboto;
+    src: url(RobotoCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: robotoRegular;
+    src: url(Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: robotoCondensedBold;
+    src: url(RobotoCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: robotoCondensedLight;
+    src: url(RobotoCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: social;
+    src: url(SocialType.ttf);
+}
+
+
+

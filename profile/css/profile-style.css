@@ -1,0 +1,275 @@
+
+body {
+	font-family:robotoRegular !important;
+	color:#fff !important;
+}
+
+.mdl-grid {
+	padding:0 !important;
+}
+
+#nome-usuario {	
+	font-family:robotoCondensedLight !important;
+	margin:0;	
+	font-size:50px;
+}
+
+#foto-usuario {
+	height:200px;
+	width:200px;
+	background:url(../img/vini.jpg);
+	background-size:contain;
+	border: 3px solid #fff;
+	border-radius:50%;
+	margin: 100px auto 0;
+}
+
+#medias-usuario {
+	padding:7px 0 0 7px;
+	font-family:social !important;
+	font-size:40px;
+}
+
+#medias-usuario .media-usuario {
+	display:inline-block;
+	margin:-10px;
+}
+
+#sobre-usuario {
+	font-family:robotoCondensedLight !important;
+	margin-top:130px;
+	color:#333;
+	text-align:center;
+	padding:0 20px;
+}
+
+#tabs {
+	color:#333;
+}
+
+#tabs .mdl-tabs__tab-bar {
+	font-family:robotoCondensedBold !important;
+	justify-content: left;
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
+	height: 3px !important;
+}
+
+.mdl-card__actions {
+	text-align:right;
+	color:#999 !important;
+}
+
+.mdl-icon-toggle:not(.is-checked) .mdl-icon-toggle__label {
+	color:#999 !important;
+}
+
+.mdl-icon-toggle.is-checked .mdl-icon-toggle__label {
+	color:#3f51b5 !important;
+}
+
+#botao-adicionar-mapa-ou-publicacao {
+	position: fixed;
+	display: block;
+	right: 0;
+	bottom: 0;
+	margin-right: 40px;
+	margin-bottom: 40px;
+	z-index: 901;
+}
+
+#celula-foto-usuario {
+	height:200px;
+}
+
+#celula-nome-e-medias-sociais {
+	padding:50px 0;
+	text-align:left;
+	height:200px;
+} 
+
+
+.card-mapa.mdl-card {
+  width: 100%;
+  height: 200px;
+}
+
+/* Estilos para telas abaixo de 840px de largura */
+@media screen and (max-width: 840px) {
+	.apenas-telas-grandes {
+		display:none;
+	}
+	
+	.apenas-telas-pequenas {
+		display:block;
+	}
+	
+	#celula-nome-e-medias-sociais {
+		padding:120px 0;
+		text-align:center;
+		height:200px;
+		width:100%;
+		color:rgba(0,0,0,.87);
+		margin:0 !important;
+	} 
+	
+	#nome-usuario {
+		font-size:40px;
+	}
+	
+	#medias-usuario {
+		font-size:35px;
+	}
+	
+	#celula-foto-usuario {
+		margin:0 !important;
+		width:100%;
+		background-color:#3F51B5 !important;
+	}
+	
+	#sobre-usuario {
+		font-family:robotoCondensedLight !important;
+		margin-top:0px;
+		color:#333;
+		text-align:center;
+		padding:0 20px;
+	}
+	
+	#topo {
+		background-color:transparent;
+	}
+	
+	@-webkit-keyframes topoFull {
+	  0% {
+	  	height:440px;
+	  }
+
+	  100% {
+	  	height:100%;
+	  }
+	}
+
+	@keyframes topoFull {
+	  0% {
+	  	height:440px;
+	  }
+
+	  100% {
+	  	height:100%;
+	  }
+	}
+
+	.topoFull {
+	  -webkit-animation-name: topoFull;
+	  animation-name: topoFull;
+	}
+
+	@-webkit-keyframes topoNormal {
+	  0% {
+	  	height:100%;
+	  }
+
+	  100% {
+	  	height:440px;
+	  }
+	}
+
+	@keyframes topoNormal {
+	  0% {
+	  	height:100%;
+	  }
+
+	  100% {
+	  	height:440px;
+	  }
+	}
+
+	.topoNormal {
+	  -webkit-animation-name: topoNormal;
+	  animation-name: topoNormal;
+	}
+
+}
+
+/* Estilos para telas acima de 840px de largura */
+@media screen and (min-width: 840px) {
+	.apenas-telas-grandes {
+		display:block;
+	}
+	
+	.apenas-telas-pequenas {
+		display:none;
+	}
+	
+	#topo {
+		background-color:#3F51B5 !important;
+	}
+	
+	@-webkit-keyframes topoFull {
+	  0% {
+	  	height:200px;
+	  }
+
+	  100% {
+	  	height:100%;
+	  }
+	}
+
+	@keyframes topoFull {
+	  0% {
+	  	height:200px;
+	  }
+
+	  100% {
+	  	height:100%;
+	  }
+	}
+
+	.topoFull {
+	  -webkit-animation-name: topoFull;
+	  animation-name: topoFull;
+	}
+
+	@-webkit-keyframes topoNormal {
+	  0% {
+	  	height:100%;
+	  }
+
+	  100% {
+	  	height:200px;
+	  }
+	}
+
+	@keyframes topoNormal {
+	  0% {
+	  	height:100%;
+	  }
+
+	  100% {
+	  	height:200px;
+	  }
+	}
+
+	.topoNormal {
+	  -webkit-animation-name: topoNormal;
+	  animation-name: topoNormal;
+	}
+
+}
+
+#conteudo {
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	position:absolute;
+	margin:auto 10%;
+	height:100%;
+}
+
+#conteudo h1 {
+	font-family:robotoCondensedLight !important;
+	font-size:250%;
+}
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<!-- Material design lite -->
+		<link rel="stylesheet" href="../recursos/mdl/material.min.css">
+		<script src="../recursos/mdl/material.min.js"></script>
+		
+		<!-- Material design Icons -->
+		<link rel="stylesheet" href="../recursos/material-design-icons-3.0.1/materialIcons.css">
+		
+		<!-- Efeitos -->
+		<link rel="stylesheet" href="../recursos/efeitos.css">
+		
+		<!-- Fontes -->
+		<link rel="stylesheet" href="../recursos/fontes/fontes.css">
+		
+		<!-- CMBuilder -->
+		<link rel="stylesheet" href="css/cmbuilder-style.css">
+		
+		<!-- Configuração para dispositivos moveis -->
+		<meta name="viewport" content="width=device-width">
+		
+	</head>
+  
+	<body>
+		<form action="editor.html">
+			<div id="conteudo">
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--12-col">
+						<i onclick="history.back();" style="cursor:pointer;" class="material-icons">arrow_back</i>
+					</div>
+					<div class="mdl-cell mdl-cell--12-col">
+						<h1 class="fadeInDown animated">Qual o tipo de representação?</h1>
+					</div>
+					<div class="mdl-cell mdl-cell--3-col fadeInDown animated delay-01s">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-1">
+							<input type="radio" id="list-option-1" class="mdl-radio__button" name="options" value="1" checked />
+						</label>
+					  	Representação baseada em texto
+			  		</div>
+					<div class="mdl-cell mdl-cell--3-col fadeInDown animated delay-01s">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-2">
+							<input type="radio" id="list-option-2" class="mdl-radio__button" name="options" value="2" />
+						</label>
+						Sumarização baseada em texto
+					</div>
+					<div class="mdl-cell mdl-cell--3-col fadeInDown animated delay-01s">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-3">
+							<input type="radio" id="list-option-3" class="mdl-radio__button" name="options" value="3" />
+						</label>
+						Síntese baseada em texto e domínio
+					</div>
+					<div class="mdl-cell mdl-cell--3-col fadeInDown animated delay-01s">
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-4">
+							<input type="radio" id="list-option-4" class="mdl-radio__button" name="options" value="4" />
+						</label>
+						Sumarização baseada em domínio
+					</div>
+					<div class="mdl-cell mdl-cell--12-col">
+						<h1 class="fadeInDown animated delay-02s">Qual é o texto base?</h1>
+						<div class="mdl-textfield mdl-js-textfield" id="div-texto-base">
+					    		<textarea class="mdl-textfield__input" type="text" rows="8" id="field-texto-base" ></textarea>
+					  	</div>
+					</div>
+					<div class="mdl-cell mdl-cell--12-col">
+					<div id="div-botao-proximo">
+					  	<button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored zoomIn animated delay-03s">
+							<i class="material-icons">arrow_forward</i>
+						</button>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+</html>

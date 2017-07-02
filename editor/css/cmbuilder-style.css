@@ -1,0 +1,49 @@
+
+.mdl-radio__outer-circle {
+	border: 2px solid rgba(255,255,255,0.75) !important;
+}
+
+.mdl-radio__inner-circle {
+	background: #fff !important;
+	border: 2px solid #fff !important;
+}
+
+body {
+	background-color:#311c9e;
+	font-family: roboto;
+	color:#fff !important;
+}
+
+#conteudo {
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	position:absolute;
+	margin:auto 10%;
+	height:100%;
+}
+
+#conteudo h1 {
+	font-size:250%;
+}
+
+
+
+#div-texto-base {
+	width:100%;
+	padding-top:0;
+}
+
+#field-texto-base {
+	border:2px solid #fff;
+	border-radius:1px;
+	padding:10px;	
+	margin-left:-10px;
+}
+
+#div-botao-proximo {
+	text-align:right;
+}
+
+
