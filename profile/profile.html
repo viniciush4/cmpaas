@@ -240,45 +240,43 @@ function criarMapa(){
 			'<div class="mdl-cell mdl-cell--12-col">'+
 				'<h1 id="titulo" class="animated fadeInDown delay-01s">Como deseja criar o mapa?</h1>'+
 			'</div>'+
-			'<div class="mdl-cell mdl-cell--4-col" style="text-align:center;">'+
-				'<img src="../editor-basico/img/logo-cmbuilder.png" height="60" width="60" class="animated zoomIn delay-02s">'+
-				'<h1 style="padding:0;margin:0;" class="animated fadeInDown delay-02s">CMBuilder</h1>'+
-				'<button onclick="cmbuilder()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-button--mini-fab zoomIn animated delay-03s">'+
-					'<i class="material-icons">arrow_forward</i>'+
-				'</button>'+
+			'<div class="mdl-cell mdl-cell--4-col" style="text-align:center;padding:20px;">'+
+				'<img src="../editor/img/logo-cmbuilder.png" height="60" width="60" class="animated zoomIn delay-02s" style="cursor:pointer;" onclick="cmbuilder()">'+
+				'<h1 style="padding:0;margin:0;cursor:pointer;" class="animated fadeInDown delay-02s" onclick="cmbuilder()">CMBuilder</h1>'+
+				
 			'</div>'+
-			'<div class="mdl-cell mdl-cell--4-col" style="text-align:center;">'+
-				'<img src="../editor-basico/img/logo-cmeditor.png" height="60" width="60" class="animated zoomIn delay-03s">'+
-				'<h1 style="padding:0;margin:0;" class="animated fadeInDown delay-03s">CMEditor</h1>'+
-				'<button onclick="cmeditor()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-button--mini-fab zoomIn animated delay-04s">'+
-					'<i class="material-icons">arrow_forward</i>'+
-				'</button>'+
+			'<div class="mdl-cell mdl-cell--4-col" style="text-align:center;padding:20px;">'+
+				'<img src="../editor/img/logo-cmeditor.png" height="60" width="60" class="animated zoomIn delay-03s" style="cursor:pointer;" onclick="cmeditor()">'+
+				'<h1 style="padding:0;margin:0;cursor:pointer;" class="animated fadeInDown delay-03s" onclick="cmeditor()">CMEditor</h1>'+
+				
 			'</div>'+
-			'<div class="mdl-cell mdl-cell--4-col" style="text-align:center;">'+
-				'<img src="../editor-basico/img/logo-mergemaps" height="60" width="60" class="animated zoomIn delay-04s">'+
-				'<h1 style="padding:0;margin:0;" class="animated fadeInDown delay-04s">MergeMaps</h1>'+
-				'<button onclick="" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-button--mini-fab zoomIn animated delay-05s">'+
-					'<i class="material-icons">arrow_forward</i>'+
-				'</button>'+
+			'<div class="mdl-cell mdl-cell--4-col" style="text-align:center;padding:20px;">'+
+				'<img src="../editor/img/logo-mergemaps" height="60" width="60" class="animated zoomIn delay-04s" style="cursor:pointer;" onclick="cmbuilder()">'+
+				'<h1 style="padding:0;margin:0;cursor:pointer;" class="animated fadeInDown delay-04s" onclick="cmbuilder()">MergeMaps</h1>'+
+				
 			'</div>'+
 		'</div>'+
 	'</div>'
 	
-	$('#topo').css('background-color', '#3F51B5');
+	$('#topo').css('background-color', '#311c9e');
 	
 	$('#topo').html(conteudo_novo);
+	
+	setTimeout(function(){$('body').css('background-color', '#311c9e');}, 500);
+	
 }
 
 function cmbuilder(){
-	window.location.href = "../editor-basico/index.html";
+	window.location.href = "../editor/apresentacao-cmbuilder.html";
 }
 
 function cmeditor(){
-	window.location.href = "../editor-basico/editor.html";
+	window.location.href = "../editor/apresentacao-cmeditor.html";
 }
 
 function retornarAoProfile(){	
-
+	$('body').css('background-color', '#fff');
+	
 	$('#topo').html(conteudo_topo);
 	
 	$('#topo').css('background-color', 'transparent');

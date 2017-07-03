@@ -8,6 +8,10 @@ body {
 	padding:0 !important;
 }
 
+.mdl-layout__content {
+	height:100%;
+}
+
 #nome-usuario {	
 	font-family:robotoCondensedLight !important;
 	margin:0;	
@@ -125,7 +129,7 @@ body {
 	#celula-foto-usuario {
 		margin:0 !important;
 		width:100%;
-		background-color:#3F51B5 !important;
+		background-color:#311c9e !important;
 	}
 	
 	#sobre-usuario {
@@ -203,7 +207,7 @@ body {
 	}
 	
 	#topo {
-		background-color:#3F51B5 !important;
+		background-color:#311c9e !important;
 	}
 	
 	@-webkit-keyframes topoFull {

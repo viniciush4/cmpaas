@@ -10,7 +10,7 @@
 
 body {
 	background-color:#311c9e;
-	font-family: roboto;
+	font-family: robotoRegular;
 	color:#fff !important;
 }
 
@@ -25,6 +25,7 @@ body {
 }
 
 #conteudo h1 {
+	font-family:robotoCondensedLight;
 	font-size:250%;
 }
 
