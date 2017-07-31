@@ -219,7 +219,7 @@ a img
   position: relative;
   padding-top: 60px;
   padding-bottom: 80px;
-  background-color: #FFA726;
+  background-color: #07acd6;
 }
 .portal-screen-section .mdl-grid
 {
@@ -301,6 +301,24 @@ a img
 /* Fim sobre ufes */
 
 /* Sobre Cmpaas*/
+
+.video-container 
+{
+  position: relative;
+  padding-bottom: 55%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+.video-container video  
+{
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 70%;
+  height: 80%;
+}
+
 .portal-customized-section 
 {
   text-align: center;
@@ -701,6 +719,8 @@ padding-top: 16px;
   cursor: pointer;
 }
 /* Fim rodapé*/
+
+
 
 /* ################################################ */
 /* ################### MOBILE ##################### */
