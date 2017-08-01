@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
@@ -25,19 +24,25 @@
 		<!-- Modal -->
 		<link rel="stylesheet" href="css/material-modal.min.css">
 		
+		<!-- Fontes -->
+		<link rel="stylesheet" href="../recursos/fontes/fontes.css">
+		
+		
 	</head>
 	<body>
 		<!-- Menu fixo na página-->
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
 			<!-- Barra do Menu -->
-			<div class="portal-header mdl-layout__header mdl-layout__header--waterfall">
+			<div class="portal-header mdl-layout__header mdl-layout__header--waterfall" style="background-color:#14213d;">
 				<div class="mdl-layout__header-row">
 
 					<!-- Logomarca do portal -->
 					<span class="portal-title mdl-layout-title animated fadeInDown wow">
-						<img class="logoPrincipal" src="images/logoPrincipal.png">
-						<img class="logoPrincipal1" src="images/logoCentral.png">
+						<!--<img class="logoPrincipal" src="images/logoPrincipal.svg">
+						<img class="logoPrincipal1" src="images/logoCentral.svg">-->
+						<img class="logoPrincipal" src="images/logoCentral.svg">
+						<img class="logoPrincipal1" src="images/logoCentral.svg">
 					</span>
  
          
@@ -108,115 +113,143 @@
 				<div class="portal-be-together-section">
 					
 					<!-- Texto da imagem principal -->
-					<div class="texto textoCapa delay-03s animated wow zoomIn">
+					<div class="texto textoCapa delay-03s animated wow zoomIn fonteRobotoRegular" style="color:#14213d;">
 						<b>Elabore</b></br> <b>Mapas Conceituais</b>
 					</div>
-					<div class="texto subTextoCapa delay-03s animated wow zoomIn">
+					<div class="texto subTextoCapa delay-03s animated wow zoomIn fonteRobotoRegular" style="color:#442b48;">
 						<b>Experimente o Editor</b></br></br>
-						<button onclick="window.open('../editor-basico/editor.html','editor')" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+						<button onclick="window.open('../editor-basico/editor.html', 'editor')" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="background-color:#442b48;">
 							Comece Já
 						</button>
 					</div>
 
-					<div class="texto1 textoCapa1 delay-03s animated wow zoomIn">
+					<div class="texto1 textoCapa1 delay-03s animated wow zoomIn fonteRobotoRegular" style="color:#14213d;">
 						<b>Colabore Conosco!</b>
 					</div>
-					<div class="texto1 subTextoCapa1 delay-03s animated wow zoomIn">
+					<div class="texto1 subTextoCapa1 delay-03s animated wow zoomIn fonteRobotoRegular" style="color:#442b48">
 						<b>Seja usuário, desenvolvedor</b></br> <b>ou investidor</b></br></br>
-						<button type="reset" onclick="location.href='../login/index.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+						<button type="reset" onclick="location.href='../login/index.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="background-color:#442b48;">
 							Cadastre-se
 						</button>
 					</div>
 				</div>
 				
-				<!-- Serviços -->
-				<div id="servico" class="portal-screen-section mdl-typography--text-center">
-					<a name="screens"></a>
-					<div class="mdl-typography--display-1-color-contrast">
-						Serviços em Destaque
-					</div>
+				<!-- usuarios -->
+				<div id="usuarios" class="portal-screen-section mdl-typography--text-center" style="background-color:#442b48;color:#14213d;">
 
-					<!-- Cartões com os editores -->
-					<div class="mdl-grid">
-
-						<!-- Editor de Mapas Conceituais -->
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--16dp">
-							<figure class="mdl-card__media">
-								<img src="images/editor.jpg" alt="" />
-							</figure>
-							<div class="mdl-card__title">
-								<h2 class="mdl-card__title-text">Editor de Mapas Conceituais</h2>
-							</div>
-							<div class="mdl-card__supporting-text mdl-card--expand">
-								<p>Crie, armazene e gerencie seus Mapas Conceituais de onde quiser.</p>
-							</div>
-							<div class="mdl-card__actions mdl-card--border">
-								<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor1">
-									Saiba Mais
-								</a>
-								<div class="mdl-layout-spacer"></div>
-							</div>
+					<!-- Cartões com os numeros -->
+					<div class="mdl-grid" style="margin-top:0px;color:#fff;">
+					
+						<!-- usuarios total -->
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+						<h1>100k</h1><span class="subtitulo">Usuários Cadastrados</span>	
 						</div>
 
-						<!-- iMap -->
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--16dp">
-							<figure class="mdl-card__media">
-								<img src="images/editor1.jpg" alt="" />
-							</figure>
-							<div class="mdl-card__title">
-								<h2 class="mdl-card__title-text">iMap</h2>
-							</div>
-							<div class="mdl-card__supporting-text mdl-card--expand">
-								<p>Interaja com seus mapas por meio de perguntas e respostas.</p>
-							</div>
-							<div class="mdl-card__actions mdl-card--border">
-								<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor2">
-									Saiba Mais
-								</a>
-								<div class="mdl-layout-spacer"></div>								
-							</div>
+						<!-- portugal -->
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+						<h1>2500</h1><span class="subtitulo">em Portugal</span>	
 						</div>
-
-						<!-- OntoMap -->
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--16dp">
-							<figure class="mdl-card__media">
-								<img src="images/mapa3.jpg" alt="" />
-							</figure>
-							<div class="mdl-card__title">
-								<h2 class="mdl-card__title-text">OntoMap</h2>
-							</div>
-							<div class="mdl-card__supporting-text mdl-card--expand">
-								<p>Construa ontologias razas com nosso editor OWL.</p>
-							</div>
-							<div class="mdl-card__actions mdl-card--border">
-								<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor3">
-									Saiba Mais
-								</a>
-								<div class="mdl-layout-spacer"></div>								
-							</div>
-						</div>
-
-						<!-- Gerador de Mapas -->
-						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--16dp">
-							<figure class="mdl-card__media">
-								<img src="images/editor2.jpg" alt="" />
-							</figure>
-							<div class="mdl-card__title">
-								<h2 class="mdl-card__title-text">Gerador de Mapas</h2>
-							</div>
-							<div class="mdl-card__supporting-text mdl-card--expand">
-								<p>Gere mapas conceituais automaticamente a partir de textos.</p>
-							</div>
-							<div class="mdl-card__actions mdl-card--border">
-								<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor4">
-									Saiba Mais
-								</a>
-								<div class="mdl-layout-spacer"></div>								
-							</div>
+						
+						<!-- alemanha -->
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+						<h1>523</h1><span class="subtitulo">na Alemanha</span>	
+						</div>	
+						
+						<!-- brasil -->
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+						<h1>125</h1><span class="subtitulo">no Brasil</span>	
 						</div>
 					</div>
 				</div>
+				<!-- Fim usuarios -->
+				
+				
+				<!-- titulo convite -->
+				<div id="usuarios" class="portal-screen-section mdl-typography--text-center" style="background-color:#fd8469;color:#14213d;">
+				<h2 style="color:#fff;">Aproveite você também nossas ferramentas:</h2>
+				</div>				
+				
+				
+				<!-- servicos -->
+				<div id="servico-vini" class="portal-screen-section mdl-typography--text-center" style="background-color:#eaeaea;color:#14213d;">
+
+					<!-- Cartões com os numeros -->
+					<div class="mdl-grid" style="margin-top:0px;">
+					
+						<!-- usuarios total -->
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+							<img src="images/crie.svg" style="width:60%;" />
+							<p>Estruture seu pensamento</p>
+							<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor1">
+								Saiba Mais
+							</a>	
+						</div>
+						
+						<!-- usuarios total -->
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+							<img src="images/chat-logo.svg" style="width:60%;" />
+							<p>Interaja com seus mapas</p>
+							<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor2">
+								Saiba Mais
+							</a>	
+						</div>
+						
+						<!-- usuarios total -->
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+							<img src="images/ontology.svg" style="width:60%;" />
+							<p>Crie ontologias razas</p>
+							<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor3">
+								Saiba Mais
+							</a>
+						</div>
+						
+						<!-- usuarios total -->
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+							<img src="images/file.svg" style="width:60%;" />
+							<p>Gere mapas a partir de texto</p>
+							<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor4">
+								Saiba Mais
+							</a>
+						</div>
+						
+					</div>
+				</div>
+				<!-- Fim Serviços -->				
+				
+				
+						
+				
+				<!-- Áreas do conhecimento -->
+				<div id="servico" class="portal-screen-section mdl-typography--text-center" style="background-color:#FFA726;">
+
+					<!-- Cartões com as áreas do conhecimento -->
+					<div class="mdl-grid" style="margin-top:0px;">
+
+						<!-- Editor de Mapas Conceituais -->
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+						<h1>8638</h1><span class="subtitulo">Mapas Produzidos</span>	
+						</div>
+
+						<!-- iMap -->
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+						<h1>100</h1><span class="subtitulo">em Geografia</span>	
+						</div>
+						
+						<!-- OntoMap -->
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+						<h1>52</h1><span class="subtitulo">em Gemologia</span>	
+						</div>	
+						
+						<!-- Gerador de Mapas -->
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+						<h1>34</h1><span class="subtitulo">em Computaria</span>	
+						</div>
+						
+					</div>
+					
+				</div>
 				<!-- Fim Serviços -->
+
 
 				<!-- Sobre UFES-->
 				<div id="sobre" class="portal-wear-section">
@@ -825,3 +858,30 @@
 	
 	</body>
 </html>
+
+<style>
+
+h1 {
+	font-family:robotoCondensedBold !important;
+	font-size:90px;
+}
+
+h2 {
+	font-family:robotoCondensedBold !important;
+	font-size:30px;
+}
+
+.fonteRobotoRegular {
+	font-family:robotoRegular !important;
+}
+
+.subtitulo {
+	font-family:robotoCondensedBold !important;
+	font-size:30px;
+}
+
+#servico-vini p{
+	font-family: robotoRegular !important;
+	font-size:20px;
+}
+</style>

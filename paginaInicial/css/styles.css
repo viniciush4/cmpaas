@@ -171,8 +171,7 @@ a img
   position: relative;
   height: 800px;
   width: auto;
-  background-color: #f3f3f3;
-  background: url('../images/lamp1.png') center 30% no-repeat;
+  background: url('../images/entrada.svg') center 30% no-repeat #eaeaea;
   background-size: cover; 
 }
 
