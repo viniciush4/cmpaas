@@ -179,7 +179,7 @@
 						<!-- usuarios total -->
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
 							<img src="images/crie.svg" style="width:60%;" />
-							<p>Estruture seu pensamento</p>
+							<p style="margin:30px;">Estruture seu pensamento</p>
 							<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor1">
 								Saiba Mais
 							</a>	
@@ -188,7 +188,7 @@
 						<!-- usuarios total -->
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
 							<img src="images/chat-logo.svg" style="width:60%;" />
-							<p>Interaja com seus mapas</p>
+							<p style="margin:30px;">Interaja com seus mapas</p>
 							<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor2">
 								Saiba Mais
 							</a>	
@@ -197,7 +197,7 @@
 						<!-- usuarios total -->
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
 							<img src="images/ontology.svg" style="width:60%;" />
-							<p>Crie ontologias razas</p>
+							<p style="margin:30px;">Crie ontologias razas</p>
 							<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor3">
 								Saiba Mais
 							</a>
@@ -206,7 +206,7 @@
 						<!-- usuarios total -->
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
 							<img src="images/file.svg" style="width:60%;" />
-							<p>Gere mapas a partir de texto</p>
+							<p style="margin:30px;">Gere mapas a partir de texto</p>
 							<a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" data-modal="#editor4">
 								Saiba Mais
 							</a>
@@ -272,7 +272,7 @@
 				<!-- Sobre Cmpaas -->
 				<div class="portal-customized-section">
 					<div class="portal-customized-section-text">
-						<div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Portal do Conhecimento e CMPaaS</div></br></br>
+						<div class="mdl-typography--font-light mdl-typography--display-1-color-contrast fonteRobotoRegular">Portal do Conhecimento e CMPaaS</div></br></br>
 
 						<div class="video-container">		
 							<video width="" height="" controls="controls" autoplay="autoplay">
@@ -635,6 +635,71 @@
 
 				</div>
 				<!-- Fim equipe -->
+				
+				<!-- contato -->
+				<div id="usuarios" class="portal-screen-section mdl-typography--text-center" style="background:#442b48;color:#14213d;">
+
+				
+					<div class="mdl-grid" style="margin-top:0px;color:#fff;">
+					
+						
+						<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone" style="color:#fff;">
+							<h2>Contato</h2>	
+							<b>Fale Conosco</b>
+				            </br></br>
+							UFES - Campus Universitário de Goiabeiras
+							</br>
+							CT 7 - Departamento de Informática
+							</br>
+							Laboratório de Informática na Educação
+							</br>
+							Av. Fernando Ferrari, 514, 29075-910 - Vitória/ES, Brasil
+							<br>
+							<i class="material-icons">phone</i>
+							 Tel: +55 (27) 4009 - 2061
+							 <br>
+							 <i class="material-icons">email</i>
+							Email: cmpaas@gmail.com
+							<br>
+							<i class="material-icons">watch_later</i>
+							Horários: Segunda - Sexta: 8:00 às 17:00
+						</div>
+						
+						<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone" style="color:#fff;">
+						
+
+								    <form action="#" style="color:#fff;">
+							            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Nome">
+							                <label class="mdl-textfield__label" for="Name">Nome Completo:</label>
+							                <span class="mdl-textfield__error">Somente letras ou espaços</span>
+							            </div>
+							            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							                <input class="mdl-textfield__input" type="text" id="Email">
+							                <label class="mdl-textfield__label" for="Email">Email:</label>
+							            </div>
+							            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="telefone" />
+							                <label class="mdl-textfield__label" for="demo-input">Telefone para Contato:</label>
+							                <span class="mdl-textfield__error">Entrada inválida</span>
+							            </div>
+							            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							                <textarea class="mdl-textfield__input" type="text" rows="5" id="note"></textarea>
+							                <label class="mdl-textfield__label" for="note">Mensagem:</label>
+							            </div>
+							            <p>
+							                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">
+												Enviar
+											</button>
+							            </p>
+							        </form>
+
+
+						</div>
+					</div>
+				</div>
+				<!-- Fim contato -->
+				
 
 				<!-- Contato -->
 				<div id="contato" class="contato-card">
@@ -883,5 +948,9 @@ h2 {
 #servico-vini p{
 	font-family: robotoRegular !important;
 	font-size:20px;
+}
+
+.textcenter{
+	text-align:center;
 }
 </style>
