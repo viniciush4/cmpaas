@@ -635,6 +635,25 @@ padding-top: 16px;
   font-size: 14px;
   font-weight: 500;
 }
+
+.leo-card-image.mdl-card 
+{
+  width: 200px;
+  height: 200px;
+  background: url('../images/leo.png') center / cover;
+}
+.leo-card-image > .mdl-card__actions 
+{
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.leo-card-image__filename 
+{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
 /* Fim Desenvolvedores */
 
 /* Contato */
