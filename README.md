@@ -2,7 +2,7 @@
 
 O CMPaaS - Concept Maps Platform as a Service - é um projeto desenvolvido pelo Laboratório de Informática na Educação (LIEd) vinculado ao departamento de Informática da Universidade Federal do Espírito Santo.
 
-O projeto da iterface do CMPaaS surgiu como um trabalho optativo da disciplina de *Interface Humano - Computador*, onde cada grupo de alunos poderia propor uma interface com base no conteúdo estudado. O presente repositório contém o projeto de interface que ficou em primeiro lugar.
+O projeto da iterface do CMPaaS surgiu como um trabalho optativo da disciplina de *Interface Humano - Computador*, onde cada grupo de alunos poderia propor uma interface com base no conteúdo estudado. O presente repositório contém o projeto de interface que ficou em primeiro lugar. :tw-1f3c6:
 
 ### ~~Des~~organização do código
 - *editor*: contém todos os arquivos referentes aos três editores do CMPaaS
