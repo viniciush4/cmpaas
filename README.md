@@ -4,7 +4,7 @@ O CMPaaS - Concept Maps Platform as a Service - é um projeto desenvolvido pelo 
 
 O projeto da iterface do CMPaaS surgiu como um trabalho optativo da disciplina de *Interface Humano - Computador*, onde cada grupo de alunos poderia propor uma interface com base no conteúdo estudado. O presente repositório contém o projeto de interface que ficou em primeiro lugar.
 
-###~~Des~~organização do código
+### ~~Des~~organização do código
 - *editor*: contém todos os arquivos referentes aos três editores do CMPaaS
 - *profile*: contém todos os arquivos referentes ao profile dos usuários
 - *home*: contém todos os arquivos da página principal
